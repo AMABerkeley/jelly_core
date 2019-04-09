@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>bringup_jelly</name>
+  <name>jelly_bringup</name>
   <version>0.0.0</version>
-  <description>The bringup_jelly package</description>
+  <description>The jelly_bringup package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>sensors_jelly</name>
+  <name>jelly_sensors</name>
   <version>0.0.0</version>
-  <description>The sensors_jelly metapackage contains all the basic software for running and using the sensors on a Jelly robot.</description>
+  <description>The jelly_sensors metapackage contains all the basic software for running and using the sensors on a Jelly robot.</description>
 
   <maintainer email="trbrashears@berkeley.edu">Travis Brashears</maintainer>
 
