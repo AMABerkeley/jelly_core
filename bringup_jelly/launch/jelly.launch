@@ -5,4 +5,10 @@
   <include
    file="$(find jelly_urdf)/launch/display.launch"/> -->
 
+
+  <!-- #vesc hub motor driver
+ 
+  <include
+   file="$(find vesc)/launch/vesc_driver_node.launch"/> -->
+
 </launch>
