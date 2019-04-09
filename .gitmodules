@@ -1,0 +1,3 @@
+[submodule "sensors_jelly/vesc"]
+	path = sensors_jelly/vesc
+	url = https://github.com/brentyi/vesc.git
