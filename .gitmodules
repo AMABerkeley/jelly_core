@@ -1,3 +1,3 @@
-[submodule "sensors_jelly/vesc"]
-	path = sensors_jelly/vesc
+[submodule "jelly_core/jelly_sensors/vesc"]
+	path = jelly_core/jelly_sensors/vesc
 	url = https://github.com/brentyi/vesc.git
