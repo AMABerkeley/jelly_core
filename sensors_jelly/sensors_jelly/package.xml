@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>sensors_jelly</name>
+  <version>0.0.0</version>
+  <description>The sensors_jelly metapackage contains all the basic software for running and using the sensors on a Jelly robot.</description>
+
+  <maintainer email="trbrashears@berkeley.edu">Travis Brashears</maintainer>
+
+  <license>BSD</license>
+
+  <author email="trbrashears@berkeley.edu">Travis Brashears</author>
+  <author email="brentyi@berkeley.edu">Brent Yi</author>
+  <author email="phil80301@berkeley.edu">Philipp Wu</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
