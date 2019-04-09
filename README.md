@@ -1,11 +1,13 @@
 # jelly_core
 Software for controlling jelly robot with ros
 
-##bringup_jelly
+### bringup_jelly
  * used to bringup robot 
-##control_jelly
+
+### control_jelly
  * used for implementing control
-##sensors_jelly
+
+### sensors_jelly
  * used for communicating between motors, motor controllers, IMU
 
 
