@@ -7,7 +7,7 @@ Software for controlling jelly robot with ros
 `cd catkin_ws/src`\
 `catkin_init_workspace`\
 `git clone https://github.com/but-i-love-pbj/jelly_core.git`\
-'git submodule update'
+`git submodule update`
 
 
 ### bringup_jelly
