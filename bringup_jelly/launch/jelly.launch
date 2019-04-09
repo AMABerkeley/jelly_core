@@ -9,6 +9,6 @@
   <!-- #vesc hub motor driver
  
   <include
-   file="$(find vesc)/launch/vesc_driver_node.launch"/> -->
+   file="$(find vesc_driver)/launch/vesc_driver_node.launch"/> -->
 
 </launch>
