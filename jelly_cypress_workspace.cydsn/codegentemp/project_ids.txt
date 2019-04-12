@@ -1,14 +1,13 @@
-C:\school\me135\PSOC\UARTcommunication.cydsn\UARTcommunication.cyprj|350549a0-c3aa-4f65-854f-3f42e209153f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|24657e02-ab8a-4710-b3f1-d54ab86e820a
-C:\Users\joshu_000\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a9bdcc13-4940-4871-849c-3eee1ab242de
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|337426ef-bd1e-4e76-bce0-cf4ee4bf303d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f5b1837e-a9cd-4eed-a976-d20dbbf67248
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c441b905-4f6b-407b-ae69-944a9862f5fe
-C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\VESC_Serial_PWM.cyprj|dbc63472-ff03-4af1-933a-77b6657d2289
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|91bfd92c-afc3-4313-838f-2b3432fa854a
-C:\school\me135\PSOC\UART_Full_Duplex01.cydsn\UART_Full_Duplex01.cyprj|136f4701-0cc3-41cd-984d-61545f843128
-C:\school\me135\PSOC\UART_Tx01.cydsn\UART_Tx01.cyprj|8419d8a3-28e2-4016-9eb0-cfb1c6c0238d
-C:\school\me135\PSOC\USBFS_UART01.cydsn\USBFS_UART01.cyprj|701476aa-373e-4a53-ac75-ea1fe440ae06
-C:\school\me135\PSOC\blink-led.cydsn\blink-led.cyprj|4d2e7965-0d42-4c18-a874-37a5dbac7a63
-C:\school\me135\PSOC\CE195352_PSoC_5LP_Blinking_LED01.cydsn\CE195352_PSoC_5LP_Blinking_LED01.cyprj|f2d60ece-149b-4063-8667-391bd43e0826
-C:\school\me135\PSOC\UART_Rx01.cydsn\UART_Rx01.cyprj|2a9f2646-7262-4bab-a4fb-f0b25833bca3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e20481af-f340-4b08-b2fb-b93686025a82
+C:\Users\joshu_000\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|5b6569ef-7b10-43c7-91cb-25f928eab580
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7b92ccc0-4fe0-486a-81d7-e2783647dde7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a46abb10-ea3c-49e9-99f5-67bf877d390b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3fabd767-f90a-4f6d-b9b7-cb9bf75840ff
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|41f1760c-6d31-42f4-b4ab-f3924bdd201c
+C:\school\me135\PSOC\UART_Rx01.cydsn\UART_Rx01.cyprj|f4c31b67-c805-4ae6-a411-254d6a7be131
+C:\school\me135\PSOC\UART_Full_Duplex01.cydsn\UART_Full_Duplex01.cyprj|9838c09f-f845-49c1-91b3-d44dbcbccc0d
+C:\school\me135\PSOC\UART_Tx01.cydsn\UART_Tx01.cyprj|82164c26-f99a-4e1b-97dc-2618aaf1ecf4
+C:\school\me135\PSOC\USBFS_UART01.cydsn\USBFS_UART01.cyprj|b66d9294-4881-40de-8e21-768d5074cffa
+C:\school\me135\PSOC\blink-led.cydsn\blink-led.cyprj|807f85fb-fc4c-4816-8023-0cf7a84c1ebf
+C:\school\me135\PSOC\UARTcommunication.cydsn\UARTcommunication.cyprj|2430f76a-e600-4df3-b716-ece97302de3b
+C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\jelly_cypress_workspace.cyprj|35dd925d-6b40-4bf6-a7d8-0915fa97054b

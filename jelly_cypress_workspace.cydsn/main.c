@@ -82,12 +82,12 @@ int main()
     
     /* PWM */
     PWM_Start();    
-    int cmp = 8640;
+    int cmp = 9000;
     int mltplr = 1;
     while (1) {
         ch = UART_GetChar(); // returns an int apparently
         
-        if (ch > 0 && 1==2) 
+        if (ch > 0) 
         { 
             if (ch == 13) { // if new line pressed
                 // Null terminate
@@ -99,13 +99,11 @@ int main()
 
                 // Parse int from buffer
                 cmp = atoi(buffer);
-
-                   
                 
                 // Spin motor:
-                for (int i = 0; i < 2; i++) {
+                for (int i = 0; i < 1; i++) {
                     PWM_WriteCompare(cmp); 
-                    CyDelay(100);    
+                    CyDelay(20);
                 }
 
                 // Reset buffer
@@ -117,6 +115,7 @@ int main()
             }
         }
         
+        continue;
         
         for (int i = 0; i < 2; i++) {
             PWM_WriteCompare(cmp); 

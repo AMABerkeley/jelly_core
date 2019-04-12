@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Apr 11 2019 18:34:07
+#File Generated:     Apr 11 2019 22:00:28
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjplacer.exe --proj-name VESC_Serial_PWM --netlist-vh2 VESC_Serial_PWM_p.vh2 --arch p35_udb4x6 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_4x6_24.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/dsiconn.cydata --pins-file pins_68-QFN.xml --lib-file VESC_Serial_PWM_p.lib --sdc-file VESC_Serial_PWM.sdc --io-pcf VESC_Serial_PWM.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjplacer.exe --proj-name jelly_cypress_workspace --netlist-vh2 jelly_cypress_workspace_p.vh2 --arch p35_udb4x6 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_4x6_24.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/dsiconn.cydata --pins-file pins_68-QFN.xml --lib-file jelly_cypress_workspace_p.lib --sdc-file jelly_cypress_workspace.sdc --io-pcf jelly_cypress_workspace.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -22,18 +22,18 @@ Build Date : Dec  5 2017	15:33:41
 
 D2004: Option and Settings Summary
 =============================================================
-Netlist vh2 file          - VESC_Serial_PWM_p.vh2
+Netlist vh2 file          - jelly_cypress_workspace_p.vh2
 Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_4x6_24.cydata
 Package                   - 
 Defparam file             - 
-SDC file                  - VESC_Serial_PWM.sdc
+SDC file                  - jelly_cypress_workspace.sdc
 Output directory          - .
-Timing library            - VESC_Serial_PWM_p.lib
-IO Placement file         - VESC_Serial_PWM.pci
+Timing library            - jelly_cypress_workspace_p.lib
+IO Placement file         - jelly_cypress_workspace.pci
 
 D2050: Starting reading inputs for placer
 =============================================================
-D2065: Reading netlist file : "VESC_Serial_PWM_p.vh2"
+D2065: Reading netlist file : "jelly_cypress_workspace_p.vh2"
 D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\arch/udbdsi_4x6_24.cydata"
 D2051: Reading of inputs for placer completed successfully
 
@@ -54,7 +54,7 @@ Design Statistics after Packing
 
 Device Utilization Summary after Packing
     Macrocells                  :	26/192
-    UDBS                        :	6/24
+    UDBS                        :	7/24
     IOs                         :	4/72
 
 
@@ -80,12 +80,12 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 7
-Clock: CyBUS_CLK            | Frequency:  57.6 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:  53.9 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: UART_IntClock        | Frequency:  57.2 MHz | Target:   0.5 MHz
+Clock: UART_IntClock        | Frequency:  53.9 MHz | Target:   0.9 MHz
 Clock: clock_1              | Frequency:  61.7 MHz | Target:   0.5 MHz
 
 ======================================================================
@@ -99,12 +99,12 @@ Phase 7
                      Clock Summary 
 ======================================================================
 Number of clocks: 7
-Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:   1.3 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: UART_IntClock        | Frequency:   2.8 MHz | Target:   0.5 MHz
+Clock: UART_IntClock        | Frequency:   1.3 MHz | Target:   0.9 MHz
 Clock: clock_1              | Frequency:  61.7 MHz | Target:   0.5 MHz
 
 ======================================================================
@@ -141,12 +141,12 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 7
-Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:   1.5 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: UART_IntClock        | Frequency:   2.8 MHz | Target:   0.5 MHz
+Clock: UART_IntClock        | Frequency:   1.5 MHz | Target:   0.9 MHz
 Clock: clock_1              | Frequency:  61.7 MHz | Target:   0.5 MHz
 
 ======================================================================
@@ -158,5 +158,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.0 sec.
+I2076: Total run-time: 0.9 sec.
 

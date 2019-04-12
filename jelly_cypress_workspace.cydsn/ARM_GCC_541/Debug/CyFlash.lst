@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
   23:Generated_Source\PSoC5/CyFlash.c **** #define CY_FLASH_EEPROM_NUMBER_ARRAYS                 (1u)
   24:Generated_Source\PSoC5/CyFlash.c **** 
   25:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 2
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 2
 
 
   26:Generated_Source\PSoC5/CyFlash.c **** /*******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
   53 0014 DBB2     		uxtb	r3, r3
   54 0016 43F00803 		orr	r3, r3, #8
   55 001a DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 3
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 3
 
 
   56 001c 1370     		strb	r3, [r2]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
   85:Generated_Source\PSoC5/CyFlash.c **** 
   86:Generated_Source\PSoC5/CyFlash.c ****     while(0u == (CY_FLASH_SPC_FM_EE_CR_REG & CY_FLASH_EE_EE_AWAKE))
   85              		.loc 1 86 0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 4
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 4
 
 
   86 0054 00BF     		nop
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  100:Generated_Source\PSoC5/CyFlash.c **** *
  101:Generated_Source\PSoC5/CyFlash.c **** * \sideeffect
  102:Generated_Source\PSoC5/CyFlash.c **** *  This setting is ignored as long as the CPU is currently running.  This will
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 5
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 5
 
 
  103:Generated_Source\PSoC5/CyFlash.c **** *  only take effect when the CPU is later disabled.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  167 003a BD46     		mov	sp, r7
  168              		.cfi_def_cfa_register 13
  169              		@ sp needed
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 6
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 6
 
 
  170 003c 80BD     		pop	{r7, pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  199 0006 0346     		mov	r3, r0
  200 0008 0A46     		mov	r2, r1
  201 000a FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 7
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 7
 
 
  202 000c 1346     		mov	r3, r2	@ movhi
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  159:Generated_Source\PSoC5/CyFlash.c ****             if(CYRET_STARTED == status)
  239              		.loc 1 159 0
  240 004a FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 8
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 8
 
 
  241 004c 072B     		cmp	r3, #7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  279 008c FB60     		str	r3, [r7, #12]
  280 008e 01E0     		b	.L18
  281              	.L13:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 9
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 9
 
 
  175:Generated_Source\PSoC5/CyFlash.c ****                 }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  192:Generated_Source\PSoC5/CyFlash.c **** 
  193:Generated_Source\PSoC5/CyFlash.c **** /*******************************************************************************
  194:Generated_Source\PSoC5/CyFlash.c **** * Function Name: CySetTempInt
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 10
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 10
 
 
  195:Generated_Source\PSoC5/CyFlash.c **** ****************************************************************************//**
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  346 0024 1BD1     		bne	.L24
  347              	.L28:
  222:Generated_Source\PSoC5/CyFlash.c ****         {
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 11
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 11
 
 
  223:Generated_Source\PSoC5/CyFlash.c ****             do
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  383              		.loc 1 240 0
  384 005e FFF7FEFF 		bl	CySpcUnlock
  385 0062 01E0     		b	.L29
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 12
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 12
 
 
  386              	.L23:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  264:Generated_Source\PSoC5/CyFlash.c **** cystatus CyFlashGetSpcAlgorithm(void) 
  265:Generated_Source\PSoC5/CyFlash.c **** {
  417              		.loc 1 265 0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 13
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 13
 
 
  418              		.cfi_startproc
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  456 0034 F5D0     		beq	.L37
  281:Generated_Source\PSoC5/CyFlash.c ****             }
  282:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 14
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 14
 
 
  283:Generated_Source\PSoC5/CyFlash.c ****             if(CY_SPC_STATUS_SUCCESS == CY_SPC_READ_STATUS)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  497 006c 22470040 		.word	1073760034
  498              		.cfi_endproc
  499              	.LFE4:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 15
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 15
 
 
  500              		.size	CyFlashGetSpcAlgorithm, .-CyFlashGetSpcAlgorithm
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  323:Generated_Source\PSoC5/CyFlash.c ****     {
  324:Generated_Source\PSoC5/CyFlash.c ****         status = CySetTempInt();
  528              		.loc 1 324 0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 16
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 16
 
 
  529 0012 FFF7FEFF 		bl	CySetTempInt
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  557 0000 80B5     		push	{r7, lr}
  558              		.cfi_def_cfa_offset 8
  559              		.cfi_offset 7, -8
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 17
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 17
 
 
  560              		.cfi_offset 14, -4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  599              	.L48:
  366:Generated_Source\PSoC5/CyFlash.c ****         }
  367:Generated_Source\PSoC5/CyFlash.c ****         else
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 18
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 18
 
 
  368:Generated_Source\PSoC5/CyFlash.c ****         {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  390:Generated_Source\PSoC5/CyFlash.c **** *
  391:Generated_Source\PSoC5/CyFlash.c **** *  \param arrayID:    ID of the array to write.
  392:Generated_Source\PSoC5/CyFlash.c **** *   The type of write, Flash or EEPROM, is determined from the array ID.
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 19
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 19
 
 
  393:Generated_Source\PSoC5/CyFlash.c **** *   The arrays in the part are sequential starting at the first ID for the
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  665 0024 F879     		ldrb	r0, [r7, #7]	@ zero_extendqisi2
  666 0026 3A68     		ldr	r2, [r7]
  667 0028 FFF7FEFF 		bl	CyWriteRowFull
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 20
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 20
 
 
  668 002c B860     		str	r0, [r7, #8]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  446:Generated_Source\PSoC5/CyFlash.c ****     *
  447:Generated_Source\PSoC5/CyFlash.c ****     *******************************************************************************/
  448:Generated_Source\PSoC5/CyFlash.c ****     cystatus CyWriteRowConfig(uint8 arrayId, uint16 rowAddress, const uint8 * rowECC)\
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 21
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 21
 
 
  449:Generated_Source\PSoC5/CyFlash.c ****     
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  483:Generated_Source\PSoC5/CyFlash.c ****     cystatus status = CYRET_SUCCESS;
  710              		.loc 1 483 0
  711 0016 0023     		movs	r3, #0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 22
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 22
 
 
  712 0018 7B61     		str	r3, [r7, #20]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  501:Generated_Source\PSoC5/CyFlash.c ****     {
  502:Generated_Source\PSoC5/CyFlash.c ****         /* Flash */
  503:Generated_Source\PSoC5/CyFlash.c ****         if(rowNumber > (CY_FLASH_NUMBER_ROWS/CY_FLASH_NUMBER_ARRAYS))
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 23
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 23
 
 
  749              		.loc 1 503 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  525:Generated_Source\PSoC5/CyFlash.c ****     }
  526:Generated_Source\PSoC5/CyFlash.c **** 
  527:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 24
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 24
 
 
  528:Generated_Source\PSoC5/CyFlash.c ****     if(status == CYRET_SUCCESS)
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  818 00b4 1B78     		ldrb	r3, [r3]
  819 00b6 DBB2     		uxtb	r3, r3
  820 00b8 03F00203 		and	r3, r3, #2
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 25
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 25
 
 
  821 00bc 002B     		cmp	r3, #0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  859              	.L73:
  561:Generated_Source\PSoC5/CyFlash.c ****                         {
  562:Generated_Source\PSoC5/CyFlash.c ****                             /* Wait for SPC to finish and get SPC status */
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 26
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 26
 
 
  563:Generated_Source\PSoC5/CyFlash.c ****                             CyDelayUs(1u);
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  897 013a 01E0     		b	.L65
  898              	.L66:
  579:Generated_Source\PSoC5/CyFlash.c ****         }   /* if(CySpcLock() == CYRET_SUCCESS) */
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 27
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 27
 
 
  580:Generated_Source\PSoC5/CyFlash.c ****         else
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  604:Generated_Source\PSoC5/CyFlash.c **** {
  929              		.loc 1 604 0
  930              		.cfi_startproc
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 28
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 28
 
 
  931              		@ args = 0, pretend = 0, frame = 16
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  623:Generated_Source\PSoC5/CyFlash.c ****         CY_FLASH_CONTROL_REG = (CY_FLASH_CONTROL_REG & (uint8)(~CY_FLASH_CACHE_WS_VALUE_MASK)) |
  967              		.loc 1 623 0
  968 0036 204A     		ldr	r2, .L85
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 29
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 29
 
 
  969 0038 1F4B     		ldr	r3, .L85
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1009              		.loc 1 637 0
  1010 0084 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1011 0086 532B     		cmp	r3, #83
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 30
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 30
 
 
  1012 0088 0BD8     		bhi	.L84
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1052              		.thumb_func
  1053              		.type	CyEEPROM_Start, %function
  1054              	CyEEPROM_Start:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 31
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 31
 
 
  1055              	.LFB10:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1087 002c 1370     		strb	r3, [r2]
  674:Generated_Source\PSoC5/CyFlash.c **** 
  675:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 32
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 32
 
 
  676:Generated_Source\PSoC5/CyFlash.c ****     /***************************************************************************
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  700:Generated_Source\PSoC5/CyFlash.c **** 
  701:Generated_Source\PSoC5/CyFlash.c ****     CyExitCriticalSection(interruptState);
  1118              		.loc 1 701 0 is_stmt 1
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 33
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 33
 
 
  1119 0064 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1161              		.cfi_def_cfa_register 7
  714:Generated_Source\PSoC5/CyFlash.c ****     uint8 interruptState;
  715:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 34
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 34
 
 
  716:Generated_Source\PSoC5/CyFlash.c ****     interruptState = CyEnterCriticalSection();
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1209              	.LFB12:
  723:Generated_Source\PSoC5/CyFlash.c **** 
  724:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 35
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 35
 
 
  725:Generated_Source\PSoC5/CyFlash.c **** /*******************************************************************************
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1247              	.L97:
  1248              		.align	2
  1249              	.L96:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 36
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 36
 
 
  1250 002c 02470040 		.word	1073760002
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1291              	.L99:
  1292 001c 02470040 		.word	1073760002
  1293              		.cfi_endproc
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 37
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 37
 
 
  1294              	.LFE13:
@@ -2176,14 +2176,14 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1306 000c 18000000 		.4byte	.LASF41
  1307 0010 0C       		.byte	0xc
  1308 0011 D0000000 		.4byte	.LASF42
- 1309 0015 61020000 		.4byte	.LASF43
+ 1309 0015 DC010000 		.4byte	.LASF43
  1310 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1311 001d 00000000 		.4byte	0
  1312 0021 00000000 		.4byte	.Ldebug_line0
  1313 0025 02       		.uleb128 0x2
  1314 0026 01       		.byte	0x1
  1315 0027 06       		.byte	0x6
- 1316 0028 D5020000 		.4byte	.LASF0
+ 1316 0028 DD020000 		.4byte	.LASF0
  1317 002c 02       		.uleb128 0x2
  1318 002d 01       		.byte	0x1
  1319 002e 08       		.byte	0x8
@@ -2199,7 +2199,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1329 0041 02       		.uleb128 0x2
  1330 0042 04       		.byte	0x4
  1331 0043 05       		.byte	0x5
- 1332 0044 A9020000 		.4byte	.LASF4
+ 1332 0044 B1020000 		.4byte	.LASF4
  1333 0048 02       		.uleb128 0x2
  1334 0049 04       		.byte	0x4
  1335 004a 07       		.byte	0x7
@@ -2207,22 +2207,22 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1337 004f 02       		.uleb128 0x2
  1338 0050 08       		.byte	0x8
  1339 0051 05       		.byte	0x5
- 1340 0052 36020000 		.4byte	.LASF6
+ 1340 0052 69020000 		.4byte	.LASF6
  1341 0056 02       		.uleb128 0x2
  1342 0057 08       		.byte	0x8
  1343 0058 07       		.byte	0x7
- 1344 0059 F7010000 		.4byte	.LASF7
+ 1344 0059 2A020000 		.4byte	.LASF7
  1345 005d 03       		.uleb128 0x3
  1346 005e 04       		.byte	0x4
  1347 005f 05       		.byte	0x5
  1348 0060 696E7400 		.ascii	"int\000"
  1349 0064 02       		.uleb128 0x2
  1350 0065 04       		.byte	0x4
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 38
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 38
 
 
  1351 0066 07       		.byte	0x7
- 1352 0067 DC010000 		.4byte	.LASF8
+ 1352 0067 0F020000 		.4byte	.LASF8
  1353 006b 04       		.uleb128 0x4
  1354 006c 7C010000 		.4byte	.LASF9
  1355 0070 02       		.byte	0x2
@@ -2244,7 +2244,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1371 0091 02       		.uleb128 0x2
  1372 0092 01       		.byte	0x1
  1373 0093 08       		.byte	0x8
- 1374 0094 4F020000 		.4byte	.LASF13
+ 1374 0094 82020000 		.4byte	.LASF13
  1375 0098 04       		.uleb128 0x4
  1376 0099 00000000 		.4byte	.LASF14
  1377 009d 02       		.byte	0x2
@@ -2260,13 +2260,13 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1387 00b5 02       		.uleb128 0x2
  1388 00b6 08       		.byte	0x8
  1389 00b7 04       		.byte	0x4
- 1390 00b8 C9020000 		.4byte	.LASF16
+ 1390 00b8 D1020000 		.4byte	.LASF16
  1391 00bc 02       		.uleb128 0x2
  1392 00bd 04       		.byte	0x4
  1393 00be 07       		.byte	0x7
- 1394 00bf 23020000 		.4byte	.LASF17
+ 1394 00bf 56020000 		.4byte	.LASF17
  1395 00c3 06       		.uleb128 0x6
- 1396 00c4 E9010000 		.4byte	.LASF18
+ 1396 00c4 1C020000 		.4byte	.LASF18
  1397 00c8 01       		.byte	0x1
  1398 00c9 30       		.byte	0x30
  1399 00ca 00000000 		.4byte	.LFB0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1405 00d9 5B010000 		.4byte	.LASF20
  1406 00dd 01       		.byte	0x1
  1407 00de 32       		.byte	0x32
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 39
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 39
 
 
  1408 00df 6B000000 		.4byte	0x6b
@@ -2287,7 +2287,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1411 00e5 77       		.sleb128 -9
  1412 00e6 00       		.byte	0
  1413 00e7 06       		.uleb128 0x6
- 1414 00e8 B2020000 		.4byte	.LASF19
+ 1414 00e8 BA020000 		.4byte	.LASF19
  1415 00ec 01       		.byte	0x1
  1416 00ed 6A       		.byte	0x6a
  1417 00ee 00000000 		.4byte	.LFB1
@@ -2305,7 +2305,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1429 0109 77       		.sleb128 -9
  1430 010a 00       		.byte	0
  1431 010b 08       		.uleb128 0x8
- 1432 010c 8C020000 		.4byte	.LASF24
+ 1432 010c 94020000 		.4byte	.LASF24
  1433 0110 01       		.byte	0x1
  1434 0111 8C       		.byte	0x8c
  1435 0112 98000000 		.4byte	0x98
@@ -2323,7 +2323,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1447 0130 91       		.byte	0x91
  1448 0131 6F       		.sleb128 -17
  1449 0132 09       		.uleb128 0x9
- 1450 0133 44020000 		.4byte	.LASF22
+ 1450 0133 77020000 		.4byte	.LASF22
  1451 0137 01       		.byte	0x1
  1452 0138 8C       		.byte	0x8c
  1453 0139 77000000 		.4byte	0x77
@@ -2338,12 +2338,12 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1462 014b 02       		.uleb128 0x2
  1463 014c 91       		.byte	0x91
  1464 014d 74       		.sleb128 -12
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 40
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 40
 
 
  1465 014e 00       		.byte	0
  1466 014f 0A       		.uleb128 0xa
- 1467 0150 54020000 		.4byte	.LASF44
+ 1467 0150 87020000 		.4byte	.LASF44
  1468 0154 01       		.byte	0x1
  1469 0155 D0       		.byte	0xd0
  1470 0156 98000000 		.4byte	0x98
@@ -2381,7 +2381,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1502 019f 74       		.sleb128 -12
  1503 01a0 00       		.byte	0
  1504 01a1 0B       		.uleb128 0xb
- 1505 01a2 2C020000 		.4byte	.LASF26
+ 1505 01a2 5F020000 		.4byte	.LASF26
  1506 01a6 01       		.byte	0x1
  1507 01a7 3E01     		.2byte	0x13e
  1508 01a9 98000000 		.4byte	0x98
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1519 01c7 02       		.uleb128 0x2
  1520 01c8 91       		.byte	0x91
  1521 01c9 74       		.sleb128 -12
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 41
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 41
 
 
  1522 01ca 00       		.byte	0
@@ -2413,7 +2413,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1531 01e0 9C       		.byte	0x9c
  1532 01e1 04020000 		.4byte	0x204
  1533 01e5 0D       		.uleb128 0xd
- 1534 01e6 A2020000 		.4byte	.LASF28
+ 1534 01e6 AA020000 		.4byte	.LASF28
  1535 01ea 01       		.byte	0x1
  1536 01eb 5D01     		.2byte	0x15d
  1537 01ed 04020000 		.4byte	0x204
@@ -2433,7 +2433,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1551 0205 04       		.byte	0x4
  1552 0206 6B000000 		.4byte	0x6b
  1553 020a 0B       		.uleb128 0xb
- 1554 020b E1020000 		.4byte	.LASF29
+ 1554 020b E9020000 		.4byte	.LASF29
  1555 020f 01       		.byte	0x1
  1556 0210 9701     		.2byte	0x197
  1557 0212 98000000 		.4byte	0x98
@@ -2451,14 +2451,14 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1569 0231 91       		.byte	0x91
  1570 0232 6F       		.sleb128 -17
  1571 0233 0D       		.uleb128 0xd
- 1572 0234 44020000 		.4byte	.LASF22
+ 1572 0234 77020000 		.4byte	.LASF22
  1573 0238 01       		.byte	0x1
  1574 0239 9701     		.2byte	0x197
  1575 023b 77000000 		.4byte	0x77
  1576 023f 02       		.uleb128 0x2
  1577 0240 91       		.byte	0x91
  1578 0241 6C       		.sleb128 -20
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 42
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 42
 
 
  1579 0242 0D       		.uleb128 0xd
@@ -2510,7 +2510,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1625 02a2 91       		.byte	0x91
  1626 02a3 6F       		.sleb128 -17
  1627 02a4 0D       		.uleb128 0xd
- 1628 02a5 BF020000 		.4byte	.LASF33
+ 1628 02a5 C7020000 		.4byte	.LASF33
  1629 02a9 01       		.byte	0x1
  1630 02aa E001     		.2byte	0x1e0
  1631 02ac 77000000 		.4byte	0x77
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1633 02b1 91       		.byte	0x91
  1634 02b2 6C       		.sleb128 -20
  1635 02b3 0D       		.uleb128 0xd
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 43
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 43
 
 
  1636 02b4 44010000 		.4byte	.LASF30
@@ -2555,7 +2555,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1667 02f2 9C       		.byte	0x9c
  1668 02f3 16030000 		.4byte	0x316
  1669 02f7 0D       		.uleb128 0xd
- 1670 02f8 9D020000 		.4byte	.LASF35
+ 1670 02f8 A5020000 		.4byte	.LASF35
  1671 02fc 01       		.byte	0x1
  1672 02fd 5B02     		.2byte	0x25b
  1673 02ff 6B000000 		.4byte	0x6b
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1690 031e 00000000 		.4byte	.LFB10
  1691 0322 8C000000 		.4byte	.LFE10-.LFB10
  1692 0326 01       		.uleb128 0x1
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 44
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 44
 
 
  1693 0327 9C       		.byte	0x9c
@@ -2611,7 +2611,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1720 0360 77       		.sleb128 -9
  1721 0361 00       		.byte	0
  1722 0362 11       		.uleb128 0x11
- 1723 0363 0E020000 		.4byte	.LASF38
+ 1723 0363 41020000 		.4byte	.LASF38
  1724 0367 01       		.byte	0x1
  1725 0368 DC02     		.2byte	0x2dc
  1726 036a 00000000 		.4byte	.LFB12
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1747 0398 6B000000 		.4byte	0x6b
  1748 039c A7030000 		.4byte	0x3a7
  1749 03a0 13       		.uleb128 0x13
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 45
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 45
 
 
  1750 03a1 BC000000 		.4byte	0xbc
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1804 0028 00       		.byte	0
  1805 0029 04       		.uleb128 0x4
  1806 002a 16       		.uleb128 0x16
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 46
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 46
 
 
  1807 002b 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1861 0062 02       		.uleb128 0x2
  1862 0063 18       		.uleb128 0x18
  1863 0064 00       		.byte	0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 47
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 47
 
 
  1864 0065 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1918 009c 49       		.uleb128 0x49
  1919 009d 13       		.uleb128 0x13
  1920 009e 11       		.uleb128 0x11
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 48
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 48
 
 
  1921 009f 01       		.uleb128 0x1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  1975 00d7 05       		.uleb128 0x5
  1976 00d8 00       		.byte	0
  1977 00d9 03       		.uleb128 0x3
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 49
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 49
 
 
  1978 00da 0E       		.uleb128 0xe
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2032 0111 00       		.byte	0
  2033 0112 3F       		.uleb128 0x3f
  2034 0113 19       		.uleb128 0x19
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 50
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 50
 
 
  2035 0114 03       		.uleb128 0x3
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2089              		.section	.debug_aranges,"",%progbits
  2090 0000 84000000 		.4byte	0x84
  2091 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 51
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 51
 
 
  2092 0006 00000000 		.4byte	.Ldebug_info0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2146 0044 54010000 		.4byte	.LFE8
  2147 0048 00000000 		.4byte	.LFB9
  2148 004c BC000000 		.4byte	.LFE9
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 52
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 52
 
 
  2149 0050 00000000 		.4byte	.LFB10
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2175      65642069 
  2175      6E7400
  2176              	.LASF42:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 53
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 53
 
 
  2177 00d0 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyFlash.c\000"
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2199      3800
  2200              	.LASF21:
  2201 0182 61727261 		.ascii	"arrayId\000"
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 54
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 54
 
 
  2201      79496400 
@@ -3211,101 +3211,102 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 1
  2214              	.LASF10:
  2215 01d5 75696E74 		.ascii	"uint16\000"
  2215      313600
- 2216              	.LASF8:
- 2217 01dc 756E7369 		.ascii	"unsigned int\000"
- 2217      676E6564 
- 2217      20696E74 
- 2217      00
- 2218              	.LASF18:
- 2219 01e9 4379466C 		.ascii	"CyFlash_Start\000"
- 2219      6173685F 
- 2219      53746172 
- 2219      7400
- 2220              	.LASF7:
- 2221 01f7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2221      206C6F6E 
- 2221      6720756E 
- 2221      7369676E 
- 2221      65642069 
- 2222              	.LASF38:
- 2223 020e 43794545 		.ascii	"CyEEPROM_ReadReserve\000"
- 2223      50524F4D 
- 2223      5F526561 
- 2223      64526573 
- 2223      65727665 
- 2224              	.LASF17:
- 2225 0223 73697A65 		.ascii	"sizetype\000"
- 2225      74797065 
- 2225      00
- 2226              	.LASF26:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 55
+ 2216              	.LASF43:
+ 2217 01dc 433A5C73 		.ascii	"C:\\school\\me135\\PSOC\\jelly_cypress_workspace.cy"
+ 2217      63686F6F 
+ 2217      6C5C6D65 
+ 2217      3133355C 
+ 2217      50534F43 
+ 2218 020b 64736E00 		.ascii	"dsn\000"
+ 2219              	.LASF8:
+ 2220 020f 756E7369 		.ascii	"unsigned int\000"
+ 2220      676E6564 
+ 2220      20696E74 
+ 2220      00
+ 2221              	.LASF18:
+ 2222 021c 4379466C 		.ascii	"CyFlash_Start\000"
+ 2222      6173685F 
+ 2222      53746172 
+ 2222      7400
+ 2223              	.LASF7:
+ 2224 022a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2224      206C6F6E 
+ 2224      6720756E 
+ 2224      7369676E 
+ 2224      65642069 
+ 2225              	.LASF38:
+ 2226 0241 43794545 		.ascii	"CyEEPROM_ReadReserve\000"
+ 2226      50524F4D 
+ 2226      5F526561 
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 55
 
 
- 2227 022c 43795365 		.ascii	"CySetTemp\000"
- 2227      7454656D 
- 2227      7000
- 2228              	.LASF6:
- 2229 0236 6C6F6E67 		.ascii	"long long int\000"
- 2229      206C6F6E 
- 2229      6720696E 
- 2229      7400
- 2230              	.LASF22:
- 2231 0244 726F7741 		.ascii	"rowAddress\000"
- 2231      64647265 
- 2231      737300
- 2232              	.LASF13:
- 2233 024f 63686172 		.ascii	"char\000"
- 2233      00
- 2234              	.LASF44:
- 2235 0254 43795365 		.ascii	"CySetTempInt\000"
- 2235      7454656D 
- 2235      70496E74 
- 2235      00
- 2236              	.LASF43:
- 2237 0261 433A5C73 		.ascii	"C:\\school\\me135\\PSOC\\VESC_Serial_PWM.cydsn\000"
- 2237      63686F6F 
- 2237      6C5C6D65 
- 2237      3133355C 
- 2237      50534F43 
- 2238              	.LASF24:
- 2239 028c 4379466C 		.ascii	"CyFlash_EraseRow\000"
- 2239      6173685F 
- 2239      45726173 
- 2239      65526F77 
- 2239      00
- 2240              	.LASF35:
- 2241 029d 66726571 		.ascii	"freq\000"
- 2241      00
- 2242              	.LASF28:
- 2243 02a2 62756666 		.ascii	"buffer\000"
- 2243      657200
- 2244              	.LASF4:
- 2245 02a9 6C6F6E67 		.ascii	"long int\000"
- 2245      20696E74 
- 2245      00
- 2246              	.LASF19:
- 2247 02b2 4379466C 		.ascii	"CyFlash_Stop\000"
- 2247      6173685F 
- 2247      53746F70 
- 2247      00
- 2248              	.LASF33:
- 2249 02bf 726F774E 		.ascii	"rowNumber\000"
- 2249      756D6265 
- 2249      7200
- 2250              	.LASF16:
- 2251 02c9 6C6F6E67 		.ascii	"long double\000"
- 2251      20646F75 
- 2251      626C6500 
- 2252              	.LASF0:
- 2253 02d5 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cci75KYj.s 			page 56
+ 2226      64526573 
+ 2226      65727665 
+ 2227              	.LASF17:
+ 2228 0256 73697A65 		.ascii	"sizetype\000"
+ 2228      74797065 
+ 2228      00
+ 2229              	.LASF26:
+ 2230 025f 43795365 		.ascii	"CySetTemp\000"
+ 2230      7454656D 
+ 2230      7000
+ 2231              	.LASF6:
+ 2232 0269 6C6F6E67 		.ascii	"long long int\000"
+ 2232      206C6F6E 
+ 2232      6720696E 
+ 2232      7400
+ 2233              	.LASF22:
+ 2234 0277 726F7741 		.ascii	"rowAddress\000"
+ 2234      64647265 
+ 2234      737300
+ 2235              	.LASF13:
+ 2236 0282 63686172 		.ascii	"char\000"
+ 2236      00
+ 2237              	.LASF44:
+ 2238 0287 43795365 		.ascii	"CySetTempInt\000"
+ 2238      7454656D 
+ 2238      70496E74 
+ 2238      00
+ 2239              	.LASF24:
+ 2240 0294 4379466C 		.ascii	"CyFlash_EraseRow\000"
+ 2240      6173685F 
+ 2240      45726173 
+ 2240      65526F77 
+ 2240      00
+ 2241              	.LASF35:
+ 2242 02a5 66726571 		.ascii	"freq\000"
+ 2242      00
+ 2243              	.LASF28:
+ 2244 02aa 62756666 		.ascii	"buffer\000"
+ 2244      657200
+ 2245              	.LASF4:
+ 2246 02b1 6C6F6E67 		.ascii	"long int\000"
+ 2246      20696E74 
+ 2246      00
+ 2247              	.LASF19:
+ 2248 02ba 4379466C 		.ascii	"CyFlash_Stop\000"
+ 2248      6173685F 
+ 2248      53746F70 
+ 2248      00
+ 2249              	.LASF33:
+ 2250 02c7 726F774E 		.ascii	"rowNumber\000"
+ 2250      756D6265 
+ 2250      7200
+ 2251              	.LASF16:
+ 2252 02d1 6C6F6E67 		.ascii	"long double\000"
+ 2252      20646F75 
+ 2252      626C6500 
+ 2253              	.LASF0:
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cckDwiOy.s 			page 56
 
 
- 2253      65642063 
- 2253      68617200 
- 2254              	.LASF29:
- 2255 02e1 43795772 		.ascii	"CyWriteRowData\000"
- 2255      69746552 
- 2255      6F774461 
- 2255      746100
- 2256              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2254 02dd 7369676E 		.ascii	"signed char\000"
+ 2254      65642063 
+ 2254      68617200 
+ 2255              	.LASF29:
+ 2256 02e9 43795772 		.ascii	"CyWriteRowData\000"
+ 2256      69746552 
+ 2256      6F774461 
+ 2256      746100
+ 2257              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

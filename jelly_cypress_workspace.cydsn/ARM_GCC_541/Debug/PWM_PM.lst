@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
   23:Generated_Source\PSoC5/PWM_PM.c **** /*******************************************************************************
   24:Generated_Source\PSoC5/PWM_PM.c **** * Function Name: PWM_SaveConfig
   25:Generated_Source\PSoC5/PWM_PM.c **** ********************************************************************************
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 2
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 2
 
 
   26:Generated_Source\PSoC5/PWM_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
   58:Generated_Source\PSoC5/PWM_PM.c **** 
   59:Generated_Source\PSoC5/PWM_PM.c ****         #if(PWM_KillModeMinTime)
   60:Generated_Source\PSoC5/PWM_PM.c ****              PWM_backup.PWMKillCounterPeriod = PWM_ReadKillTime();
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 3
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 3
 
 
   61:Generated_Source\PSoC5/PWM_PM.c ****         #endif /* (PWM_KillModeMinTime) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
   79              		.cfi_startproc
   80              		@ args = 0, pretend = 0, frame = 0
   81              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 4
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 4
 
 
   82 0000 80B5     		push	{r7, lr}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  111              	.LFE1:
  112              		.size	PWM_RestoreConfig, .-PWM_RestoreConfig
  113              		.section	.text.PWM_Sleep,"ax",%progbits
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 5
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 5
 
 
  114              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  140 0012 0122     		movs	r2, #1
  141 0014 1A70     		strb	r2, [r3]
  142 0016 02E0     		b	.L9
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 6
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 6
 
 
  143              	.L8:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  168:Generated_Source\PSoC5/PWM_PM.c **** *  None
  169:Generated_Source\PSoC5/PWM_PM.c **** *
  170:Generated_Source\PSoC5/PWM_PM.c **** * Return:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 7
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 7
 
 
  171:Generated_Source\PSoC5/PWM_PM.c **** *  None
@@ -418,23 +418,23 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  207              	.Ldebug_info0:
  208 0000 4D010000 		.4byte	0x14d
  209 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 8
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 8
 
 
  210 0006 00000000 		.4byte	.Ldebug_abbrev0
  211 000a 04       		.byte	0x4
  212 000b 01       		.uleb128 0x1
- 213 000c 8D010000 		.4byte	.LASF26
+ 213 000c 95010000 		.4byte	.LASF26
  214 0010 0C       		.byte	0xc
- 215 0011 6D010000 		.4byte	.LASF27
- 216 0015 17010000 		.4byte	.LASF28
+ 215 0011 75010000 		.4byte	.LASF27
+ 216 0015 C8000000 		.4byte	.LASF28
  217 0019 00000000 		.4byte	.Ldebug_ranges0+0
  218 001d 00000000 		.4byte	0
  219 0021 00000000 		.4byte	.Ldebug_line0
  220 0025 02       		.uleb128 0x2
  221 0026 01       		.byte	0x1
  222 0027 06       		.byte	0x6
- 223 0028 61010000 		.4byte	.LASF0
+ 223 0028 69010000 		.4byte	.LASF0
  224 002c 02       		.uleb128 0x2
  225 002d 01       		.byte	0x1
  226 002e 08       		.byte	0x8
@@ -442,7 +442,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  228 0033 02       		.uleb128 0x2
  229 0034 02       		.byte	0x2
  230 0035 05       		.byte	0x5
- 231 0036 42010000 		.4byte	.LASF2
+ 231 0036 4A010000 		.4byte	.LASF2
  232 003a 02       		.uleb128 0x2
  233 003b 02       		.byte	0x2
  234 003c 07       		.byte	0x7
@@ -450,7 +450,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  236 0041 02       		.uleb128 0x2
  237 0042 04       		.byte	0x4
  238 0043 05       		.byte	0x5
- 239 0044 4C010000 		.4byte	.LASF4
+ 239 0044 54010000 		.4byte	.LASF4
  240 0048 02       		.uleb128 0x2
  241 0049 04       		.byte	0x4
  242 004a 07       		.byte	0x7
@@ -458,11 +458,11 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  244 004f 02       		.uleb128 0x2
  245 0050 08       		.byte	0x8
  246 0051 05       		.byte	0x5
- 247 0052 04010000 		.4byte	.LASF6
+ 247 0052 37010000 		.4byte	.LASF6
  248 0056 02       		.uleb128 0x2
  249 0057 08       		.byte	0x8
  250 0058 07       		.byte	0x7
- 251 0059 D5000000 		.4byte	.LASF7
+ 251 0059 08010000 		.4byte	.LASF7
  252 005d 03       		.uleb128 0x3
  253 005e 04       		.byte	0x4
  254 005f 05       		.byte	0x5
@@ -470,7 +470,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  256 0064 02       		.uleb128 0x2
  257 0065 04       		.byte	0x4
  258 0066 07       		.byte	0x7
- 259 0067 C8000000 		.4byte	.LASF8
+ 259 0067 FB000000 		.4byte	.LASF8
  260 006b 04       		.uleb128 0x4
  261 006c 87000000 		.4byte	.LASF9
  262 0070 02       		.byte	0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  264 0073 2C000000 		.4byte	0x2c
  265 0077 04       		.uleb128 0x4
  266 0078 C1000000 		.4byte	.LASF10
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 9
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 9
 
 
  267 007c 02       		.byte	0x2
@@ -495,9 +495,9 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  278 0091 02       		.uleb128 0x2
  279 0092 01       		.byte	0x1
  280 0093 08       		.byte	0x8
- 281 0094 12010000 		.4byte	.LASF13
+ 281 0094 45010000 		.4byte	.LASF13
  282 0098 04       		.uleb128 0x4
- 283 0099 F6000000 		.4byte	.LASF14
+ 283 0099 29010000 		.4byte	.LASF14
  284 009d 02       		.byte	0x2
  285 009e 8E02     		.2byte	0x28e
  286 00a0 A4000000 		.4byte	0xa4
@@ -506,11 +506,11 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  289 00a9 02       		.uleb128 0x2
  290 00aa 08       		.byte	0x8
  291 00ab 04       		.byte	0x4
- 292 00ac 55010000 		.4byte	.LASF15
+ 292 00ac 5D010000 		.4byte	.LASF15
  293 00b0 02       		.uleb128 0x2
  294 00b1 04       		.byte	0x4
  295 00b2 07       		.byte	0x7
- 296 00b3 FB000000 		.4byte	.LASF16
+ 296 00b3 2E010000 		.4byte	.LASF16
  297 00b7 06       		.uleb128 0x6
  298 00b8 08       		.byte	0x8
  299 00b9 03       		.byte	0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  321 00e4 98000000 		.4byte	.LASF20
  322 00e8 03       		.byte	0x3
  323 00e9 86       		.byte	0x86
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 10
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 10
 
 
  324 00ea 6B000000 		.4byte	0x6b
@@ -566,7 +566,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  346 011b 01       		.uleb128 0x1
  347 011c 9C       		.byte	0x9c
  348 011d 09       		.uleb128 0x9
- 349 011e EC000000 		.4byte	.LASF24
+ 349 011e 1F010000 		.4byte	.LASF24
  350 0122 01       		.byte	0x1
  351 0123 88       		.byte	0x88
  352 0124 00000000 		.4byte	.LFB2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  378 0003 25       		.uleb128 0x25
  379 0004 0E       		.uleb128 0xe
  380 0005 13       		.uleb128 0x13
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 11
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 11
 
 
  381 0006 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  435 003c 00       		.byte	0
  436 003d 06       		.uleb128 0x6
  437 003e 13       		.uleb128 0x13
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 12
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 12
 
 
  438 003f 01       		.byte	0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  492 0075 12       		.uleb128 0x12
  493 0076 06       		.uleb128 0x6
  494 0077 40       		.uleb128 0x40
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 13
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 13
 
 
  495 0078 18       		.uleb128 0x18
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  548      02004C00 
  548      00000201 
  548      FB0E0D00 
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 14
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 14
 
 
  548      01010101 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  572      57616B65 
  572      757000
  573              	.LASF20:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 15
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 15
 
 
  574 0098 50574D43 		.ascii	"PWMControlRegister\000"
@@ -857,81 +857,82 @@ ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 1
  579              	.LASF10:
  580 00c1 75696E74 		.ascii	"uint16\000"
  580      313600
- 581              	.LASF8:
- 582 00c8 756E7369 		.ascii	"unsigned int\000"
- 582      676E6564 
- 582      20696E74 
- 582      00
- 583              	.LASF7:
- 584 00d5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 584      206C6F6E 
- 584      6720756E 
- 584      7369676E 
- 584      65642069 
- 585              	.LASF24:
- 586 00ec 50574D5F 		.ascii	"PWM_Sleep\000"
- 586      536C6565 
- 586      7000
- 587              	.LASF14:
- 588 00f6 72656738 		.ascii	"reg8\000"
- 588      00
- 589              	.LASF16:
- 590 00fb 73697A65 		.ascii	"sizetype\000"
- 590      74797065 
- 590      00
- 591              	.LASF6:
- 592 0104 6C6F6E67 		.ascii	"long long int\000"
- 592      206C6F6E 
- 592      6720696E 
- 592      7400
- 593              	.LASF13:
- 594 0112 63686172 		.ascii	"char\000"
- 594      00
- 595              	.LASF28:
- 596 0117 433A5C73 		.ascii	"C:\\school\\me135\\PSOC\\VESC_Serial_PWM.cydsn\000"
- 596      63686F6F 
- 596      6C5C6D65 
- 596      3133355C 
- 596      50534F43 
- 597              	.LASF2:
- 598 0142 73686F72 		.ascii	"short int\000"
- 598      7420696E 
- 598      7400
- 599              	.LASF4:
-ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc9j1FK3.s 			page 16
+ 581              	.LASF28:
+ 582 00c8 433A5C73 		.ascii	"C:\\school\\me135\\PSOC\\jelly_cypress_workspace.cy"
+ 582      63686F6F 
+ 582      6C5C6D65 
+ 582      3133355C 
+ 582      50534F43 
+ 583 00f7 64736E00 		.ascii	"dsn\000"
+ 584              	.LASF8:
+ 585 00fb 756E7369 		.ascii	"unsigned int\000"
+ 585      676E6564 
+ 585      20696E74 
+ 585      00
+ 586              	.LASF7:
+ 587 0108 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 587      206C6F6E 
+ 587      6720756E 
+ 587      7369676E 
+ 587      65642069 
+ 588              	.LASF24:
+ 589 011f 50574D5F 		.ascii	"PWM_Sleep\000"
+ 589      536C6565 
+ 589      7000
+ 590              	.LASF14:
+ 591 0129 72656738 		.ascii	"reg8\000"
+ 591      00
+ 592              	.LASF16:
+ 593 012e 73697A65 		.ascii	"sizetype\000"
+ 593      74797065 
+ 593      00
+ 594              	.LASF6:
+ 595 0137 6C6F6E67 		.ascii	"long long int\000"
+ 595      206C6F6E 
+ 595      6720696E 
+ 595      7400
+ 596              	.LASF13:
+ 597 0145 63686172 		.ascii	"char\000"
+ 597      00
+ 598              	.LASF2:
+ 599 014a 73686F72 		.ascii	"short int\000"
+ 599      7420696E 
+ 599      7400
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\ccBRsjAd.s 			page 16
 
 
- 600 014c 6C6F6E67 		.ascii	"long int\000"
- 600      20696E74 
- 600      00
- 601              	.LASF15:
- 602 0155 6C6F6E67 		.ascii	"long double\000"
- 602      20646F75 
- 602      626C6500 
- 603              	.LASF0:
- 604 0161 7369676E 		.ascii	"signed char\000"
- 604      65642063 
- 604      68617200 
- 605              	.LASF27:
- 606 016d 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_PM.c\000"
- 606      72617465 
- 606      645F536F 
- 606      75726365 
- 606      5C50536F 
- 607              	.LASF26:
- 608 018d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 608      43313120 
- 608      352E342E 
- 608      31203230 
- 608      31363036 
- 609 01c0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 609      20726576 
- 609      6973696F 
- 609      6E203233 
- 609      37373135 
- 610 01f3 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 610      66756E63 
- 610      74696F6E 
- 610      2D736563 
- 610      74696F6E 
- 611              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 600              	.LASF4:
+ 601 0154 6C6F6E67 		.ascii	"long int\000"
+ 601      20696E74 
+ 601      00
+ 602              	.LASF15:
+ 603 015d 6C6F6E67 		.ascii	"long double\000"
+ 603      20646F75 
+ 603      626C6500 
+ 604              	.LASF0:
+ 605 0169 7369676E 		.ascii	"signed char\000"
+ 605      65642063 
+ 605      68617200 
+ 606              	.LASF27:
+ 607 0175 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_PM.c\000"
+ 607      72617465 
+ 607      645F536F 
+ 607      75726365 
+ 607      5C50536F 
+ 608              	.LASF26:
+ 609 0195 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 609      43313120 
+ 609      352E342E 
+ 609      31203230 
+ 609      31363036 
+ 610 01c8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 610      20726576 
+ 610      6973696F 
+ 610      6E203233 
+ 610      37373135 
+ 611 01fb 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 611      66756E63 
+ 611      74696F6E 
+ 611      2D736563 
+ 611      74696F6E 
+ 612              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

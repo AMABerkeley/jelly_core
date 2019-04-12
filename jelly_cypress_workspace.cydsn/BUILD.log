@@ -1,14 +1,50 @@
---------------- Build Started: 04/11/2019 19:21:05 Project: VESC_Serial_PWM, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-The code generation step is up to date.
+--------------- Build Started: 04/11/2019 22:00:20 Project: jelly_cypress_workspace, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\joshu_000\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\jelly_cypress_workspace.cyprj -d CY8C5888LTI-LP097 -s C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/main.lst -g -ffunction-sections -ffat-lto-objects -O0 -c main.c -o .\ARM_GCC_541\Debug\main.o
-arm-none-eabi-ar.exe -rs .\ARM_GCC_541\Debug\VESC_Serial_PWM.a .\ARM_GCC_541\Debug\clock_1.o .\ARM_GCC_541\Debug\PWM_Out.o .\ARM_GCC_541\Debug\Kill_Switch.o .\ARM_GCC_541\Debug\CyDmac.o .\ARM_GCC_541\Debug\CyFlash.o .\ARM_GCC_541\Debug\CyLib.o .\ARM_GCC_541\Debug\cyPm.o .\ARM_GCC_541\Debug\CySpc.o .\ARM_GCC_541\Debug\cyutils.o .\ARM_GCC_541\Debug\cy_em_eeprom.o .\ARM_GCC_541\Debug\PWM.o .\ARM_GCC_541\Debug\PWM_PM.o .\ARM_GCC_541\Debug\UART.o .\ARM_GCC_541\Debug\UART_PM.o .\ARM_GCC_541\Debug\UART_INT.o .\ARM_GCC_541\Debug\UART_BOOT.o .\ARM_GCC_541\Debug\UART_IntClock.o .\ARM_GCC_541\Debug\CyBootAsmGnu.o
-arm-none-eabi-ar.exe: creating .\ARM_GCC_541\Debug\VESC_Serial_PWM.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\ARM_GCC_541\Debug\VESC_Serial_PWM.elf .\ARM_GCC_541\Debug\main.o .\ARM_GCC_541\Debug\cyfitter_cfg.o .\ARM_GCC_541\Debug\cymetadata.o .\ARM_GCC_541\Debug\Cm3Start.o .\ARM_GCC_541\Debug\VESC_Serial_PWM.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\ARM_GCC_541\Debug/VESC_Serial_PWM.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -O0 -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\ARM_GCC_541\Debug\VESC_Serial_PWM.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\ARM_GCC_541\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/cymetadata.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\cymetadata.c -o .\ARM_GCC_541\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/clock_1.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\clock_1.c -o .\ARM_GCC_541\Debug\clock_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/PWM_Out.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\PWM_Out.c -o .\ARM_GCC_541\Debug\PWM_Out.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/Kill_Switch.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\Kill_Switch.c -o .\ARM_GCC_541\Debug\Kill_Switch.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/Cm3Start.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\Cm3Start.c -o .\ARM_GCC_541\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/CyDmac.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\CyDmac.c -o .\ARM_GCC_541\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/CyFlash.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\CyFlash.c -o .\ARM_GCC_541\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/CyLib.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\CyLib.c -o .\ARM_GCC_541\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/cyPm.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\cyPm.c -o .\ARM_GCC_541\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/CySpc.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\CySpc.c -o .\ARM_GCC_541\Debug\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/cyutils.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\cyutils.c -o .\ARM_GCC_541\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/cy_em_eeprom.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\cy_em_eeprom.c -o .\ARM_GCC_541\Debug\cy_em_eeprom.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/PWM.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\PWM.c -o .\ARM_GCC_541\Debug\PWM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/PWM_PM.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\PWM_PM.c -o .\ARM_GCC_541\Debug\PWM_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/UART.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\UART.c -o .\ARM_GCC_541\Debug\UART.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/UART_PM.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\UART_PM.c -o .\ARM_GCC_541\Debug\UART_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/UART_INT.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\UART_INT.c -o .\ARM_GCC_541\Debug\UART_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/UART_BOOT.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\UART_BOOT.c -o .\ARM_GCC_541\Debug\UART_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_541\Debug/UART_IntClock.lst -g -ffunction-sections -ffat-lto-objects -O0 -c Generated_Source\PSoC5\UART_IntClock.c -o .\ARM_GCC_541\Debug\UART_IntClock.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -o .\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\ARM_GCC_541\Debug\jelly_cypress_workspace.a .\ARM_GCC_541\Debug\clock_1.o .\ARM_GCC_541\Debug\PWM_Out.o .\ARM_GCC_541\Debug\Kill_Switch.o .\ARM_GCC_541\Debug\CyDmac.o .\ARM_GCC_541\Debug\CyFlash.o .\ARM_GCC_541\Debug\CyLib.o .\ARM_GCC_541\Debug\cyPm.o .\ARM_GCC_541\Debug\CySpc.o .\ARM_GCC_541\Debug\cyutils.o .\ARM_GCC_541\Debug\cy_em_eeprom.o .\ARM_GCC_541\Debug\PWM.o .\ARM_GCC_541\Debug\PWM_PM.o .\ARM_GCC_541\Debug\UART.o .\ARM_GCC_541\Debug\UART_PM.o .\ARM_GCC_541\Debug\UART_INT.o .\ARM_GCC_541\Debug\UART_BOOT.o .\ARM_GCC_541\Debug\UART_IntClock.o .\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\ARM_GCC_541\Debug\jelly_cypress_workspace.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\ARM_GCC_541\Debug\jelly_cypress_workspace.elf .\ARM_GCC_541\Debug\main.o .\ARM_GCC_541\Debug\cyfitter_cfg.o .\ARM_GCC_541\Debug\cymetadata.o .\ARM_GCC_541\Debug\Cm3Start.o .\ARM_GCC_541\Debug\jelly_cypress_workspace.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\ARM_GCC_541\Debug/jelly_cypress_workspace.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -O0 -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\ARM_GCC_541\Debug\jelly_cypress_workspace.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\ARM_GCC_541\Debug\VESC_Serial_PWM.elf
-Flash used: 3166 of 262144 bytes (1.2%).
-SRAM used: 2533 of 65536 bytes (3.9%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 04/11/2019 19:21:07 ---------------
+cyelftool.exe -S C:\school\me135\PSOC\jelly_cypress_workspace.cydsn\ARM_GCC_541\Debug\jelly_cypress_workspace.elf
+Flash used: 3992 of 262144 bytes (1.5%).
+SRAM used: 2541 of 65536 bytes (3.9%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 04/11/2019 22:00:40 ---------------
