@@ -7,10 +7,11 @@ This includes the ros packages to control the robot.
 
 ### Setup ROS Workspace
 
-`mkdir -p catkin_ws/src`\
-`cd catkin_ws/src`\
+`mkdir -p jelly_ws/src`\
+`cd jelly_ws/src`\
 `catkin_init_workspace`\
 `git clone https://github.com/AMABerkeley/jelly.git`\
+`cd jelly`
 `git submodule init`\
 `git submodule update`
 
