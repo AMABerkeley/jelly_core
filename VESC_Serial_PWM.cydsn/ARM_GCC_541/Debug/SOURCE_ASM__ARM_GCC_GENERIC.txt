@@ -1,0 +1,1 @@
+'C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s' -o .o -T SOURCE_ASM__ARM_GCC_GENERIC -I 'C:\school\me135\PSOC\VESC_Serial_PWM.cydsn' -I 'C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\Generated_Source\PSoC5' -f 'C:\school\me135\PSOC\VESC_Serial_PWM.cydsn\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.d'

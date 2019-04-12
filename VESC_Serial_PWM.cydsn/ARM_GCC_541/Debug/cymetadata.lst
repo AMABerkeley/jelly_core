@@ -1,0 +1,3177 @@
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_meta_configecc
+  20              		.section	.cyconfigecc,"a",%progbits
+  21              		.align	2
+  22              		.type	cy_meta_configecc, %object
+  23              		.size	cy_meta_configecc, 2544
+  24              	cy_meta_configecc:
+  25 0000 02       		.byte	2
+  26 0001 00       		.byte	0
+  27 0002 00       		.byte	0
+  28 0003 00       		.byte	0
+  29 0004 04       		.byte	4
+  30 0005 00       		.byte	0
+  31 0006 00       		.byte	0
+  32 0007 00       		.byte	0
+  33 0008 80       		.byte	-128
+  34 0009 80       		.byte	-128
+  35 000a 00       		.byte	0
+  36 000b 00       		.byte	0
+  37 000c 40       		.byte	64
+  38 000d 00       		.byte	0
+  39 000e 00       		.byte	0
+  40 000f 00       		.byte	0
+  41 0010 00       		.byte	0
+  42 0011 00       		.byte	0
+  43 0012 00       		.byte	0
+  44 0013 00       		.byte	0
+  45 0014 00       		.byte	0
+  46 0015 00       		.byte	0
+  47 0016 00       		.byte	0
+  48 0017 00       		.byte	0
+  49 0018 00       		.byte	0
+  50 0019 00       		.byte	0
+  51 001a 00       		.byte	0
+  52 001b 00       		.byte	0
+  53 001c 00       		.byte	0
+  54 001d 00       		.byte	0
+  55 001e 00       		.byte	0
+  56 001f 00       		.byte	0
+  57 0020 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 2
+
+
+  58 0021 00       		.byte	0
+  59 0022 00       		.byte	0
+  60 0023 00       		.byte	0
+  61 0024 00       		.byte	0
+  62 0025 00       		.byte	0
+  63 0026 00       		.byte	0
+  64 0027 00       		.byte	0
+  65 0028 00       		.byte	0
+  66 0029 00       		.byte	0
+  67 002a 00       		.byte	0
+  68 002b 00       		.byte	0
+  69 002c 00       		.byte	0
+  70 002d 00       		.byte	0
+  71 002e 00       		.byte	0
+  72 002f 00       		.byte	0
+  73 0030 00       		.byte	0
+  74 0031 00       		.byte	0
+  75 0032 00       		.byte	0
+  76 0033 00       		.byte	0
+  77 0034 00       		.byte	0
+  78 0035 00       		.byte	0
+  79 0036 00       		.byte	0
+  80 0037 00       		.byte	0
+  81 0038 00       		.byte	0
+  82 0039 00       		.byte	0
+  83 003a 00       		.byte	0
+  84 003b 00       		.byte	0
+  85 003c 00       		.byte	0
+  86 003d 00       		.byte	0
+  87 003e 00       		.byte	0
+  88 003f 00       		.byte	0
+  89 0040 00       		.byte	0
+  90 0041 00       		.byte	0
+  91 0042 00       		.byte	0
+  92 0043 00       		.byte	0
+  93 0044 00       		.byte	0
+  94 0045 00       		.byte	0
+  95 0046 00       		.byte	0
+  96 0047 00       		.byte	0
+  97 0048 00       		.byte	0
+  98 0049 00       		.byte	0
+  99 004a 00       		.byte	0
+ 100 004b 00       		.byte	0
+ 101 004c 00       		.byte	0
+ 102 004d 00       		.byte	0
+ 103 004e 00       		.byte	0
+ 104 004f 00       		.byte	0
+ 105 0050 60       		.byte	96
+ 106 0051 02       		.byte	2
+ 107 0052 00       		.byte	0
+ 108 0053 00       		.byte	0
+ 109 0054 00       		.byte	0
+ 110 0055 00       		.byte	0
+ 111 0056 00       		.byte	0
+ 112 0057 00       		.byte	0
+ 113 0058 00       		.byte	0
+ 114 0059 FF       		.byte	-1
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 3
+
+
+ 115 005a FF       		.byte	-1
+ 116 005b FF       		.byte	-1
+ 117 005c 00       		.byte	0
+ 118 005d A0       		.byte	-96
+ 119 005e 00       		.byte	0
+ 120 005f 04       		.byte	4
+ 121 0060 18       		.byte	24
+ 122 0061 00       		.byte	0
+ 123 0062 00       		.byte	0
+ 124 0063 00       		.byte	0
+ 125 0064 00       		.byte	0
+ 126 0065 00       		.byte	0
+ 127 0066 00       		.byte	0
+ 128 0067 00       		.byte	0
+ 129 0068 00       		.byte	0
+ 130 0069 00       		.byte	0
+ 131 006a 04       		.byte	4
+ 132 006b 00       		.byte	0
+ 133 006c 00       		.byte	0
+ 134 006d 00       		.byte	0
+ 135 006e 00       		.byte	0
+ 136 006f 01       		.byte	1
+ 137 0070 40       		.byte	64
+ 138 0071 00       		.byte	0
+ 139 0072 C0       		.byte	-64
+ 140 0073 00       		.byte	0
+ 141 0074 40       		.byte	64
+ 142 0075 40       		.byte	64
+ 143 0076 C0       		.byte	-64
+ 144 0077 00       		.byte	0
+ 145 0078 C0       		.byte	-64
+ 146 0079 00       		.byte	0
+ 147 007a C0       		.byte	-64
+ 148 007b 00       		.byte	0
+ 149 007c C0       		.byte	-64
+ 150 007d 00       		.byte	0
+ 151 007e C0       		.byte	-64
+ 152 007f 00       		.byte	0
+ 153 0080 00       		.byte	0
+ 154 0081 00       		.byte	0
+ 155 0082 00       		.byte	0
+ 156 0083 00       		.byte	0
+ 157 0084 00       		.byte	0
+ 158 0085 00       		.byte	0
+ 159 0086 00       		.byte	0
+ 160 0087 00       		.byte	0
+ 161 0088 00       		.byte	0
+ 162 0089 00       		.byte	0
+ 163 008a 00       		.byte	0
+ 164 008b 00       		.byte	0
+ 165 008c 00       		.byte	0
+ 166 008d 00       		.byte	0
+ 167 008e 00       		.byte	0
+ 168 008f 00       		.byte	0
+ 169 0090 00       		.byte	0
+ 170 0091 00       		.byte	0
+ 171 0092 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 4
+
+
+ 172 0093 00       		.byte	0
+ 173 0094 00       		.byte	0
+ 174 0095 00       		.byte	0
+ 175 0096 02       		.byte	2
+ 176 0097 00       		.byte	0
+ 177 0098 00       		.byte	0
+ 178 0099 00       		.byte	0
+ 179 009a 00       		.byte	0
+ 180 009b 00       		.byte	0
+ 181 009c 00       		.byte	0
+ 182 009d 00       		.byte	0
+ 183 009e 00       		.byte	0
+ 184 009f 00       		.byte	0
+ 185 00a0 00       		.byte	0
+ 186 00a1 00       		.byte	0
+ 187 00a2 01       		.byte	1
+ 188 00a3 00       		.byte	0
+ 189 00a4 00       		.byte	0
+ 190 00a5 00       		.byte	0
+ 191 00a6 00       		.byte	0
+ 192 00a7 00       		.byte	0
+ 193 00a8 00       		.byte	0
+ 194 00a9 00       		.byte	0
+ 195 00aa 00       		.byte	0
+ 196 00ab 00       		.byte	0
+ 197 00ac 00       		.byte	0
+ 198 00ad 00       		.byte	0
+ 199 00ae 00       		.byte	0
+ 200 00af 00       		.byte	0
+ 201 00b0 02       		.byte	2
+ 202 00b1 00       		.byte	0
+ 203 00b2 00       		.byte	0
+ 204 00b3 00       		.byte	0
+ 205 00b4 02       		.byte	2
+ 206 00b5 00       		.byte	0
+ 207 00b6 00       		.byte	0
+ 208 00b7 00       		.byte	0
+ 209 00b8 00       		.byte	0
+ 210 00b9 00       		.byte	0
+ 211 00ba 00       		.byte	0
+ 212 00bb 00       		.byte	0
+ 213 00bc 00       		.byte	0
+ 214 00bd 00       		.byte	0
+ 215 00be 00       		.byte	0
+ 216 00bf 00       		.byte	0
+ 217 00c0 02       		.byte	2
+ 218 00c1 00       		.byte	0
+ 219 00c2 00       		.byte	0
+ 220 00c3 00       		.byte	0
+ 221 00c4 01       		.byte	1
+ 222 00c5 00       		.byte	0
+ 223 00c6 00       		.byte	0
+ 224 00c7 00       		.byte	0
+ 225 00c8 00       		.byte	0
+ 226 00c9 00       		.byte	0
+ 227 00ca 00       		.byte	0
+ 228 00cb 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 5
+
+
+ 229 00cc 00       		.byte	0
+ 230 00cd 00       		.byte	0
+ 231 00ce 00       		.byte	0
+ 232 00cf 00       		.byte	0
+ 233 00d0 20       		.byte	32
+ 234 00d1 06       		.byte	6
+ 235 00d2 00       		.byte	0
+ 236 00d3 00       		.byte	0
+ 237 00d4 00       		.byte	0
+ 238 00d5 01       		.byte	1
+ 239 00d6 00       		.byte	0
+ 240 00d7 02       		.byte	2
+ 241 00d8 13       		.byte	19
+ 242 00d9 FF       		.byte	-1
+ 243 00da FF       		.byte	-1
+ 244 00db FF       		.byte	-1
+ 245 00dc 00       		.byte	0
+ 246 00dd AF       		.byte	-81
+ 247 00de 0F       		.byte	15
+ 248 00df 04       		.byte	4
+ 249 00e0 18       		.byte	24
+ 250 00e1 00       		.byte	0
+ 251 00e2 80       		.byte	-128
+ 252 00e3 00       		.byte	0
+ 253 00e4 00       		.byte	0
+ 254 00e5 00       		.byte	0
+ 255 00e6 00       		.byte	0
+ 256 00e7 00       		.byte	0
+ 257 00e8 04       		.byte	4
+ 258 00e9 00       		.byte	0
+ 259 00ea 04       		.byte	4
+ 260 00eb 04       		.byte	4
+ 261 00ec 00       		.byte	0
+ 262 00ed 00       		.byte	0
+ 263 00ee 00       		.byte	0
+ 264 00ef 01       		.byte	1
+ 265 00f0 40       		.byte	64
+ 266 00f1 00       		.byte	0
+ 267 00f2 C0       		.byte	-64
+ 268 00f3 00       		.byte	0
+ 269 00f4 40       		.byte	64
+ 270 00f5 40       		.byte	64
+ 271 00f6 C0       		.byte	-64
+ 272 00f7 00       		.byte	0
+ 273 00f8 C0       		.byte	-64
+ 274 00f9 00       		.byte	0
+ 275 00fa C0       		.byte	-64
+ 276 00fb 00       		.byte	0
+ 277 00fc C0       		.byte	-64
+ 278 00fd 00       		.byte	0
+ 279 00fe C0       		.byte	-64
+ 280 00ff 00       		.byte	0
+ 281 0100 00       		.byte	0
+ 282 0101 00       		.byte	0
+ 283 0102 00       		.byte	0
+ 284 0103 00       		.byte	0
+ 285 0104 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 6
+
+
+ 286 0105 00       		.byte	0
+ 287 0106 00       		.byte	0
+ 288 0107 00       		.byte	0
+ 289 0108 00       		.byte	0
+ 290 0109 00       		.byte	0
+ 291 010a 00       		.byte	0
+ 292 010b 00       		.byte	0
+ 293 010c 00       		.byte	0
+ 294 010d 00       		.byte	0
+ 295 010e 00       		.byte	0
+ 296 010f 00       		.byte	0
+ 297 0110 DC       		.byte	-36
+ 298 0111 20       		.byte	32
+ 299 0112 22       		.byte	34
+ 300 0113 00       		.byte	0
+ 301 0114 00       		.byte	0
+ 302 0115 13       		.byte	19
+ 303 0116 20       		.byte	32
+ 304 0117 04       		.byte	4
+ 305 0118 0C       		.byte	12
+ 306 0119 03       		.byte	3
+ 307 011a 71       		.byte	113
+ 308 011b 14       		.byte	20
+ 309 011c 10       		.byte	16
+ 310 011d 00       		.byte	0
+ 311 011e AC       		.byte	-84
+ 312 011f 00       		.byte	0
+ 313 0120 00       		.byte	0
+ 314 0121 13       		.byte	19
+ 315 0122 00       		.byte	0
+ 316 0123 0C       		.byte	12
+ 317 0124 00       		.byte	0
+ 318 0125 00       		.byte	0
+ 319 0126 03       		.byte	3
+ 320 0127 00       		.byte	0
+ 321 0128 14       		.byte	20
+ 322 0129 00       		.byte	0
+ 323 012a 00       		.byte	0
+ 324 012b 15       		.byte	21
+ 325 012c 00       		.byte	0
+ 326 012d 00       		.byte	0
+ 327 012e 00       		.byte	0
+ 328 012f 00       		.byte	0
+ 329 0130 00       		.byte	0
+ 330 0131 0A       		.byte	10
+ 331 0132 00       		.byte	0
+ 332 0133 14       		.byte	20
+ 333 0134 09       		.byte	9
+ 334 0135 00       		.byte	0
+ 335 0136 D0       		.byte	-48
+ 336 0137 00       		.byte	0
+ 337 0138 10       		.byte	16
+ 338 0139 00       		.byte	0
+ 339 013a 40       		.byte	64
+ 340 013b 08       		.byte	8
+ 341 013c 00       		.byte	0
+ 342 013d 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 7
+
+
+ 343 013e 00       		.byte	0
+ 344 013f 00       		.byte	0
+ 345 0140 00       		.byte	0
+ 346 0141 10       		.byte	16
+ 347 0142 1F       		.byte	31
+ 348 0143 00       		.byte	0
+ 349 0144 E0       		.byte	-32
+ 350 0145 20       		.byte	32
+ 351 0146 00       		.byte	0
+ 352 0147 0F       		.byte	15
+ 353 0148 00       		.byte	0
+ 354 0149 00       		.byte	0
+ 355 014a 20       		.byte	32
+ 356 014b 80       		.byte	-128
+ 357 014c 00       		.byte	0
+ 358 014d 00       		.byte	0
+ 359 014e 00       		.byte	0
+ 360 014f 11       		.byte	17
+ 361 0150 43       		.byte	67
+ 362 0151 02       		.byte	2
+ 363 0152 00       		.byte	0
+ 364 0153 00       		.byte	0
+ 365 0154 00       		.byte	0
+ 366 0155 0B       		.byte	11
+ 367 0156 C0       		.byte	-64
+ 368 0157 E0       		.byte	-32
+ 369 0158 29       		.byte	41
+ 370 0159 FF       		.byte	-1
+ 371 015a FF       		.byte	-1
+ 372 015b FF       		.byte	-1
+ 373 015c 00       		.byte	0
+ 374 015d 00       		.byte	0
+ 375 015e F0       		.byte	-16
+ 376 015f 44       		.byte	68
+ 377 0160 0C       		.byte	12
+ 378 0161 00       		.byte	0
+ 379 0162 00       		.byte	0
+ 380 0163 00       		.byte	0
+ 381 0164 01       		.byte	1
+ 382 0165 00       		.byte	0
+ 383 0166 00       		.byte	0
+ 384 0167 00       		.byte	0
+ 385 0168 04       		.byte	4
+ 386 0169 04       		.byte	4
+ 387 016a 04       		.byte	4
+ 388 016b 04       		.byte	4
+ 389 016c 11       		.byte	17
+ 390 016d 11       		.byte	17
+ 391 016e 00       		.byte	0
+ 392 016f 01       		.byte	1
+ 393 0170 00       		.byte	0
+ 394 0171 00       		.byte	0
+ 395 0172 00       		.byte	0
+ 396 0173 00       		.byte	0
+ 397 0174 00       		.byte	0
+ 398 0175 00       		.byte	0
+ 399 0176 C0       		.byte	-64
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 8
+
+
+ 400 0177 00       		.byte	0
+ 401 0178 00       		.byte	0
+ 402 0179 00       		.byte	0
+ 403 017a 40       		.byte	64
+ 404 017b 02       		.byte	2
+ 405 017c 00       		.byte	0
+ 406 017d 00       		.byte	0
+ 407 017e 00       		.byte	0
+ 408 017f 00       		.byte	0
+ 409 0180 00       		.byte	0
+ 410 0181 00       		.byte	0
+ 411 0182 00       		.byte	0
+ 412 0183 00       		.byte	0
+ 413 0184 00       		.byte	0
+ 414 0185 00       		.byte	0
+ 415 0186 00       		.byte	0
+ 416 0187 00       		.byte	0
+ 417 0188 00       		.byte	0
+ 418 0189 00       		.byte	0
+ 419 018a 00       		.byte	0
+ 420 018b 00       		.byte	0
+ 421 018c 00       		.byte	0
+ 422 018d 00       		.byte	0
+ 423 018e 00       		.byte	0
+ 424 018f 00       		.byte	0
+ 425 0190 00       		.byte	0
+ 426 0191 01       		.byte	1
+ 427 0192 00       		.byte	0
+ 428 0193 0E       		.byte	14
+ 429 0194 00       		.byte	0
+ 430 0195 44       		.byte	68
+ 431 0196 00       		.byte	0
+ 432 0197 31       		.byte	49
+ 433 0198 00       		.byte	0
+ 434 0199 67       		.byte	103
+ 435 019a 0C       		.byte	12
+ 436 019b 00       		.byte	0
+ 437 019c 2C       		.byte	44
+ 438 019d 00       		.byte	0
+ 439 019e 43       		.byte	67
+ 440 019f 00       		.byte	0
+ 441 01a0 00       		.byte	0
+ 442 01a1 00       		.byte	0
+ 443 01a2 00       		.byte	0
+ 444 01a3 00       		.byte	0
+ 445 01a4 00       		.byte	0
+ 446 01a5 80       		.byte	-128
+ 447 01a6 08       		.byte	8
+ 448 01a7 00       		.byte	0
+ 449 01a8 71       		.byte	113
+ 450 01a9 67       		.byte	103
+ 451 01aa 0E       		.byte	14
+ 452 01ab 00       		.byte	0
+ 453 01ac 00       		.byte	0
+ 454 01ad 00       		.byte	0
+ 455 01ae 00       		.byte	0
+ 456 01af 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 9
+
+
+ 457 01b0 71       		.byte	113
+ 458 01b1 00       		.byte	0
+ 459 01b2 06       		.byte	6
+ 460 01b3 00       		.byte	0
+ 461 01b4 80       		.byte	-128
+ 462 01b5 22       		.byte	34
+ 463 01b6 13       		.byte	19
+ 464 01b7 51       		.byte	81
+ 465 01b8 00       		.byte	0
+ 466 01b9 00       		.byte	0
+ 467 01ba 00       		.byte	0
+ 468 01bb 00       		.byte	0
+ 469 01bc 00       		.byte	0
+ 470 01bd 00       		.byte	0
+ 471 01be 00       		.byte	0
+ 472 01bf 00       		.byte	0
+ 473 01c0 0F       		.byte	15
+ 474 01c1 07       		.byte	7
+ 475 01c2 C0       		.byte	-64
+ 476 01c3 60       		.byte	96
+ 477 01c4 30       		.byte	48
+ 478 01c5 80       		.byte	-128
+ 479 01c6 00       		.byte	0
+ 480 01c7 18       		.byte	24
+ 481 01c8 28       		.byte	40
+ 482 01c9 00       		.byte	0
+ 483 01ca 02       		.byte	2
+ 484 01cb 00       		.byte	0
+ 485 01cc 00       		.byte	0
+ 486 01cd 00       		.byte	0
+ 487 01ce 10       		.byte	16
+ 488 01cf 50       		.byte	80
+ 489 01d0 02       		.byte	2
+ 490 01d1 00       		.byte	0
+ 491 01d2 00       		.byte	0
+ 492 01d3 00       		.byte	0
+ 493 01d4 00       		.byte	0
+ 494 01d5 00       		.byte	0
+ 495 01d6 40       		.byte	64
+ 496 01d7 00       		.byte	0
+ 497 01d8 00       		.byte	0
+ 498 01d9 FF       		.byte	-1
+ 499 01da 07       		.byte	7
+ 500 01db FF       		.byte	-1
+ 501 01dc 40       		.byte	64
+ 502 01dd 20       		.byte	32
+ 503 01de F0       		.byte	-16
+ 504 01df 05       		.byte	5
+ 505 01e0 08       		.byte	8
+ 506 01e1 00       		.byte	0
+ 507 01e2 00       		.byte	0
+ 508 01e3 00       		.byte	0
+ 509 01e4 00       		.byte	0
+ 510 01e5 00       		.byte	0
+ 511 01e6 00       		.byte	0
+ 512 01e7 00       		.byte	0
+ 513 01e8 04       		.byte	4
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 10
+
+
+ 514 01e9 04       		.byte	4
+ 515 01ea 04       		.byte	4
+ 516 01eb 00       		.byte	0
+ 517 01ec 11       		.byte	17
+ 518 01ed 01       		.byte	1
+ 519 01ee 00       		.byte	0
+ 520 01ef 01       		.byte	1
+ 521 01f0 40       		.byte	64
+ 522 01f1 A8       		.byte	-88
+ 523 01f2 40       		.byte	64
+ 524 01f3 20       		.byte	32
+ 525 01f4 00       		.byte	0
+ 526 01f5 00       		.byte	0
+ 527 01f6 00       		.byte	0
+ 528 01f7 00       		.byte	0
+ 529 01f8 00       		.byte	0
+ 530 01f9 00       		.byte	0
+ 531 01fa 00       		.byte	0
+ 532 01fb 00       		.byte	0
+ 533 01fc 00       		.byte	0
+ 534 01fd 00       		.byte	0
+ 535 01fe 00       		.byte	0
+ 536 01ff 00       		.byte	0
+ 537 0200 00       		.byte	0
+ 538 0201 00       		.byte	0
+ 539 0202 00       		.byte	0
+ 540 0203 00       		.byte	0
+ 541 0204 00       		.byte	0
+ 542 0205 00       		.byte	0
+ 543 0206 00       		.byte	0
+ 544 0207 00       		.byte	0
+ 545 0208 00       		.byte	0
+ 546 0209 00       		.byte	0
+ 547 020a 00       		.byte	0
+ 548 020b 00       		.byte	0
+ 549 020c 00       		.byte	0
+ 550 020d 00       		.byte	0
+ 551 020e 00       		.byte	0
+ 552 020f 00       		.byte	0
+ 553 0210 01       		.byte	1
+ 554 0211 FF       		.byte	-1
+ 555 0212 00       		.byte	0
+ 556 0213 00       		.byte	0
+ 557 0214 1F       		.byte	31
+ 558 0215 18       		.byte	24
+ 559 0216 60       		.byte	96
+ 560 0217 00       		.byte	0
+ 561 0218 02       		.byte	2
+ 562 0219 08       		.byte	8
+ 563 021a 00       		.byte	0
+ 564 021b 00       		.byte	0
+ 565 021c 1C       		.byte	28
+ 566 021d C0       		.byte	-64
+ 567 021e 63       		.byte	99
+ 568 021f 00       		.byte	0
+ 569 0220 00       		.byte	0
+ 570 0221 3C       		.byte	60
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 11
+
+
+ 571 0222 00       		.byte	0
+ 572 0223 C2       		.byte	-62
+ 573 0224 00       		.byte	0
+ 574 0225 80       		.byte	-128
+ 575 0226 23       		.byte	35
+ 576 0227 00       		.byte	0
+ 577 0228 73       		.byte	115
+ 578 0229 1C       		.byte	28
+ 579 022a 0C       		.byte	12
+ 580 022b E1       		.byte	-31
+ 581 022c 7F       		.byte	127
+ 582 022d 10       		.byte	16
+ 583 022e 00       		.byte	0
+ 584 022f 00       		.byte	0
+ 585 0230 08       		.byte	8
+ 586 0231 44       		.byte	68
+ 587 0232 00       		.byte	0
+ 588 0233 00       		.byte	0
+ 589 0234 04       		.byte	4
+ 590 0235 00       		.byte	0
+ 591 0236 00       		.byte	0
+ 592 0237 E3       		.byte	-29
+ 593 0238 0C       		.byte	12
+ 594 0239 E7       		.byte	-25
+ 595 023a 00       		.byte	0
+ 596 023b 18       		.byte	24
+ 597 023c 03       		.byte	3
+ 598 023d 00       		.byte	0
+ 599 023e 00       		.byte	0
+ 600 023f 04       		.byte	4
+ 601 0240 10       		.byte	16
+ 602 0241 1F       		.byte	31
+ 603 0242 2C       		.byte	44
+ 604 0243 00       		.byte	0
+ 605 0244 0F       		.byte	15
+ 606 0245 38       		.byte	56
+ 607 0246 40       		.byte	64
+ 608 0247 C0       		.byte	-64
+ 609 0248 80       		.byte	-128
+ 610 0249 00       		.byte	0
+ 611 024a 28       		.byte	40
+ 612 024b 02       		.byte	2
+ 613 024c 00       		.byte	0
+ 614 024d 00       		.byte	0
+ 615 024e 01       		.byte	1
+ 616 024f 00       		.byte	0
+ 617 0250 23       		.byte	35
+ 618 0251 04       		.byte	4
+ 619 0252 06       		.byte	6
+ 620 0253 00       		.byte	0
+ 621 0254 05       		.byte	5
+ 622 0255 E0       		.byte	-32
+ 623 0256 0C       		.byte	12
+ 624 0257 00       		.byte	0
+ 625 0258 06       		.byte	6
+ 626 0259 FF       		.byte	-1
+ 627 025a FF       		.byte	-1
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 12
+
+
+ 628 025b FF       		.byte	-1
+ 629 025c 62       		.byte	98
+ 630 025d A0       		.byte	-96
+ 631 025e F0       		.byte	-16
+ 632 025f 41       		.byte	65
+ 633 0260 0C       		.byte	12
+ 634 0261 00       		.byte	0
+ 635 0262 00       		.byte	0
+ 636 0263 00       		.byte	0
+ 637 0264 00       		.byte	0
+ 638 0265 00       		.byte	0
+ 639 0266 02       		.byte	2
+ 640 0267 13       		.byte	19
+ 641 0268 04       		.byte	4
+ 642 0269 04       		.byte	4
+ 643 026a 04       		.byte	4
+ 644 026b 04       		.byte	4
+ 645 026c 11       		.byte	17
+ 646 026d 11       		.byte	17
+ 647 026e 00       		.byte	0
+ 648 026f 01       		.byte	1
+ 649 0270 00       		.byte	0
+ 650 0271 00       		.byte	0
+ 651 0272 00       		.byte	0
+ 652 0273 00       		.byte	0
+ 653 0274 00       		.byte	0
+ 654 0275 00       		.byte	0
+ 655 0276 40       		.byte	64
+ 656 0277 02       		.byte	2
+ 657 0278 00       		.byte	0
+ 658 0279 10       		.byte	16
+ 659 027a 30       		.byte	48
+ 660 027b 10       		.byte	16
+ 661 027c 00       		.byte	0
+ 662 027d 10       		.byte	16
+ 663 027e 10       		.byte	16
+ 664 027f 12       		.byte	18
+ 665 0280 00       		.byte	0
+ 666 0281 00       		.byte	0
+ 667 0282 00       		.byte	0
+ 668 0283 00       		.byte	0
+ 669 0284 00       		.byte	0
+ 670 0285 00       		.byte	0
+ 671 0286 00       		.byte	0
+ 672 0287 00       		.byte	0
+ 673 0288 00       		.byte	0
+ 674 0289 00       		.byte	0
+ 675 028a 00       		.byte	0
+ 676 028b 00       		.byte	0
+ 677 028c 00       		.byte	0
+ 678 028d 00       		.byte	0
+ 679 028e 00       		.byte	0
+ 680 028f 00       		.byte	0
+ 681 0290 00       		.byte	0
+ 682 0291 00       		.byte	0
+ 683 0292 00       		.byte	0
+ 684 0293 01       		.byte	1
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 13
+
+
+ 685 0294 01       		.byte	1
+ 686 0295 00       		.byte	0
+ 687 0296 00       		.byte	0
+ 688 0297 00       		.byte	0
+ 689 0298 00       		.byte	0
+ 690 0299 00       		.byte	0
+ 691 029a 00       		.byte	0
+ 692 029b 00       		.byte	0
+ 693 029c 00       		.byte	0
+ 694 029d 00       		.byte	0
+ 695 029e 00       		.byte	0
+ 696 029f 00       		.byte	0
+ 697 02a0 00       		.byte	0
+ 698 02a1 00       		.byte	0
+ 699 02a2 00       		.byte	0
+ 700 02a3 00       		.byte	0
+ 701 02a4 00       		.byte	0
+ 702 02a5 00       		.byte	0
+ 703 02a6 04       		.byte	4
+ 704 02a7 00       		.byte	0
+ 705 02a8 00       		.byte	0
+ 706 02a9 00       		.byte	0
+ 707 02aa 02       		.byte	2
+ 708 02ab 00       		.byte	0
+ 709 02ac 00       		.byte	0
+ 710 02ad 00       		.byte	0
+ 711 02ae 02       		.byte	2
+ 712 02af 00       		.byte	0
+ 713 02b0 00       		.byte	0
+ 714 02b1 00       		.byte	0
+ 715 02b2 00       		.byte	0
+ 716 02b3 00       		.byte	0
+ 717 02b4 00       		.byte	0
+ 718 02b5 00       		.byte	0
+ 719 02b6 00       		.byte	0
+ 720 02b7 00       		.byte	0
+ 721 02b8 01       		.byte	1
+ 722 02b9 00       		.byte	0
+ 723 02ba 00       		.byte	0
+ 724 02bb 00       		.byte	0
+ 725 02bc 01       		.byte	1
+ 726 02bd 00       		.byte	0
+ 727 02be 00       		.byte	0
+ 728 02bf 01       		.byte	1
+ 729 02c0 04       		.byte	4
+ 730 02c1 00       		.byte	0
+ 731 02c2 01       		.byte	1
+ 732 02c3 01       		.byte	1
+ 733 02c4 02       		.byte	2
+ 734 02c5 00       		.byte	0
+ 735 02c6 00       		.byte	0
+ 736 02c7 00       		.byte	0
+ 737 02c8 00       		.byte	0
+ 738 02c9 00       		.byte	0
+ 739 02ca 00       		.byte	0
+ 740 02cb 80       		.byte	-128
+ 741 02cc 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 14
+
+
+ 742 02cd 00       		.byte	0
+ 743 02ce 10       		.byte	16
+ 744 02cf 04       		.byte	4
+ 745 02d0 00       		.byte	0
+ 746 02d1 00       		.byte	0
+ 747 02d2 00       		.byte	0
+ 748 02d3 00       		.byte	0
+ 749 02d4 00       		.byte	0
+ 750 02d5 00       		.byte	0
+ 751 02d6 00       		.byte	0
+ 752 02d7 00       		.byte	0
+ 753 02d8 00       		.byte	0
+ 754 02d9 00       		.byte	0
+ 755 02da 00       		.byte	0
+ 756 02db 00       		.byte	0
+ 757 02dc 00       		.byte	0
+ 758 02dd 00       		.byte	0
+ 759 02de 00       		.byte	0
+ 760 02df 00       		.byte	0
+ 761 02e0 00       		.byte	0
+ 762 02e1 00       		.byte	0
+ 763 02e2 00       		.byte	0
+ 764 02e3 00       		.byte	0
+ 765 02e4 18       		.byte	24
+ 766 02e5 00       		.byte	0
+ 767 02e6 00       		.byte	0
+ 768 02e7 00       		.byte	0
+ 769 02e8 04       		.byte	4
+ 770 02e9 04       		.byte	4
+ 771 02ea 00       		.byte	0
+ 772 02eb 04       		.byte	4
+ 773 02ec 11       		.byte	17
+ 774 02ed 10       		.byte	16
+ 775 02ee 00       		.byte	0
+ 776 02ef 01       		.byte	1
+ 777 02f0 00       		.byte	0
+ 778 02f1 00       		.byte	0
+ 779 02f2 00       		.byte	0
+ 780 02f3 00       		.byte	0
+ 781 02f4 00       		.byte	0
+ 782 02f5 00       		.byte	0
+ 783 02f6 00       		.byte	0
+ 784 02f7 00       		.byte	0
+ 785 02f8 00       		.byte	0
+ 786 02f9 00       		.byte	0
+ 787 02fa 00       		.byte	0
+ 788 02fb 00       		.byte	0
+ 789 02fc 00       		.byte	0
+ 790 02fd 00       		.byte	0
+ 791 02fe 00       		.byte	0
+ 792 02ff 00       		.byte	0
+ 793 0300 00       		.byte	0
+ 794 0301 00       		.byte	0
+ 795 0302 00       		.byte	0
+ 796 0303 00       		.byte	0
+ 797 0304 00       		.byte	0
+ 798 0305 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 15
+
+
+ 799 0306 00       		.byte	0
+ 800 0307 00       		.byte	0
+ 801 0308 00       		.byte	0
+ 802 0309 00       		.byte	0
+ 803 030a 00       		.byte	0
+ 804 030b 00       		.byte	0
+ 805 030c 00       		.byte	0
+ 806 030d 00       		.byte	0
+ 807 030e 00       		.byte	0
+ 808 030f 00       		.byte	0
+ 809 0310 00       		.byte	0
+ 810 0311 00       		.byte	0
+ 811 0312 00       		.byte	0
+ 812 0313 00       		.byte	0
+ 813 0314 00       		.byte	0
+ 814 0315 00       		.byte	0
+ 815 0316 00       		.byte	0
+ 816 0317 00       		.byte	0
+ 817 0318 00       		.byte	0
+ 818 0319 00       		.byte	0
+ 819 031a 00       		.byte	0
+ 820 031b 00       		.byte	0
+ 821 031c 00       		.byte	0
+ 822 031d 00       		.byte	0
+ 823 031e 00       		.byte	0
+ 824 031f 00       		.byte	0
+ 825 0320 00       		.byte	0
+ 826 0321 00       		.byte	0
+ 827 0322 00       		.byte	0
+ 828 0323 00       		.byte	0
+ 829 0324 00       		.byte	0
+ 830 0325 00       		.byte	0
+ 831 0326 00       		.byte	0
+ 832 0327 00       		.byte	0
+ 833 0328 0F       		.byte	15
+ 834 0329 00       		.byte	0
+ 835 032a 72       		.byte	114
+ 836 032b 38       		.byte	56
+ 837 032c 00       		.byte	0
+ 838 032d 00       		.byte	0
+ 839 032e 00       		.byte	0
+ 840 032f 00       		.byte	0
+ 841 0330 02       		.byte	2
+ 842 0331 00       		.byte	0
+ 843 0332 00       		.byte	0
+ 844 0333 00       		.byte	0
+ 845 0334 00       		.byte	0
+ 846 0335 00       		.byte	0
+ 847 0336 00       		.byte	0
+ 848 0337 00       		.byte	0
+ 849 0338 00       		.byte	0
+ 850 0339 00       		.byte	0
+ 851 033a 00       		.byte	0
+ 852 033b 00       		.byte	0
+ 853 033c 02       		.byte	2
+ 854 033d 00       		.byte	0
+ 855 033e 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 16
+
+
+ 856 033f 00       		.byte	0
+ 857 0340 01       		.byte	1
+ 858 0341 00       		.byte	0
+ 859 0342 00       		.byte	0
+ 860 0343 00       		.byte	0
+ 861 0344 00       		.byte	0
+ 862 0345 00       		.byte	0
+ 863 0346 00       		.byte	0
+ 864 0347 00       		.byte	0
+ 865 0348 00       		.byte	0
+ 866 0349 00       		.byte	0
+ 867 034a 00       		.byte	0
+ 868 034b 00       		.byte	0
+ 869 034c 00       		.byte	0
+ 870 034d 00       		.byte	0
+ 871 034e 01       		.byte	1
+ 872 034f 00       		.byte	0
+ 873 0350 00       		.byte	0
+ 874 0351 00       		.byte	0
+ 875 0352 00       		.byte	0
+ 876 0353 00       		.byte	0
+ 877 0354 00       		.byte	0
+ 878 0355 00       		.byte	0
+ 879 0356 00       		.byte	0
+ 880 0357 00       		.byte	0
+ 881 0358 00       		.byte	0
+ 882 0359 00       		.byte	0
+ 883 035a 00       		.byte	0
+ 884 035b 00       		.byte	0
+ 885 035c 00       		.byte	0
+ 886 035d 00       		.byte	0
+ 887 035e 00       		.byte	0
+ 888 035f 00       		.byte	0
+ 889 0360 40       		.byte	64
+ 890 0361 00       		.byte	0
+ 891 0362 00       		.byte	0
+ 892 0363 00       		.byte	0
+ 893 0364 00       		.byte	0
+ 894 0365 00       		.byte	0
+ 895 0366 00       		.byte	0
+ 896 0367 00       		.byte	0
+ 897 0368 00       		.byte	0
+ 898 0369 00       		.byte	0
+ 899 036a 00       		.byte	0
+ 900 036b 00       		.byte	0
+ 901 036c 00       		.byte	0
+ 902 036d 00       		.byte	0
+ 903 036e 00       		.byte	0
+ 904 036f 00       		.byte	0
+ 905 0370 00       		.byte	0
+ 906 0371 00       		.byte	0
+ 907 0372 00       		.byte	0
+ 908 0373 00       		.byte	0
+ 909 0374 00       		.byte	0
+ 910 0375 00       		.byte	0
+ 911 0376 00       		.byte	0
+ 912 0377 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 17
+
+
+ 913 0378 00       		.byte	0
+ 914 0379 00       		.byte	0
+ 915 037a 00       		.byte	0
+ 916 037b 00       		.byte	0
+ 917 037c 00       		.byte	0
+ 918 037d 00       		.byte	0
+ 919 037e 00       		.byte	0
+ 920 037f 00       		.byte	0
+ 921 0380 00       		.byte	0
+ 922 0381 00       		.byte	0
+ 923 0382 00       		.byte	0
+ 924 0383 00       		.byte	0
+ 925 0384 00       		.byte	0
+ 926 0385 00       		.byte	0
+ 927 0386 00       		.byte	0
+ 928 0387 00       		.byte	0
+ 929 0388 00       		.byte	0
+ 930 0389 00       		.byte	0
+ 931 038a 00       		.byte	0
+ 932 038b 00       		.byte	0
+ 933 038c 00       		.byte	0
+ 934 038d 00       		.byte	0
+ 935 038e 00       		.byte	0
+ 936 038f 00       		.byte	0
+ 937 0390 00       		.byte	0
+ 938 0391 00       		.byte	0
+ 939 0392 00       		.byte	0
+ 940 0393 00       		.byte	0
+ 941 0394 00       		.byte	0
+ 942 0395 00       		.byte	0
+ 943 0396 00       		.byte	0
+ 944 0397 00       		.byte	0
+ 945 0398 00       		.byte	0
+ 946 0399 00       		.byte	0
+ 947 039a 00       		.byte	0
+ 948 039b 00       		.byte	0
+ 949 039c 00       		.byte	0
+ 950 039d 00       		.byte	0
+ 951 039e 00       		.byte	0
+ 952 039f 00       		.byte	0
+ 953 03a0 00       		.byte	0
+ 954 03a1 00       		.byte	0
+ 955 03a2 00       		.byte	0
+ 956 03a3 00       		.byte	0
+ 957 03a4 00       		.byte	0
+ 958 03a5 00       		.byte	0
+ 959 03a6 00       		.byte	0
+ 960 03a7 00       		.byte	0
+ 961 03a8 00       		.byte	0
+ 962 03a9 00       		.byte	0
+ 963 03aa 00       		.byte	0
+ 964 03ab 00       		.byte	0
+ 965 03ac 00       		.byte	0
+ 966 03ad 00       		.byte	0
+ 967 03ae 00       		.byte	0
+ 968 03af 00       		.byte	0
+ 969 03b0 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 18
+
+
+ 970 03b1 00       		.byte	0
+ 971 03b2 00       		.byte	0
+ 972 03b3 00       		.byte	0
+ 973 03b4 00       		.byte	0
+ 974 03b5 00       		.byte	0
+ 975 03b6 00       		.byte	0
+ 976 03b7 00       		.byte	0
+ 977 03b8 00       		.byte	0
+ 978 03b9 00       		.byte	0
+ 979 03ba 00       		.byte	0
+ 980 03bb 00       		.byte	0
+ 981 03bc 00       		.byte	0
+ 982 03bd 00       		.byte	0
+ 983 03be 00       		.byte	0
+ 984 03bf 00       		.byte	0
+ 985 03c0 00       		.byte	0
+ 986 03c1 00       		.byte	0
+ 987 03c2 00       		.byte	0
+ 988 03c3 00       		.byte	0
+ 989 03c4 00       		.byte	0
+ 990 03c5 02       		.byte	2
+ 991 03c6 00       		.byte	0
+ 992 03c7 00       		.byte	0
+ 993 03c8 00       		.byte	0
+ 994 03c9 00       		.byte	0
+ 995 03ca 00       		.byte	0
+ 996 03cb 00       		.byte	0
+ 997 03cc 00       		.byte	0
+ 998 03cd 00       		.byte	0
+ 999 03ce 00       		.byte	0
+ 1000 03cf 00       		.byte	0
+ 1001 03d0 00       		.byte	0
+ 1002 03d1 00       		.byte	0
+ 1003 03d2 00       		.byte	0
+ 1004 03d3 00       		.byte	0
+ 1005 03d4 00       		.byte	0
+ 1006 03d5 00       		.byte	0
+ 1007 03d6 00       		.byte	0
+ 1008 03d7 00       		.byte	0
+ 1009 03d8 40       		.byte	64
+ 1010 03d9 00       		.byte	0
+ 1011 03da 00       		.byte	0
+ 1012 03db 00       		.byte	0
+ 1013 03dc 00       		.byte	0
+ 1014 03dd 00       		.byte	0
+ 1015 03de 00       		.byte	0
+ 1016 03df 00       		.byte	0
+ 1017 03e0 00       		.byte	0
+ 1018 03e1 00       		.byte	0
+ 1019 03e2 00       		.byte	0
+ 1020 03e3 00       		.byte	0
+ 1021 03e4 00       		.byte	0
+ 1022 03e5 00       		.byte	0
+ 1023 03e6 00       		.byte	0
+ 1024 03e7 00       		.byte	0
+ 1025 03e8 00       		.byte	0
+ 1026 03e9 02       		.byte	2
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 19
+
+
+ 1027 03ea 00       		.byte	0
+ 1028 03eb 00       		.byte	0
+ 1029 03ec 00       		.byte	0
+ 1030 03ed 00       		.byte	0
+ 1031 03ee 00       		.byte	0
+ 1032 03ef 00       		.byte	0
+ 1033 03f0 00       		.byte	0
+ 1034 03f1 00       		.byte	0
+ 1035 03f2 00       		.byte	0
+ 1036 03f3 00       		.byte	0
+ 1037 03f4 00       		.byte	0
+ 1038 03f5 00       		.byte	0
+ 1039 03f6 00       		.byte	0
+ 1040 03f7 00       		.byte	0
+ 1041 03f8 00       		.byte	0
+ 1042 03f9 00       		.byte	0
+ 1043 03fa 00       		.byte	0
+ 1044 03fb 00       		.byte	0
+ 1045 03fc 00       		.byte	0
+ 1046 03fd 00       		.byte	0
+ 1047 03fe 00       		.byte	0
+ 1048 03ff 00       		.byte	0
+ 1049 0400 00       		.byte	0
+ 1050 0401 00       		.byte	0
+ 1051 0402 00       		.byte	0
+ 1052 0403 00       		.byte	0
+ 1053 0404 00       		.byte	0
+ 1054 0405 00       		.byte	0
+ 1055 0406 00       		.byte	0
+ 1056 0407 00       		.byte	0
+ 1057 0408 00       		.byte	0
+ 1058 0409 00       		.byte	0
+ 1059 040a 00       		.byte	0
+ 1060 040b 00       		.byte	0
+ 1061 040c 00       		.byte	0
+ 1062 040d 00       		.byte	0
+ 1063 040e 00       		.byte	0
+ 1064 040f 00       		.byte	0
+ 1065 0410 00       		.byte	0
+ 1066 0411 00       		.byte	0
+ 1067 0412 00       		.byte	0
+ 1068 0413 00       		.byte	0
+ 1069 0414 08       		.byte	8
+ 1070 0415 00       		.byte	0
+ 1071 0416 00       		.byte	0
+ 1072 0417 00       		.byte	0
+ 1073 0418 00       		.byte	0
+ 1074 0419 00       		.byte	0
+ 1075 041a 00       		.byte	0
+ 1076 041b 00       		.byte	0
+ 1077 041c 00       		.byte	0
+ 1078 041d 00       		.byte	0
+ 1079 041e 00       		.byte	0
+ 1080 041f 00       		.byte	0
+ 1081 0420 00       		.byte	0
+ 1082 0421 00       		.byte	0
+ 1083 0422 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 20
+
+
+ 1084 0423 00       		.byte	0
+ 1085 0424 00       		.byte	0
+ 1086 0425 00       		.byte	0
+ 1087 0426 00       		.byte	0
+ 1088 0427 00       		.byte	0
+ 1089 0428 00       		.byte	0
+ 1090 0429 00       		.byte	0
+ 1091 042a 00       		.byte	0
+ 1092 042b 00       		.byte	0
+ 1093 042c 00       		.byte	0
+ 1094 042d 00       		.byte	0
+ 1095 042e 04       		.byte	4
+ 1096 042f 00       		.byte	0
+ 1097 0430 00       		.byte	0
+ 1098 0431 00       		.byte	0
+ 1099 0432 01       		.byte	1
+ 1100 0433 00       		.byte	0
+ 1101 0434 00       		.byte	0
+ 1102 0435 00       		.byte	0
+ 1103 0436 00       		.byte	0
+ 1104 0437 00       		.byte	0
+ 1105 0438 00       		.byte	0
+ 1106 0439 00       		.byte	0
+ 1107 043a 00       		.byte	0
+ 1108 043b 00       		.byte	0
+ 1109 043c 00       		.byte	0
+ 1110 043d 00       		.byte	0
+ 1111 043e 00       		.byte	0
+ 1112 043f 00       		.byte	0
+ 1113 0440 00       		.byte	0
+ 1114 0441 00       		.byte	0
+ 1115 0442 00       		.byte	0
+ 1116 0443 00       		.byte	0
+ 1117 0444 00       		.byte	0
+ 1118 0445 00       		.byte	0
+ 1119 0446 00       		.byte	0
+ 1120 0447 00       		.byte	0
+ 1121 0448 00       		.byte	0
+ 1122 0449 00       		.byte	0
+ 1123 044a 00       		.byte	0
+ 1124 044b 00       		.byte	0
+ 1125 044c 00       		.byte	0
+ 1126 044d 00       		.byte	0
+ 1127 044e 00       		.byte	0
+ 1128 044f 00       		.byte	0
+ 1129 0450 00       		.byte	0
+ 1130 0451 02       		.byte	2
+ 1131 0452 00       		.byte	0
+ 1132 0453 00       		.byte	0
+ 1133 0454 00       		.byte	0
+ 1134 0455 00       		.byte	0
+ 1135 0456 00       		.byte	0
+ 1136 0457 00       		.byte	0
+ 1137 0458 00       		.byte	0
+ 1138 0459 00       		.byte	0
+ 1139 045a 00       		.byte	0
+ 1140 045b 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 21
+
+
+ 1141 045c 00       		.byte	0
+ 1142 045d 00       		.byte	0
+ 1143 045e 00       		.byte	0
+ 1144 045f 00       		.byte	0
+ 1145 0460 00       		.byte	0
+ 1146 0461 00       		.byte	0
+ 1147 0462 00       		.byte	0
+ 1148 0463 00       		.byte	0
+ 1149 0464 00       		.byte	0
+ 1150 0465 00       		.byte	0
+ 1151 0466 00       		.byte	0
+ 1152 0467 00       		.byte	0
+ 1153 0468 00       		.byte	0
+ 1154 0469 00       		.byte	0
+ 1155 046a 00       		.byte	0
+ 1156 046b 00       		.byte	0
+ 1157 046c 00       		.byte	0
+ 1158 046d 00       		.byte	0
+ 1159 046e 00       		.byte	0
+ 1160 046f 00       		.byte	0
+ 1161 0470 00       		.byte	0
+ 1162 0471 00       		.byte	0
+ 1163 0472 00       		.byte	0
+ 1164 0473 00       		.byte	0
+ 1165 0474 00       		.byte	0
+ 1166 0475 00       		.byte	0
+ 1167 0476 00       		.byte	0
+ 1168 0477 00       		.byte	0
+ 1169 0478 00       		.byte	0
+ 1170 0479 00       		.byte	0
+ 1171 047a 00       		.byte	0
+ 1172 047b 00       		.byte	0
+ 1173 047c 00       		.byte	0
+ 1174 047d 00       		.byte	0
+ 1175 047e 00       		.byte	0
+ 1176 047f 00       		.byte	0
+ 1177 0480 00       		.byte	0
+ 1178 0481 00       		.byte	0
+ 1179 0482 00       		.byte	0
+ 1180 0483 00       		.byte	0
+ 1181 0484 00       		.byte	0
+ 1182 0485 00       		.byte	0
+ 1183 0486 00       		.byte	0
+ 1184 0487 00       		.byte	0
+ 1185 0488 00       		.byte	0
+ 1186 0489 00       		.byte	0
+ 1187 048a 00       		.byte	0
+ 1188 048b 00       		.byte	0
+ 1189 048c 00       		.byte	0
+ 1190 048d 00       		.byte	0
+ 1191 048e 00       		.byte	0
+ 1192 048f 00       		.byte	0
+ 1193 0490 00       		.byte	0
+ 1194 0491 00       		.byte	0
+ 1195 0492 00       		.byte	0
+ 1196 0493 00       		.byte	0
+ 1197 0494 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 22
+
+
+ 1198 0495 00       		.byte	0
+ 1199 0496 00       		.byte	0
+ 1200 0497 00       		.byte	0
+ 1201 0498 00       		.byte	0
+ 1202 0499 00       		.byte	0
+ 1203 049a 00       		.byte	0
+ 1204 049b 00       		.byte	0
+ 1205 049c 00       		.byte	0
+ 1206 049d 00       		.byte	0
+ 1207 049e 00       		.byte	0
+ 1208 049f 00       		.byte	0
+ 1209 04a0 00       		.byte	0
+ 1210 04a1 00       		.byte	0
+ 1211 04a2 00       		.byte	0
+ 1212 04a3 00       		.byte	0
+ 1213 04a4 00       		.byte	0
+ 1214 04a5 00       		.byte	0
+ 1215 04a6 00       		.byte	0
+ 1216 04a7 00       		.byte	0
+ 1217 04a8 00       		.byte	0
+ 1218 04a9 00       		.byte	0
+ 1219 04aa 00       		.byte	0
+ 1220 04ab 00       		.byte	0
+ 1221 04ac 00       		.byte	0
+ 1222 04ad 00       		.byte	0
+ 1223 04ae 00       		.byte	0
+ 1224 04af 00       		.byte	0
+ 1225 04b0 00       		.byte	0
+ 1226 04b1 00       		.byte	0
+ 1227 04b2 00       		.byte	0
+ 1228 04b3 00       		.byte	0
+ 1229 04b4 00       		.byte	0
+ 1230 04b5 00       		.byte	0
+ 1231 04b6 00       		.byte	0
+ 1232 04b7 00       		.byte	0
+ 1233 04b8 00       		.byte	0
+ 1234 04b9 00       		.byte	0
+ 1235 04ba 00       		.byte	0
+ 1236 04bb 00       		.byte	0
+ 1237 04bc 00       		.byte	0
+ 1238 04bd 00       		.byte	0
+ 1239 04be 00       		.byte	0
+ 1240 04bf 00       		.byte	0
+ 1241 04c0 00       		.byte	0
+ 1242 04c1 00       		.byte	0
+ 1243 04c2 00       		.byte	0
+ 1244 04c3 00       		.byte	0
+ 1245 04c4 00       		.byte	0
+ 1246 04c5 00       		.byte	0
+ 1247 04c6 00       		.byte	0
+ 1248 04c7 00       		.byte	0
+ 1249 04c8 00       		.byte	0
+ 1250 04c9 00       		.byte	0
+ 1251 04ca 00       		.byte	0
+ 1252 04cb 00       		.byte	0
+ 1253 04cc 00       		.byte	0
+ 1254 04cd 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 23
+
+
+ 1255 04ce 00       		.byte	0
+ 1256 04cf 00       		.byte	0
+ 1257 04d0 00       		.byte	0
+ 1258 04d1 00       		.byte	0
+ 1259 04d2 00       		.byte	0
+ 1260 04d3 00       		.byte	0
+ 1261 04d4 00       		.byte	0
+ 1262 04d5 00       		.byte	0
+ 1263 04d6 00       		.byte	0
+ 1264 04d7 00       		.byte	0
+ 1265 04d8 00       		.byte	0
+ 1266 04d9 00       		.byte	0
+ 1267 04da 00       		.byte	0
+ 1268 04db 00       		.byte	0
+ 1269 04dc 00       		.byte	0
+ 1270 04dd 00       		.byte	0
+ 1271 04de 00       		.byte	0
+ 1272 04df 00       		.byte	0
+ 1273 04e0 00       		.byte	0
+ 1274 04e1 00       		.byte	0
+ 1275 04e2 00       		.byte	0
+ 1276 04e3 00       		.byte	0
+ 1277 04e4 00       		.byte	0
+ 1278 04e5 00       		.byte	0
+ 1279 04e6 00       		.byte	0
+ 1280 04e7 00       		.byte	0
+ 1281 04e8 00       		.byte	0
+ 1282 04e9 00       		.byte	0
+ 1283 04ea 00       		.byte	0
+ 1284 04eb 00       		.byte	0
+ 1285 04ec 00       		.byte	0
+ 1286 04ed 00       		.byte	0
+ 1287 04ee 00       		.byte	0
+ 1288 04ef 00       		.byte	0
+ 1289 04f0 00       		.byte	0
+ 1290 04f1 00       		.byte	0
+ 1291 04f2 00       		.byte	0
+ 1292 04f3 00       		.byte	0
+ 1293 04f4 00       		.byte	0
+ 1294 04f5 00       		.byte	0
+ 1295 04f6 00       		.byte	0
+ 1296 04f7 00       		.byte	0
+ 1297 04f8 00       		.byte	0
+ 1298 04f9 00       		.byte	0
+ 1299 04fa 00       		.byte	0
+ 1300 04fb 00       		.byte	0
+ 1301 04fc 00       		.byte	0
+ 1302 04fd 00       		.byte	0
+ 1303 04fe 00       		.byte	0
+ 1304 04ff 00       		.byte	0
+ 1305 0500 00       		.byte	0
+ 1306 0501 00       		.byte	0
+ 1307 0502 00       		.byte	0
+ 1308 0503 00       		.byte	0
+ 1309 0504 00       		.byte	0
+ 1310 0505 00       		.byte	0
+ 1311 0506 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 24
+
+
+ 1312 0507 04       		.byte	4
+ 1313 0508 00       		.byte	0
+ 1314 0509 00       		.byte	0
+ 1315 050a 00       		.byte	0
+ 1316 050b 00       		.byte	0
+ 1317 050c 00       		.byte	0
+ 1318 050d 00       		.byte	0
+ 1319 050e 00       		.byte	0
+ 1320 050f 00       		.byte	0
+ 1321 0510 00       		.byte	0
+ 1322 0511 00       		.byte	0
+ 1323 0512 00       		.byte	0
+ 1324 0513 00       		.byte	0
+ 1325 0514 00       		.byte	0
+ 1326 0515 00       		.byte	0
+ 1327 0516 00       		.byte	0
+ 1328 0517 00       		.byte	0
+ 1329 0518 00       		.byte	0
+ 1330 0519 00       		.byte	0
+ 1331 051a 00       		.byte	0
+ 1332 051b 00       		.byte	0
+ 1333 051c 00       		.byte	0
+ 1334 051d 00       		.byte	0
+ 1335 051e 00       		.byte	0
+ 1336 051f 00       		.byte	0
+ 1337 0520 00       		.byte	0
+ 1338 0521 00       		.byte	0
+ 1339 0522 00       		.byte	0
+ 1340 0523 00       		.byte	0
+ 1341 0524 00       		.byte	0
+ 1342 0525 00       		.byte	0
+ 1343 0526 00       		.byte	0
+ 1344 0527 00       		.byte	0
+ 1345 0528 00       		.byte	0
+ 1346 0529 00       		.byte	0
+ 1347 052a 00       		.byte	0
+ 1348 052b 00       		.byte	0
+ 1349 052c 00       		.byte	0
+ 1350 052d 00       		.byte	0
+ 1351 052e 00       		.byte	0
+ 1352 052f 00       		.byte	0
+ 1353 0530 00       		.byte	0
+ 1354 0531 00       		.byte	0
+ 1355 0532 00       		.byte	0
+ 1356 0533 00       		.byte	0
+ 1357 0534 00       		.byte	0
+ 1358 0535 00       		.byte	0
+ 1359 0536 00       		.byte	0
+ 1360 0537 00       		.byte	0
+ 1361 0538 02       		.byte	2
+ 1362 0539 00       		.byte	0
+ 1363 053a 00       		.byte	0
+ 1364 053b 00       		.byte	0
+ 1365 053c 00       		.byte	0
+ 1366 053d 00       		.byte	0
+ 1367 053e 00       		.byte	0
+ 1368 053f 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 25
+
+
+ 1369 0540 00       		.byte	0
+ 1370 0541 00       		.byte	0
+ 1371 0542 00       		.byte	0
+ 1372 0543 00       		.byte	0
+ 1373 0544 00       		.byte	0
+ 1374 0545 00       		.byte	0
+ 1375 0546 00       		.byte	0
+ 1376 0547 00       		.byte	0
+ 1377 0548 00       		.byte	0
+ 1378 0549 00       		.byte	0
+ 1379 054a 00       		.byte	0
+ 1380 054b 00       		.byte	0
+ 1381 054c 00       		.byte	0
+ 1382 054d 00       		.byte	0
+ 1383 054e 00       		.byte	0
+ 1384 054f 00       		.byte	0
+ 1385 0550 00       		.byte	0
+ 1386 0551 00       		.byte	0
+ 1387 0552 00       		.byte	0
+ 1388 0553 00       		.byte	0
+ 1389 0554 00       		.byte	0
+ 1390 0555 00       		.byte	0
+ 1391 0556 00       		.byte	0
+ 1392 0557 00       		.byte	0
+ 1393 0558 00       		.byte	0
+ 1394 0559 00       		.byte	0
+ 1395 055a 00       		.byte	0
+ 1396 055b 00       		.byte	0
+ 1397 055c 00       		.byte	0
+ 1398 055d 00       		.byte	0
+ 1399 055e 00       		.byte	0
+ 1400 055f 00       		.byte	0
+ 1401 0560 00       		.byte	0
+ 1402 0561 00       		.byte	0
+ 1403 0562 00       		.byte	0
+ 1404 0563 00       		.byte	0
+ 1405 0564 00       		.byte	0
+ 1406 0565 00       		.byte	0
+ 1407 0566 00       		.byte	0
+ 1408 0567 00       		.byte	0
+ 1409 0568 00       		.byte	0
+ 1410 0569 00       		.byte	0
+ 1411 056a 00       		.byte	0
+ 1412 056b 00       		.byte	0
+ 1413 056c 00       		.byte	0
+ 1414 056d 00       		.byte	0
+ 1415 056e 00       		.byte	0
+ 1416 056f 00       		.byte	0
+ 1417 0570 00       		.byte	0
+ 1418 0571 00       		.byte	0
+ 1419 0572 00       		.byte	0
+ 1420 0573 00       		.byte	0
+ 1421 0574 00       		.byte	0
+ 1422 0575 00       		.byte	0
+ 1423 0576 00       		.byte	0
+ 1424 0577 00       		.byte	0
+ 1425 0578 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 26
+
+
+ 1426 0579 00       		.byte	0
+ 1427 057a 00       		.byte	0
+ 1428 057b 00       		.byte	0
+ 1429 057c 00       		.byte	0
+ 1430 057d 00       		.byte	0
+ 1431 057e 00       		.byte	0
+ 1432 057f 00       		.byte	0
+ 1433 0580 00       		.byte	0
+ 1434 0581 00       		.byte	0
+ 1435 0582 00       		.byte	0
+ 1436 0583 00       		.byte	0
+ 1437 0584 00       		.byte	0
+ 1438 0585 00       		.byte	0
+ 1439 0586 00       		.byte	0
+ 1440 0587 00       		.byte	0
+ 1441 0588 00       		.byte	0
+ 1442 0589 00       		.byte	0
+ 1443 058a 00       		.byte	0
+ 1444 058b 00       		.byte	0
+ 1445 058c 00       		.byte	0
+ 1446 058d 00       		.byte	0
+ 1447 058e 00       		.byte	0
+ 1448 058f 00       		.byte	0
+ 1449 0590 00       		.byte	0
+ 1450 0591 00       		.byte	0
+ 1451 0592 00       		.byte	0
+ 1452 0593 00       		.byte	0
+ 1453 0594 00       		.byte	0
+ 1454 0595 00       		.byte	0
+ 1455 0596 00       		.byte	0
+ 1456 0597 00       		.byte	0
+ 1457 0598 00       		.byte	0
+ 1458 0599 00       		.byte	0
+ 1459 059a 00       		.byte	0
+ 1460 059b 00       		.byte	0
+ 1461 059c 00       		.byte	0
+ 1462 059d 00       		.byte	0
+ 1463 059e 00       		.byte	0
+ 1464 059f 00       		.byte	0
+ 1465 05a0 00       		.byte	0
+ 1466 05a1 00       		.byte	0
+ 1467 05a2 00       		.byte	0
+ 1468 05a3 00       		.byte	0
+ 1469 05a4 00       		.byte	0
+ 1470 05a5 00       		.byte	0
+ 1471 05a6 00       		.byte	0
+ 1472 05a7 04       		.byte	4
+ 1473 05a8 00       		.byte	0
+ 1474 05a9 00       		.byte	0
+ 1475 05aa 00       		.byte	0
+ 1476 05ab 00       		.byte	0
+ 1477 05ac 00       		.byte	0
+ 1478 05ad 00       		.byte	0
+ 1479 05ae 00       		.byte	0
+ 1480 05af 00       		.byte	0
+ 1481 05b0 00       		.byte	0
+ 1482 05b1 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 27
+
+
+ 1483 05b2 00       		.byte	0
+ 1484 05b3 00       		.byte	0
+ 1485 05b4 00       		.byte	0
+ 1486 05b5 00       		.byte	0
+ 1487 05b6 00       		.byte	0
+ 1488 05b7 00       		.byte	0
+ 1489 05b8 00       		.byte	0
+ 1490 05b9 00       		.byte	0
+ 1491 05ba 00       		.byte	0
+ 1492 05bb 00       		.byte	0
+ 1493 05bc 00       		.byte	0
+ 1494 05bd 00       		.byte	0
+ 1495 05be 00       		.byte	0
+ 1496 05bf 00       		.byte	0
+ 1497 05c0 00       		.byte	0
+ 1498 05c1 00       		.byte	0
+ 1499 05c2 00       		.byte	0
+ 1500 05c3 00       		.byte	0
+ 1501 05c4 00       		.byte	0
+ 1502 05c5 00       		.byte	0
+ 1503 05c6 00       		.byte	0
+ 1504 05c7 00       		.byte	0
+ 1505 05c8 00       		.byte	0
+ 1506 05c9 00       		.byte	0
+ 1507 05ca 00       		.byte	0
+ 1508 05cb 00       		.byte	0
+ 1509 05cc 00       		.byte	0
+ 1510 05cd 00       		.byte	0
+ 1511 05ce 00       		.byte	0
+ 1512 05cf 00       		.byte	0
+ 1513 05d0 00       		.byte	0
+ 1514 05d1 00       		.byte	0
+ 1515 05d2 00       		.byte	0
+ 1516 05d3 00       		.byte	0
+ 1517 05d4 00       		.byte	0
+ 1518 05d5 00       		.byte	0
+ 1519 05d6 00       		.byte	0
+ 1520 05d7 00       		.byte	0
+ 1521 05d8 00       		.byte	0
+ 1522 05d9 00       		.byte	0
+ 1523 05da 00       		.byte	0
+ 1524 05db 00       		.byte	0
+ 1525 05dc 00       		.byte	0
+ 1526 05dd 00       		.byte	0
+ 1527 05de 00       		.byte	0
+ 1528 05df 00       		.byte	0
+ 1529 05e0 00       		.byte	0
+ 1530 05e1 00       		.byte	0
+ 1531 05e2 00       		.byte	0
+ 1532 05e3 00       		.byte	0
+ 1533 05e4 00       		.byte	0
+ 1534 05e5 00       		.byte	0
+ 1535 05e6 00       		.byte	0
+ 1536 05e7 00       		.byte	0
+ 1537 05e8 00       		.byte	0
+ 1538 05e9 00       		.byte	0
+ 1539 05ea 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 28
+
+
+ 1540 05eb 00       		.byte	0
+ 1541 05ec 00       		.byte	0
+ 1542 05ed 00       		.byte	0
+ 1543 05ee 00       		.byte	0
+ 1544 05ef 00       		.byte	0
+ 1545 05f0 00       		.byte	0
+ 1546 05f1 00       		.byte	0
+ 1547 05f2 00       		.byte	0
+ 1548 05f3 00       		.byte	0
+ 1549 05f4 00       		.byte	0
+ 1550 05f5 00       		.byte	0
+ 1551 05f6 00       		.byte	0
+ 1552 05f7 00       		.byte	0
+ 1553 05f8 00       		.byte	0
+ 1554 05f9 00       		.byte	0
+ 1555 05fa 00       		.byte	0
+ 1556 05fb 00       		.byte	0
+ 1557 05fc 00       		.byte	0
+ 1558 05fd 00       		.byte	0
+ 1559 05fe 00       		.byte	0
+ 1560 05ff 00       		.byte	0
+ 1561 0600 00       		.byte	0
+ 1562 0601 00       		.byte	0
+ 1563 0602 00       		.byte	0
+ 1564 0603 00       		.byte	0
+ 1565 0604 00       		.byte	0
+ 1566 0605 00       		.byte	0
+ 1567 0606 00       		.byte	0
+ 1568 0607 00       		.byte	0
+ 1569 0608 00       		.byte	0
+ 1570 0609 00       		.byte	0
+ 1571 060a 00       		.byte	0
+ 1572 060b 00       		.byte	0
+ 1573 060c 00       		.byte	0
+ 1574 060d 00       		.byte	0
+ 1575 060e 00       		.byte	0
+ 1576 060f 00       		.byte	0
+ 1577 0610 00       		.byte	0
+ 1578 0611 00       		.byte	0
+ 1579 0612 00       		.byte	0
+ 1580 0613 00       		.byte	0
+ 1581 0614 00       		.byte	0
+ 1582 0615 00       		.byte	0
+ 1583 0616 00       		.byte	0
+ 1584 0617 00       		.byte	0
+ 1585 0618 00       		.byte	0
+ 1586 0619 00       		.byte	0
+ 1587 061a 00       		.byte	0
+ 1588 061b 00       		.byte	0
+ 1589 061c 00       		.byte	0
+ 1590 061d 00       		.byte	0
+ 1591 061e 00       		.byte	0
+ 1592 061f 00       		.byte	0
+ 1593 0620 00       		.byte	0
+ 1594 0621 00       		.byte	0
+ 1595 0622 00       		.byte	0
+ 1596 0623 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 29
+
+
+ 1597 0624 02       		.byte	2
+ 1598 0625 00       		.byte	0
+ 1599 0626 00       		.byte	0
+ 1600 0627 00       		.byte	0
+ 1601 0628 00       		.byte	0
+ 1602 0629 00       		.byte	0
+ 1603 062a 00       		.byte	0
+ 1604 062b 00       		.byte	0
+ 1605 062c 00       		.byte	0
+ 1606 062d 00       		.byte	0
+ 1607 062e 00       		.byte	0
+ 1608 062f 00       		.byte	0
+ 1609 0630 00       		.byte	0
+ 1610 0631 00       		.byte	0
+ 1611 0632 00       		.byte	0
+ 1612 0633 00       		.byte	0
+ 1613 0634 00       		.byte	0
+ 1614 0635 00       		.byte	0
+ 1615 0636 00       		.byte	0
+ 1616 0637 00       		.byte	0
+ 1617 0638 00       		.byte	0
+ 1618 0639 00       		.byte	0
+ 1619 063a 00       		.byte	0
+ 1620 063b 00       		.byte	0
+ 1621 063c 00       		.byte	0
+ 1622 063d 00       		.byte	0
+ 1623 063e 00       		.byte	0
+ 1624 063f 00       		.byte	0
+ 1625 0640 00       		.byte	0
+ 1626 0641 00       		.byte	0
+ 1627 0642 00       		.byte	0
+ 1628 0643 00       		.byte	0
+ 1629 0644 00       		.byte	0
+ 1630 0645 00       		.byte	0
+ 1631 0646 00       		.byte	0
+ 1632 0647 00       		.byte	0
+ 1633 0648 00       		.byte	0
+ 1634 0649 00       		.byte	0
+ 1635 064a 00       		.byte	0
+ 1636 064b 00       		.byte	0
+ 1637 064c 00       		.byte	0
+ 1638 064d 00       		.byte	0
+ 1639 064e 00       		.byte	0
+ 1640 064f 00       		.byte	0
+ 1641 0650 A0       		.byte	-96
+ 1642 0651 08       		.byte	8
+ 1643 0652 08       		.byte	8
+ 1644 0653 80       		.byte	-128
+ 1645 0654 00       		.byte	0
+ 1646 0655 00       		.byte	0
+ 1647 0656 00       		.byte	0
+ 1648 0657 10       		.byte	16
+ 1649 0658 00       		.byte	0
+ 1650 0659 40       		.byte	64
+ 1651 065a 14       		.byte	20
+ 1652 065b 00       		.byte	0
+ 1653 065c 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 30
+
+
+ 1654 065d 40       		.byte	64
+ 1655 065e 20       		.byte	32
+ 1656 065f 04       		.byte	4
+ 1657 0660 80       		.byte	-128
+ 1658 0661 00       		.byte	0
+ 1659 0662 02       		.byte	2
+ 1660 0663 58       		.byte	88
+ 1661 0664 00       		.byte	0
+ 1662 0665 50       		.byte	80
+ 1663 0666 00       		.byte	0
+ 1664 0667 00       		.byte	0
+ 1665 0668 00       		.byte	0
+ 1666 0669 99       		.byte	-103
+ 1667 066a 24       		.byte	36
+ 1668 066b 00       		.byte	0
+ 1669 066c 00       		.byte	0
+ 1670 066d 04       		.byte	4
+ 1671 066e 10       		.byte	16
+ 1672 066f 22       		.byte	34
+ 1673 0670 88       		.byte	-120
+ 1674 0671 02       		.byte	2
+ 1675 0672 00       		.byte	0
+ 1676 0673 06       		.byte	6
+ 1677 0674 02       		.byte	2
+ 1678 0675 48       		.byte	72
+ 1679 0676 00       		.byte	0
+ 1680 0677 01       		.byte	1
+ 1681 0678 00       		.byte	0
+ 1682 0679 14       		.byte	20
+ 1683 067a 00       		.byte	0
+ 1684 067b 82       		.byte	-126
+ 1685 067c 00       		.byte	0
+ 1686 067d 80       		.byte	-128
+ 1687 067e 00       		.byte	0
+ 1688 067f 00       		.byte	0
+ 1689 0680 80       		.byte	-128
+ 1690 0681 02       		.byte	2
+ 1691 0682 18       		.byte	24
+ 1692 0683 00       		.byte	0
+ 1693 0684 00       		.byte	0
+ 1694 0685 00       		.byte	0
+ 1695 0686 00       		.byte	0
+ 1696 0687 00       		.byte	0
+ 1697 0688 2A       		.byte	42
+ 1698 0689 00       		.byte	0
+ 1699 068a 00       		.byte	0
+ 1700 068b 40       		.byte	64
+ 1701 068c 00       		.byte	0
+ 1702 068d 00       		.byte	0
+ 1703 068e 00       		.byte	0
+ 1704 068f 01       		.byte	1
+ 1705 0690 00       		.byte	0
+ 1706 0691 00       		.byte	0
+ 1707 0692 14       		.byte	20
+ 1708 0693 01       		.byte	1
+ 1709 0694 00       		.byte	0
+ 1710 0695 08       		.byte	8
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 31
+
+
+ 1711 0696 20       		.byte	32
+ 1712 0697 00       		.byte	0
+ 1713 0698 05       		.byte	5
+ 1714 0699 00       		.byte	0
+ 1715 069a 00       		.byte	0
+ 1716 069b 01       		.byte	1
+ 1717 069c 00       		.byte	0
+ 1718 069d 00       		.byte	0
+ 1719 069e 00       		.byte	0
+ 1720 069f 00       		.byte	0
+ 1721 06a0 00       		.byte	0
+ 1722 06a1 40       		.byte	64
+ 1723 06a2 00       		.byte	0
+ 1724 06a3 00       		.byte	0
+ 1725 06a4 00       		.byte	0
+ 1726 06a5 00       		.byte	0
+ 1727 06a6 00       		.byte	0
+ 1728 06a7 00       		.byte	0
+ 1729 06a8 00       		.byte	0
+ 1730 06a9 01       		.byte	1
+ 1731 06aa 00       		.byte	0
+ 1732 06ab 00       		.byte	0
+ 1733 06ac 00       		.byte	0
+ 1734 06ad 00       		.byte	0
+ 1735 06ae 00       		.byte	0
+ 1736 06af 02       		.byte	2
+ 1737 06b0 00       		.byte	0
+ 1738 06b1 00       		.byte	0
+ 1739 06b2 00       		.byte	0
+ 1740 06b3 00       		.byte	0
+ 1741 06b4 00       		.byte	0
+ 1742 06b5 00       		.byte	0
+ 1743 06b6 20       		.byte	32
+ 1744 06b7 02       		.byte	2
+ 1745 06b8 00       		.byte	0
+ 1746 06b9 50       		.byte	80
+ 1747 06ba 00       		.byte	0
+ 1748 06bb 10       		.byte	16
+ 1749 06bc 00       		.byte	0
+ 1750 06bd 00       		.byte	0
+ 1751 06be 00       		.byte	0
+ 1752 06bf 00       		.byte	0
+ 1753 06c0 94       		.byte	-108
+ 1754 06c1 00       		.byte	0
+ 1755 06c2 00       		.byte	0
+ 1756 06c3 18       		.byte	24
+ 1757 06c4 00       		.byte	0
+ 1758 06c5 00       		.byte	0
+ 1759 06c6 00       		.byte	0
+ 1760 06c7 00       		.byte	0
+ 1761 06c8 00       		.byte	0
+ 1762 06c9 00       		.byte	0
+ 1763 06ca 00       		.byte	0
+ 1764 06cb 00       		.byte	0
+ 1765 06cc 00       		.byte	0
+ 1766 06cd 00       		.byte	0
+ 1767 06ce 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 32
+
+
+ 1768 06cf 00       		.byte	0
+ 1769 06d0 00       		.byte	0
+ 1770 06d1 00       		.byte	0
+ 1771 06d2 00       		.byte	0
+ 1772 06d3 21       		.byte	33
+ 1773 06d4 00       		.byte	0
+ 1774 06d5 00       		.byte	0
+ 1775 06d6 00       		.byte	0
+ 1776 06d7 00       		.byte	0
+ 1777 06d8 20       		.byte	32
+ 1778 06d9 00       		.byte	0
+ 1779 06da 10       		.byte	16
+ 1780 06db 80       		.byte	-128
+ 1781 06dc 00       		.byte	0
+ 1782 06dd 00       		.byte	0
+ 1783 06de 00       		.byte	0
+ 1784 06df 00       		.byte	0
+ 1785 06e0 00       		.byte	0
+ 1786 06e1 00       		.byte	0
+ 1787 06e2 00       		.byte	0
+ 1788 06e3 00       		.byte	0
+ 1789 06e4 00       		.byte	0
+ 1790 06e5 10       		.byte	16
+ 1791 06e6 00       		.byte	0
+ 1792 06e7 00       		.byte	0
+ 1793 06e8 00       		.byte	0
+ 1794 06e9 00       		.byte	0
+ 1795 06ea 00       		.byte	0
+ 1796 06eb 00       		.byte	0
+ 1797 06ec 20       		.byte	32
+ 1798 06ed 00       		.byte	0
+ 1799 06ee 00       		.byte	0
+ 1800 06ef 10       		.byte	16
+ 1801 06f0 11       		.byte	17
+ 1802 06f1 00       		.byte	0
+ 1803 06f2 02       		.byte	2
+ 1804 06f3 00       		.byte	0
+ 1805 06f4 00       		.byte	0
+ 1806 06f5 00       		.byte	0
+ 1807 06f6 00       		.byte	0
+ 1808 06f7 00       		.byte	0
+ 1809 06f8 00       		.byte	0
+ 1810 06f9 00       		.byte	0
+ 1811 06fa 00       		.byte	0
+ 1812 06fb 00       		.byte	0
+ 1813 06fc 00       		.byte	0
+ 1814 06fd 00       		.byte	0
+ 1815 06fe 00       		.byte	0
+ 1816 06ff 00       		.byte	0
+ 1817 0700 00       		.byte	0
+ 1818 0701 00       		.byte	0
+ 1819 0702 00       		.byte	0
+ 1820 0703 00       		.byte	0
+ 1821 0704 00       		.byte	0
+ 1822 0705 00       		.byte	0
+ 1823 0706 00       		.byte	0
+ 1824 0707 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 33
+
+
+ 1825 0708 00       		.byte	0
+ 1826 0709 00       		.byte	0
+ 1827 070a 00       		.byte	0
+ 1828 070b 00       		.byte	0
+ 1829 070c 00       		.byte	0
+ 1830 070d 00       		.byte	0
+ 1831 070e 00       		.byte	0
+ 1832 070f 00       		.byte	0
+ 1833 0710 2F       		.byte	47
+ 1834 0711 00       		.byte	0
+ 1835 0712 E7       		.byte	-25
+ 1836 0713 00       		.byte	0
+ 1837 0714 CF       		.byte	-49
+ 1838 0715 00       		.byte	0
+ 1839 0716 00       		.byte	0
+ 1840 0717 00       		.byte	0
+ 1841 0718 00       		.byte	0
+ 1842 0719 00       		.byte	0
+ 1843 071a 1F       		.byte	31
+ 1844 071b 00       		.byte	0
+ 1845 071c 0F       		.byte	15
+ 1846 071d 00       		.byte	0
+ 1847 071e 8F       		.byte	-113
+ 1848 071f 00       		.byte	0
+ 1849 0720 07       		.byte	7
+ 1850 0721 00       		.byte	0
+ 1851 0722 0C       		.byte	12
+ 1852 0723 00       		.byte	0
+ 1853 0724 00       		.byte	0
+ 1854 0725 00       		.byte	0
+ 1855 0726 81       		.byte	-127
+ 1856 0727 00       		.byte	0
+ 1857 0728 30       		.byte	48
+ 1858 0729 00       		.byte	0
+ 1859 072a 00       		.byte	0
+ 1860 072b 00       		.byte	0
+ 1861 072c 00       		.byte	0
+ 1862 072d 00       		.byte	0
+ 1863 072e 00       		.byte	0
+ 1864 072f 00       		.byte	0
+ 1865 0730 00       		.byte	0
+ 1866 0731 00       		.byte	0
+ 1867 0732 00       		.byte	0
+ 1868 0733 00       		.byte	0
+ 1869 0734 00       		.byte	0
+ 1870 0735 00       		.byte	0
+ 1871 0736 00       		.byte	0
+ 1872 0737 00       		.byte	0
+ 1873 0738 00       		.byte	0
+ 1874 0739 00       		.byte	0
+ 1875 073a 00       		.byte	0
+ 1876 073b 00       		.byte	0
+ 1877 073c 00       		.byte	0
+ 1878 073d 00       		.byte	0
+ 1879 073e 00       		.byte	0
+ 1880 073f 00       		.byte	0
+ 1881 0740 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 34
+
+
+ 1882 0741 00       		.byte	0
+ 1883 0742 00       		.byte	0
+ 1884 0743 00       		.byte	0
+ 1885 0744 00       		.byte	0
+ 1886 0745 00       		.byte	0
+ 1887 0746 00       		.byte	0
+ 1888 0747 00       		.byte	0
+ 1889 0748 00       		.byte	0
+ 1890 0749 00       		.byte	0
+ 1891 074a 00       		.byte	0
+ 1892 074b 00       		.byte	0
+ 1893 074c 00       		.byte	0
+ 1894 074d 00       		.byte	0
+ 1895 074e 00       		.byte	0
+ 1896 074f 00       		.byte	0
+ 1897 0750 40       		.byte	64
+ 1898 0751 00       		.byte	0
+ 1899 0752 00       		.byte	0
+ 1900 0753 08       		.byte	8
+ 1901 0754 00       		.byte	0
+ 1902 0755 12       		.byte	18
+ 1903 0756 10       		.byte	16
+ 1904 0757 02       		.byte	2
+ 1905 0758 00       		.byte	0
+ 1906 0759 10       		.byte	16
+ 1907 075a 04       		.byte	4
+ 1908 075b 20       		.byte	32
+ 1909 075c 00       		.byte	0
+ 1910 075d 00       		.byte	0
+ 1911 075e 20       		.byte	32
+ 1912 075f 08       		.byte	8
+ 1913 0760 00       		.byte	0
+ 1914 0761 00       		.byte	0
+ 1915 0762 30       		.byte	48
+ 1916 0763 02       		.byte	2
+ 1917 0764 00       		.byte	0
+ 1918 0765 20       		.byte	32
+ 1919 0766 20       		.byte	32
+ 1920 0767 00       		.byte	0
+ 1921 0768 44       		.byte	68
+ 1922 0769 02       		.byte	2
+ 1923 076a 00       		.byte	0
+ 1924 076b 08       		.byte	8
+ 1925 076c 00       		.byte	0
+ 1926 076d 14       		.byte	20
+ 1927 076e 24       		.byte	36
+ 1928 076f 00       		.byte	0
+ 1929 0770 22       		.byte	34
+ 1930 0771 05       		.byte	5
+ 1931 0772 12       		.byte	18
+ 1932 0773 00       		.byte	0
+ 1933 0774 00       		.byte	0
+ 1934 0775 00       		.byte	0
+ 1935 0776 00       		.byte	0
+ 1936 0777 8A       		.byte	-118
+ 1937 0778 20       		.byte	32
+ 1938 0779 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 35
+
+
+ 1939 077a 00       		.byte	0
+ 1940 077b 00       		.byte	0
+ 1941 077c 00       		.byte	0
+ 1942 077d 02       		.byte	2
+ 1943 077e 20       		.byte	32
+ 1944 077f 08       		.byte	8
+ 1945 0780 00       		.byte	0
+ 1946 0781 04       		.byte	4
+ 1947 0782 00       		.byte	0
+ 1948 0783 10       		.byte	16
+ 1949 0784 00       		.byte	0
+ 1950 0785 00       		.byte	0
+ 1951 0786 20       		.byte	32
+ 1952 0787 02       		.byte	2
+ 1953 0788 00       		.byte	0
+ 1954 0789 1A       		.byte	26
+ 1955 078a 00       		.byte	0
+ 1956 078b 00       		.byte	0
+ 1957 078c 00       		.byte	0
+ 1958 078d 01       		.byte	1
+ 1959 078e 16       		.byte	22
+ 1960 078f 20       		.byte	32
+ 1961 0790 04       		.byte	4
+ 1962 0791 00       		.byte	0
+ 1963 0792 00       		.byte	0
+ 1964 0793 00       		.byte	0
+ 1965 0794 00       		.byte	0
+ 1966 0795 10       		.byte	16
+ 1967 0796 10       		.byte	16
+ 1968 0797 02       		.byte	2
+ 1969 0798 00       		.byte	0
+ 1970 0799 00       		.byte	0
+ 1971 079a 20       		.byte	32
+ 1972 079b 00       		.byte	0
+ 1973 079c 00       		.byte	0
+ 1974 079d 00       		.byte	0
+ 1975 079e 00       		.byte	0
+ 1976 079f 08       		.byte	8
+ 1977 07a0 00       		.byte	0
+ 1978 07a1 10       		.byte	16
+ 1979 07a2 00       		.byte	0
+ 1980 07a3 10       		.byte	16
+ 1981 07a4 00       		.byte	0
+ 1982 07a5 00       		.byte	0
+ 1983 07a6 02       		.byte	2
+ 1984 07a7 10       		.byte	16
+ 1985 07a8 00       		.byte	0
+ 1986 07a9 00       		.byte	0
+ 1987 07aa 00       		.byte	0
+ 1988 07ab 00       		.byte	0
+ 1989 07ac 00       		.byte	0
+ 1990 07ad 01       		.byte	1
+ 1991 07ae 10       		.byte	16
+ 1992 07af 88       		.byte	-120
+ 1993 07b0 00       		.byte	0
+ 1994 07b1 00       		.byte	0
+ 1995 07b2 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 36
+
+
+ 1996 07b3 00       		.byte	0
+ 1997 07b4 00       		.byte	0
+ 1998 07b5 00       		.byte	0
+ 1999 07b6 00       		.byte	0
+ 2000 07b7 00       		.byte	0
+ 2001 07b8 00       		.byte	0
+ 2002 07b9 00       		.byte	0
+ 2003 07ba 00       		.byte	0
+ 2004 07bb 00       		.byte	0
+ 2005 07bc 00       		.byte	0
+ 2006 07bd 00       		.byte	0
+ 2007 07be 00       		.byte	0
+ 2008 07bf 00       		.byte	0
+ 2009 07c0 00       		.byte	0
+ 2010 07c1 00       		.byte	0
+ 2011 07c2 00       		.byte	0
+ 2012 07c3 00       		.byte	0
+ 2013 07c4 00       		.byte	0
+ 2014 07c5 00       		.byte	0
+ 2015 07c6 00       		.byte	0
+ 2016 07c7 00       		.byte	0
+ 2017 07c8 00       		.byte	0
+ 2018 07c9 00       		.byte	0
+ 2019 07ca 00       		.byte	0
+ 2020 07cb 00       		.byte	0
+ 2021 07cc 00       		.byte	0
+ 2022 07cd 00       		.byte	0
+ 2023 07ce 00       		.byte	0
+ 2024 07cf 00       		.byte	0
+ 2025 07d0 00       		.byte	0
+ 2026 07d1 00       		.byte	0
+ 2027 07d2 10       		.byte	16
+ 2028 07d3 00       		.byte	0
+ 2029 07d4 00       		.byte	0
+ 2030 07d5 00       		.byte	0
+ 2031 07d6 00       		.byte	0
+ 2032 07d7 00       		.byte	0
+ 2033 07d8 00       		.byte	0
+ 2034 07d9 00       		.byte	0
+ 2035 07da 00       		.byte	0
+ 2036 07db 00       		.byte	0
+ 2037 07dc 00       		.byte	0
+ 2038 07dd 00       		.byte	0
+ 2039 07de 00       		.byte	0
+ 2040 07df 00       		.byte	0
+ 2041 07e0 00       		.byte	0
+ 2042 07e1 00       		.byte	0
+ 2043 07e2 00       		.byte	0
+ 2044 07e3 00       		.byte	0
+ 2045 07e4 00       		.byte	0
+ 2046 07e5 00       		.byte	0
+ 2047 07e6 00       		.byte	0
+ 2048 07e7 00       		.byte	0
+ 2049 07e8 00       		.byte	0
+ 2050 07e9 00       		.byte	0
+ 2051 07ea 00       		.byte	0
+ 2052 07eb 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 37
+
+
+ 2053 07ec 00       		.byte	0
+ 2054 07ed 00       		.byte	0
+ 2055 07ee 00       		.byte	0
+ 2056 07ef 00       		.byte	0
+ 2057 07f0 00       		.byte	0
+ 2058 07f1 00       		.byte	0
+ 2059 07f2 00       		.byte	0
+ 2060 07f3 00       		.byte	0
+ 2061 07f4 00       		.byte	0
+ 2062 07f5 00       		.byte	0
+ 2063 07f6 00       		.byte	0
+ 2064 07f7 00       		.byte	0
+ 2065 07f8 00       		.byte	0
+ 2066 07f9 00       		.byte	0
+ 2067 07fa 00       		.byte	0
+ 2068 07fb 00       		.byte	0
+ 2069 07fc 00       		.byte	0
+ 2070 07fd 00       		.byte	0
+ 2071 07fe 00       		.byte	0
+ 2072 07ff 00       		.byte	0
+ 2073 0800 00       		.byte	0
+ 2074 0801 00       		.byte	0
+ 2075 0802 00       		.byte	0
+ 2076 0803 00       		.byte	0
+ 2077 0804 00       		.byte	0
+ 2078 0805 00       		.byte	0
+ 2079 0806 00       		.byte	0
+ 2080 0807 00       		.byte	0
+ 2081 0808 00       		.byte	0
+ 2082 0809 00       		.byte	0
+ 2083 080a 00       		.byte	0
+ 2084 080b 00       		.byte	0
+ 2085 080c 00       		.byte	0
+ 2086 080d 00       		.byte	0
+ 2087 080e 00       		.byte	0
+ 2088 080f 00       		.byte	0
+ 2089 0810 F3       		.byte	-13
+ 2090 0811 00       		.byte	0
+ 2091 0812 66       		.byte	102
+ 2092 0813 00       		.byte	0
+ 2093 0814 6C       		.byte	108
+ 2094 0815 00       		.byte	0
+ 2095 0816 00       		.byte	0
+ 2096 0817 00       		.byte	0
+ 2097 0818 00       		.byte	0
+ 2098 0819 00       		.byte	0
+ 2099 081a A2       		.byte	-94
+ 2100 081b 00       		.byte	0
+ 2101 081c A6       		.byte	-90
+ 2102 081d 00       		.byte	0
+ 2103 081e E7       		.byte	-25
+ 2104 081f 00       		.byte	0
+ 2105 0820 E4       		.byte	-28
+ 2106 0821 00       		.byte	0
+ 2107 0822 00       		.byte	0
+ 2108 0823 00       		.byte	0
+ 2109 0824 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 38
+
+
+ 2110 0825 00       		.byte	0
+ 2111 0826 F0       		.byte	-16
+ 2112 0827 00       		.byte	0
+ 2113 0828 00       		.byte	0
+ 2114 0829 00       		.byte	0
+ 2115 082a 00       		.byte	0
+ 2116 082b 00       		.byte	0
+ 2117 082c 00       		.byte	0
+ 2118 082d 00       		.byte	0
+ 2119 082e 00       		.byte	0
+ 2120 082f 00       		.byte	0
+ 2121 0830 00       		.byte	0
+ 2122 0831 00       		.byte	0
+ 2123 0832 00       		.byte	0
+ 2124 0833 00       		.byte	0
+ 2125 0834 04       		.byte	4
+ 2126 0835 00       		.byte	0
+ 2127 0836 00       		.byte	0
+ 2128 0837 00       		.byte	0
+ 2129 0838 00       		.byte	0
+ 2130 0839 00       		.byte	0
+ 2131 083a 00       		.byte	0
+ 2132 083b 00       		.byte	0
+ 2133 083c 00       		.byte	0
+ 2134 083d 00       		.byte	0
+ 2135 083e 00       		.byte	0
+ 2136 083f 00       		.byte	0
+ 2137 0840 00       		.byte	0
+ 2138 0841 00       		.byte	0
+ 2139 0842 00       		.byte	0
+ 2140 0843 00       		.byte	0
+ 2141 0844 00       		.byte	0
+ 2142 0845 00       		.byte	0
+ 2143 0846 00       		.byte	0
+ 2144 0847 00       		.byte	0
+ 2145 0848 00       		.byte	0
+ 2146 0849 00       		.byte	0
+ 2147 084a 00       		.byte	0
+ 2148 084b 00       		.byte	0
+ 2149 084c 00       		.byte	0
+ 2150 084d 00       		.byte	0
+ 2151 084e 00       		.byte	0
+ 2152 084f 00       		.byte	0
+ 2153 0850 00       		.byte	0
+ 2154 0851 00       		.byte	0
+ 2155 0852 00       		.byte	0
+ 2156 0853 00       		.byte	0
+ 2157 0854 00       		.byte	0
+ 2158 0855 00       		.byte	0
+ 2159 0856 00       		.byte	0
+ 2160 0857 00       		.byte	0
+ 2161 0858 00       		.byte	0
+ 2162 0859 00       		.byte	0
+ 2163 085a 00       		.byte	0
+ 2164 085b 00       		.byte	0
+ 2165 085c 00       		.byte	0
+ 2166 085d 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 39
+
+
+ 2167 085e 00       		.byte	0
+ 2168 085f 00       		.byte	0
+ 2169 0860 00       		.byte	0
+ 2170 0861 00       		.byte	0
+ 2171 0862 00       		.byte	0
+ 2172 0863 00       		.byte	0
+ 2173 0864 00       		.byte	0
+ 2174 0865 00       		.byte	0
+ 2175 0866 00       		.byte	0
+ 2176 0867 00       		.byte	0
+ 2177 0868 00       		.byte	0
+ 2178 0869 00       		.byte	0
+ 2179 086a 00       		.byte	0
+ 2180 086b 00       		.byte	0
+ 2181 086c 00       		.byte	0
+ 2182 086d 00       		.byte	0
+ 2183 086e 00       		.byte	0
+ 2184 086f 00       		.byte	0
+ 2185 0870 00       		.byte	0
+ 2186 0871 00       		.byte	0
+ 2187 0872 00       		.byte	0
+ 2188 0873 00       		.byte	0
+ 2189 0874 00       		.byte	0
+ 2190 0875 00       		.byte	0
+ 2191 0876 00       		.byte	0
+ 2192 0877 00       		.byte	0
+ 2193 0878 00       		.byte	0
+ 2194 0879 00       		.byte	0
+ 2195 087a 00       		.byte	0
+ 2196 087b 00       		.byte	0
+ 2197 087c 00       		.byte	0
+ 2198 087d 00       		.byte	0
+ 2199 087e 00       		.byte	0
+ 2200 087f 00       		.byte	0
+ 2201 0880 00       		.byte	0
+ 2202 0881 00       		.byte	0
+ 2203 0882 00       		.byte	0
+ 2204 0883 00       		.byte	0
+ 2205 0884 40       		.byte	64
+ 2206 0885 00       		.byte	0
+ 2207 0886 00       		.byte	0
+ 2208 0887 00       		.byte	0
+ 2209 0888 00       		.byte	0
+ 2210 0889 00       		.byte	0
+ 2211 088a 00       		.byte	0
+ 2212 088b 00       		.byte	0
+ 2213 088c 00       		.byte	0
+ 2214 088d 00       		.byte	0
+ 2215 088e 00       		.byte	0
+ 2216 088f 00       		.byte	0
+ 2217 0890 00       		.byte	0
+ 2218 0891 00       		.byte	0
+ 2219 0892 00       		.byte	0
+ 2220 0893 00       		.byte	0
+ 2221 0894 00       		.byte	0
+ 2222 0895 00       		.byte	0
+ 2223 0896 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 40
+
+
+ 2224 0897 00       		.byte	0
+ 2225 0898 00       		.byte	0
+ 2226 0899 00       		.byte	0
+ 2227 089a 00       		.byte	0
+ 2228 089b 00       		.byte	0
+ 2229 089c 00       		.byte	0
+ 2230 089d 00       		.byte	0
+ 2231 089e 00       		.byte	0
+ 2232 089f 00       		.byte	0
+ 2233 08a0 00       		.byte	0
+ 2234 08a1 00       		.byte	0
+ 2235 08a2 00       		.byte	0
+ 2236 08a3 00       		.byte	0
+ 2237 08a4 00       		.byte	0
+ 2238 08a5 00       		.byte	0
+ 2239 08a6 00       		.byte	0
+ 2240 08a7 00       		.byte	0
+ 2241 08a8 00       		.byte	0
+ 2242 08a9 00       		.byte	0
+ 2243 08aa 00       		.byte	0
+ 2244 08ab 00       		.byte	0
+ 2245 08ac 00       		.byte	0
+ 2246 08ad 00       		.byte	0
+ 2247 08ae 00       		.byte	0
+ 2248 08af 00       		.byte	0
+ 2249 08b0 00       		.byte	0
+ 2250 08b1 00       		.byte	0
+ 2251 08b2 00       		.byte	0
+ 2252 08b3 00       		.byte	0
+ 2253 08b4 00       		.byte	0
+ 2254 08b5 00       		.byte	0
+ 2255 08b6 00       		.byte	0
+ 2256 08b7 00       		.byte	0
+ 2257 08b8 00       		.byte	0
+ 2258 08b9 00       		.byte	0
+ 2259 08ba 00       		.byte	0
+ 2260 08bb 00       		.byte	0
+ 2261 08bc 00       		.byte	0
+ 2262 08bd 00       		.byte	0
+ 2263 08be 00       		.byte	0
+ 2264 08bf 00       		.byte	0
+ 2265 08c0 00       		.byte	0
+ 2266 08c1 00       		.byte	0
+ 2267 08c2 00       		.byte	0
+ 2268 08c3 00       		.byte	0
+ 2269 08c4 00       		.byte	0
+ 2270 08c5 00       		.byte	0
+ 2271 08c6 00       		.byte	0
+ 2272 08c7 00       		.byte	0
+ 2273 08c8 00       		.byte	0
+ 2274 08c9 00       		.byte	0
+ 2275 08ca 00       		.byte	0
+ 2276 08cb 00       		.byte	0
+ 2277 08cc 00       		.byte	0
+ 2278 08cd 00       		.byte	0
+ 2279 08ce 00       		.byte	0
+ 2280 08cf 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 41
+
+
+ 2281 08d0 04       		.byte	4
+ 2282 08d1 00       		.byte	0
+ 2283 08d2 00       		.byte	0
+ 2284 08d3 00       		.byte	0
+ 2285 08d4 00       		.byte	0
+ 2286 08d5 00       		.byte	0
+ 2287 08d6 00       		.byte	0
+ 2288 08d7 00       		.byte	0
+ 2289 08d8 00       		.byte	0
+ 2290 08d9 02       		.byte	2
+ 2291 08da 00       		.byte	0
+ 2292 08db 00       		.byte	0
+ 2293 08dc 00       		.byte	0
+ 2294 08dd 00       		.byte	0
+ 2295 08de 00       		.byte	0
+ 2296 08df 00       		.byte	0
+ 2297 08e0 A0       		.byte	-96
+ 2298 08e1 00       		.byte	0
+ 2299 08e2 00       		.byte	0
+ 2300 08e3 00       		.byte	0
+ 2301 08e4 00       		.byte	0
+ 2302 08e5 00       		.byte	0
+ 2303 08e6 00       		.byte	0
+ 2304 08e7 00       		.byte	0
+ 2305 08e8 44       		.byte	68
+ 2306 08e9 00       		.byte	0
+ 2307 08ea 00       		.byte	0
+ 2308 08eb 10       		.byte	16
+ 2309 08ec 00       		.byte	0
+ 2310 08ed 00       		.byte	0
+ 2311 08ee 00       		.byte	0
+ 2312 08ef 00       		.byte	0
+ 2313 08f0 00       		.byte	0
+ 2314 08f1 00       		.byte	0
+ 2315 08f2 00       		.byte	0
+ 2316 08f3 00       		.byte	0
+ 2317 08f4 00       		.byte	0
+ 2318 08f5 00       		.byte	0
+ 2319 08f6 00       		.byte	0
+ 2320 08f7 00       		.byte	0
+ 2321 08f8 00       		.byte	0
+ 2322 08f9 00       		.byte	0
+ 2323 08fa 00       		.byte	0
+ 2324 08fb 00       		.byte	0
+ 2325 08fc 00       		.byte	0
+ 2326 08fd 00       		.byte	0
+ 2327 08fe 00       		.byte	0
+ 2328 08ff 00       		.byte	0
+ 2329 0900 00       		.byte	0
+ 2330 0901 00       		.byte	0
+ 2331 0902 00       		.byte	0
+ 2332 0903 00       		.byte	0
+ 2333 0904 00       		.byte	0
+ 2334 0905 00       		.byte	0
+ 2335 0906 00       		.byte	0
+ 2336 0907 00       		.byte	0
+ 2337 0908 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 42
+
+
+ 2338 0909 00       		.byte	0
+ 2339 090a 00       		.byte	0
+ 2340 090b 00       		.byte	0
+ 2341 090c 00       		.byte	0
+ 2342 090d 00       		.byte	0
+ 2343 090e 00       		.byte	0
+ 2344 090f 00       		.byte	0
+ 2345 0910 04       		.byte	4
+ 2346 0911 00       		.byte	0
+ 2347 0912 00       		.byte	0
+ 2348 0913 00       		.byte	0
+ 2349 0914 00       		.byte	0
+ 2350 0915 00       		.byte	0
+ 2351 0916 04       		.byte	4
+ 2352 0917 00       		.byte	0
+ 2353 0918 A8       		.byte	-88
+ 2354 0919 00       		.byte	0
+ 2355 091a 00       		.byte	0
+ 2356 091b 00       		.byte	0
+ 2357 091c 00       		.byte	0
+ 2358 091d 00       		.byte	0
+ 2359 091e 00       		.byte	0
+ 2360 091f 20       		.byte	32
+ 2361 0920 08       		.byte	8
+ 2362 0921 00       		.byte	0
+ 2363 0922 04       		.byte	4
+ 2364 0923 00       		.byte	0
+ 2365 0924 00       		.byte	0
+ 2366 0925 00       		.byte	0
+ 2367 0926 00       		.byte	0
+ 2368 0927 00       		.byte	0
+ 2369 0928 00       		.byte	0
+ 2370 0929 00       		.byte	0
+ 2371 092a 00       		.byte	0
+ 2372 092b 00       		.byte	0
+ 2373 092c 00       		.byte	0
+ 2374 092d 00       		.byte	0
+ 2375 092e 00       		.byte	0
+ 2376 092f 00       		.byte	0
+ 2377 0930 00       		.byte	0
+ 2378 0931 00       		.byte	0
+ 2379 0932 00       		.byte	0
+ 2380 0933 00       		.byte	0
+ 2381 0934 00       		.byte	0
+ 2382 0935 00       		.byte	0
+ 2383 0936 00       		.byte	0
+ 2384 0937 00       		.byte	0
+ 2385 0938 00       		.byte	0
+ 2386 0939 00       		.byte	0
+ 2387 093a 00       		.byte	0
+ 2388 093b 00       		.byte	0
+ 2389 093c 00       		.byte	0
+ 2390 093d 00       		.byte	0
+ 2391 093e 00       		.byte	0
+ 2392 093f 00       		.byte	0
+ 2393 0940 00       		.byte	0
+ 2394 0941 02       		.byte	2
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 43
+
+
+ 2395 0942 00       		.byte	0
+ 2396 0943 00       		.byte	0
+ 2397 0944 00       		.byte	0
+ 2398 0945 00       		.byte	0
+ 2399 0946 00       		.byte	0
+ 2400 0947 00       		.byte	0
+ 2401 0948 00       		.byte	0
+ 2402 0949 00       		.byte	0
+ 2403 094a 00       		.byte	0
+ 2404 094b 00       		.byte	0
+ 2405 094c 00       		.byte	0
+ 2406 094d 00       		.byte	0
+ 2407 094e 00       		.byte	0
+ 2408 094f 00       		.byte	0
+ 2409 0950 00       		.byte	0
+ 2410 0951 00       		.byte	0
+ 2411 0952 00       		.byte	0
+ 2412 0953 00       		.byte	0
+ 2413 0954 00       		.byte	0
+ 2414 0955 00       		.byte	0
+ 2415 0956 00       		.byte	0
+ 2416 0957 00       		.byte	0
+ 2417 0958 00       		.byte	0
+ 2418 0959 00       		.byte	0
+ 2419 095a 00       		.byte	0
+ 2420 095b 00       		.byte	0
+ 2421 095c 00       		.byte	0
+ 2422 095d 00       		.byte	0
+ 2423 095e 00       		.byte	0
+ 2424 095f 00       		.byte	0
+ 2425 0960 00       		.byte	0
+ 2426 0961 00       		.byte	0
+ 2427 0962 00       		.byte	0
+ 2428 0963 00       		.byte	0
+ 2429 0964 00       		.byte	0
+ 2430 0965 00       		.byte	0
+ 2431 0966 00       		.byte	0
+ 2432 0967 00       		.byte	0
+ 2433 0968 00       		.byte	0
+ 2434 0969 00       		.byte	0
+ 2435 096a 00       		.byte	0
+ 2436 096b 00       		.byte	0
+ 2437 096c 00       		.byte	0
+ 2438 096d 00       		.byte	0
+ 2439 096e 00       		.byte	0
+ 2440 096f 00       		.byte	0
+ 2441 0970 00       		.byte	0
+ 2442 0971 00       		.byte	0
+ 2443 0972 00       		.byte	0
+ 2444 0973 00       		.byte	0
+ 2445 0974 00       		.byte	0
+ 2446 0975 00       		.byte	0
+ 2447 0976 00       		.byte	0
+ 2448 0977 00       		.byte	0
+ 2449 0978 00       		.byte	0
+ 2450 0979 00       		.byte	0
+ 2451 097a 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 44
+
+
+ 2452 097b 00       		.byte	0
+ 2453 097c 00       		.byte	0
+ 2454 097d 00       		.byte	0
+ 2455 097e 00       		.byte	0
+ 2456 097f 00       		.byte	0
+ 2457 0980 00       		.byte	0
+ 2458 0981 00       		.byte	0
+ 2459 0982 00       		.byte	0
+ 2460 0983 00       		.byte	0
+ 2461 0984 00       		.byte	0
+ 2462 0985 00       		.byte	0
+ 2463 0986 00       		.byte	0
+ 2464 0987 00       		.byte	0
+ 2465 0988 00       		.byte	0
+ 2466 0989 00       		.byte	0
+ 2467 098a 00       		.byte	0
+ 2468 098b 00       		.byte	0
+ 2469 098c 00       		.byte	0
+ 2470 098d 00       		.byte	0
+ 2471 098e 00       		.byte	0
+ 2472 098f 00       		.byte	0
+ 2473 0990 04       		.byte	4
+ 2474 0991 00       		.byte	0
+ 2475 0992 08       		.byte	8
+ 2476 0993 00       		.byte	0
+ 2477 0994 0C       		.byte	12
+ 2478 0995 00       		.byte	0
+ 2479 0996 00       		.byte	0
+ 2480 0997 00       		.byte	0
+ 2481 0998 00       		.byte	0
+ 2482 0999 00       		.byte	0
+ 2483 099a 00       		.byte	0
+ 2484 099b 00       		.byte	0
+ 2485 099c 00       		.byte	0
+ 2486 099d 00       		.byte	0
+ 2487 099e 00       		.byte	0
+ 2488 099f 00       		.byte	0
+ 2489 09a0 24       		.byte	36
+ 2490 09a1 00       		.byte	0
+ 2491 09a2 24       		.byte	36
+ 2492 09a3 00       		.byte	0
+ 2493 09a4 00       		.byte	0
+ 2494 09a5 00       		.byte	0
+ 2495 09a6 00       		.byte	0
+ 2496 09a7 00       		.byte	0
+ 2497 09a8 00       		.byte	0
+ 2498 09a9 00       		.byte	0
+ 2499 09aa 00       		.byte	0
+ 2500 09ab 00       		.byte	0
+ 2501 09ac 00       		.byte	0
+ 2502 09ad 00       		.byte	0
+ 2503 09ae 00       		.byte	0
+ 2504 09af 00       		.byte	0
+ 2505 09b0 00       		.byte	0
+ 2506 09b1 00       		.byte	0
+ 2507 09b2 00       		.byte	0
+ 2508 09b3 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 45
+
+
+ 2509 09b4 00       		.byte	0
+ 2510 09b5 00       		.byte	0
+ 2511 09b6 00       		.byte	0
+ 2512 09b7 00       		.byte	0
+ 2513 09b8 00       		.byte	0
+ 2514 09b9 00       		.byte	0
+ 2515 09ba 00       		.byte	0
+ 2516 09bb 00       		.byte	0
+ 2517 09bc 00       		.byte	0
+ 2518 09bd 00       		.byte	0
+ 2519 09be 00       		.byte	0
+ 2520 09bf 00       		.byte	0
+ 2521 09c0 00       		.byte	0
+ 2522 09c1 00       		.byte	0
+ 2523 09c2 00       		.byte	0
+ 2524 09c3 00       		.byte	0
+ 2525 09c4 00       		.byte	0
+ 2526 09c5 00       		.byte	0
+ 2527 09c6 00       		.byte	0
+ 2528 09c7 00       		.byte	0
+ 2529 09c8 00       		.byte	0
+ 2530 09c9 00       		.byte	0
+ 2531 09ca 00       		.byte	0
+ 2532 09cb 00       		.byte	0
+ 2533 09cc 00       		.byte	0
+ 2534 09cd 00       		.byte	0
+ 2535 09ce 00       		.byte	0
+ 2536 09cf 00       		.byte	0
+ 2537 09d0 80       		.byte	-128
+ 2538 09d1 00       		.byte	0
+ 2539 09d2 40       		.byte	64
+ 2540 09d3 80       		.byte	-128
+ 2541 09d4 80       		.byte	-128
+ 2542 09d5 00       		.byte	0
+ 2543 09d6 80       		.byte	-128
+ 2544 09d7 00       		.byte	0
+ 2545 09d8 00       		.byte	0
+ 2546 09d9 00       		.byte	0
+ 2547 09da 00       		.byte	0
+ 2548 09db 00       		.byte	0
+ 2549 09dc 00       		.byte	0
+ 2550 09dd 0B       		.byte	11
+ 2551 09de 0B       		.byte	11
+ 2552 09df 00       		.byte	0
+ 2553 09e0 00       		.byte	0
+ 2554 09e1 00       		.byte	0
+ 2555 09e2 00       		.byte	0
+ 2556 09e3 00       		.byte	0
+ 2557 09e4 04       		.byte	4
+ 2558 09e5 00       		.byte	0
+ 2559 09e6 00       		.byte	0
+ 2560 09e7 06       		.byte	6
+ 2561 09e8 02       		.byte	2
+ 2562 09e9 00       		.byte	0
+ 2563 09ea 02       		.byte	2
+ 2564 09eb 00       		.byte	0
+ 2565 09ec 00       		.byte	0
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 46
+
+
+ 2566 09ed 00       		.byte	0
+ 2567 09ee 00       		.byte	0
+ 2568 09ef 00       		.byte	0
+ 2569              		.global	cy_meta_custnvl
+ 2570              		.section	.cycustnvl,"a",%progbits
+ 2571              		.align	2
+ 2572              		.type	cy_meta_custnvl, %object
+ 2573              		.size	cy_meta_custnvl, 4
+ 2574              	cy_meta_custnvl:
+ 2575 0000 00       		.byte	0
+ 2576 0001 00       		.byte	0
+ 2577 0002 40       		.byte	64
+ 2578 0003 05       		.byte	5
+ 2579              		.global	cy_meta_wonvl
+ 2580              		.section	.cywolatch,"a",%progbits
+ 2581              		.align	2
+ 2582              		.type	cy_meta_wonvl, %object
+ 2583              		.size	cy_meta_wonvl, 4
+ 2584              	cy_meta_wonvl:
+ 2585 0000 BC       		.byte	-68
+ 2586 0001 90       		.byte	-112
+ 2587 0002 AC       		.byte	-84
+ 2588 0003 AF       		.byte	-81
+ 2589              		.global	cy_meta_flashprotect
+ 2590              		.section	.cyflashprotect,"a",%progbits
+ 2591              		.align	2
+ 2592              		.type	cy_meta_flashprotect, %object
+ 2593              		.size	cy_meta_flashprotect, 256
+ 2594              	cy_meta_flashprotect:
+ 2595 0000 00000000 		.space	256
+ 2595      00000000 
+ 2595      00000000 
+ 2595      00000000 
+ 2595      00000000 
+ 2596              		.global	cy_metadata
+ 2597              		.section	.cymeta,"a",%progbits
+ 2598              		.align	2
+ 2599              		.type	cy_metadata, %object
+ 2600              		.size	cy_metadata, 12
+ 2601              	cy_metadata:
+ 2602 0000 00       		.byte	0
+ 2603 0001 01       		.byte	1
+ 2604 0002 2E       		.byte	46
+ 2605 0003 16       		.byte	22
+ 2606 0004 10       		.byte	16
+ 2607 0005 69       		.byte	105
+ 2608 0006 00       		.byte	0
+ 2609 0007 01       		.byte	1
+ 2610 0008 00       		.byte	0
+ 2611 0009 00       		.byte	0
+ 2612 000a 00       		.byte	0
+ 2613 000b 00       		.byte	0
+ 2614              		.text
+ 2615              	.Letext0:
+ 2616              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2617              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2618              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 47
+
+
+ 2619              		.section	.debug_info,"",%progbits
+ 2620              	.Ldebug_info0:
+ 2621 0000 35010000 		.4byte	0x135
+ 2622 0004 0400     		.2byte	0x4
+ 2623 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2624 000a 04       		.byte	0x4
+ 2625 000b 01       		.uleb128 0x1
+ 2626 000c 0A000000 		.4byte	.LASF17
+ 2627 0010 0C       		.byte	0xc
+ 2628 0011 A9010000 		.4byte	.LASF18
+ 2629 0015 5F010000 		.4byte	.LASF19
+ 2630 0019 00000000 		.4byte	.Ldebug_line0
+ 2631 001d 02       		.uleb128 0x2
+ 2632 001e 01       		.byte	0x1
+ 2633 001f 06       		.byte	0x6
+ 2634 0020 9D010000 		.4byte	.LASF0
+ 2635 0024 03       		.uleb128 0x3
+ 2636 0025 00000000 		.4byte	.LASF9
+ 2637 0029 01       		.byte	0x1
+ 2638 002a 1D       		.byte	0x1d
+ 2639 002b 2F000000 		.4byte	0x2f
+ 2640 002f 02       		.uleb128 0x2
+ 2641 0030 01       		.byte	0x1
+ 2642 0031 08       		.byte	0x8
+ 2643 0032 A4000000 		.4byte	.LASF1
+ 2644 0036 02       		.uleb128 0x2
+ 2645 0037 02       		.byte	0x2
+ 2646 0038 05       		.byte	0x5
+ 2647 0039 8A010000 		.4byte	.LASF2
+ 2648 003d 02       		.uleb128 0x2
+ 2649 003e 02       		.byte	0x2
+ 2650 003f 07       		.byte	0x7
+ 2651 0040 C4000000 		.4byte	.LASF3
+ 2652 0044 02       		.uleb128 0x2
+ 2653 0045 04       		.byte	0x4
+ 2654 0046 05       		.byte	0x5
+ 2655 0047 94010000 		.4byte	.LASF4
+ 2656 004b 02       		.uleb128 0x2
+ 2657 004c 04       		.byte	0x4
+ 2658 004d 07       		.byte	0x7
+ 2659 004e B2000000 		.4byte	.LASF5
+ 2660 0052 02       		.uleb128 0x2
+ 2661 0053 08       		.byte	0x8
+ 2662 0054 05       		.byte	0x5
+ 2663 0055 51010000 		.4byte	.LASF6
+ 2664 0059 02       		.uleb128 0x2
+ 2665 005a 08       		.byte	0x8
+ 2666 005b 07       		.byte	0x7
+ 2667 005c 06010000 		.4byte	.LASF7
+ 2668 0060 04       		.uleb128 0x4
+ 2669 0061 04       		.byte	0x4
+ 2670 0062 05       		.byte	0x5
+ 2671 0063 696E7400 		.ascii	"int\000"
+ 2672 0067 02       		.uleb128 0x2
+ 2673 0068 04       		.byte	0x4
+ 2674 0069 07       		.byte	0x7
+ 2675 006a F9000000 		.4byte	.LASF8
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 48
+
+
+ 2676 006e 03       		.uleb128 0x3
+ 2677 006f 1D010000 		.4byte	.LASF10
+ 2678 0073 02       		.byte	0x2
+ 2679 0074 18       		.byte	0x18
+ 2680 0075 24000000 		.4byte	0x24
+ 2681 0079 05       		.uleb128 0x5
+ 2682 007a 91000000 		.4byte	0x91
+ 2683 007e 8A000000 		.4byte	0x8a
+ 2684 0082 06       		.uleb128 0x6
+ 2685 0083 8A000000 		.4byte	0x8a
+ 2686 0087 EF09     		.2byte	0x9ef
+ 2687 0089 00       		.byte	0
+ 2688 008a 02       		.uleb128 0x2
+ 2689 008b 04       		.byte	0x4
+ 2690 008c 07       		.byte	0x7
+ 2691 008d 48010000 		.4byte	.LASF11
+ 2692 0091 07       		.uleb128 0x7
+ 2693 0092 6E000000 		.4byte	0x6e
+ 2694 0096 08       		.uleb128 0x8
+ 2695 0097 E7000000 		.4byte	.LASF12
+ 2696 009b 03       		.byte	0x3
+ 2697 009c 1F       		.byte	0x1f
+ 2698 009d A7000000 		.4byte	0xa7
+ 2699 00a1 05       		.uleb128 0x5
+ 2700 00a2 03       		.byte	0x3
+ 2701 00a3 00000000 		.4byte	cy_meta_configecc
+ 2702 00a7 07       		.uleb128 0x7
+ 2703 00a8 79000000 		.4byte	0x79
+ 2704 00ac 05       		.uleb128 0x5
+ 2705 00ad 91000000 		.4byte	0x91
+ 2706 00b1 BC000000 		.4byte	0xbc
+ 2707 00b5 09       		.uleb128 0x9
+ 2708 00b6 8A000000 		.4byte	0x8a
+ 2709 00ba 03       		.byte	0x3
+ 2710 00bb 00       		.byte	0
+ 2711 00bc 0A       		.uleb128 0xa
+ 2712 00bd D7000000 		.4byte	.LASF13
+ 2713 00c1 03       		.byte	0x3
+ 2714 00c2 6A01     		.2byte	0x16a
+ 2715 00c4 CE000000 		.4byte	0xce
+ 2716 00c8 05       		.uleb128 0x5
+ 2717 00c9 03       		.byte	0x3
+ 2718 00ca 00000000 		.4byte	cy_meta_custnvl
+ 2719 00ce 07       		.uleb128 0x7
+ 2720 00cf AC000000 		.4byte	0xac
+ 2721 00d3 0A       		.uleb128 0xa
+ 2722 00d4 3A010000 		.4byte	.LASF14
+ 2723 00d8 03       		.byte	0x3
+ 2724 00d9 7801     		.2byte	0x178
+ 2725 00db E5000000 		.4byte	0xe5
+ 2726 00df 05       		.uleb128 0x5
+ 2727 00e0 03       		.byte	0x3
+ 2728 00e1 00000000 		.4byte	cy_meta_wonvl
+ 2729 00e5 07       		.uleb128 0x7
+ 2730 00e6 AC000000 		.4byte	0xac
+ 2731 00ea 05       		.uleb128 0x5
+ 2732 00eb 91000000 		.4byte	0x91
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 49
+
+
+ 2733 00ef FA000000 		.4byte	0xfa
+ 2734 00f3 09       		.uleb128 0x9
+ 2735 00f4 8A000000 		.4byte	0x8a
+ 2736 00f8 FF       		.byte	0xff
+ 2737 00f9 00       		.byte	0
+ 2738 00fa 0A       		.uleb128 0xa
+ 2739 00fb 25010000 		.4byte	.LASF15
+ 2740 00ff 03       		.byte	0x3
+ 2741 0100 8601     		.2byte	0x186
+ 2742 0102 0C010000 		.4byte	0x10c
+ 2743 0106 05       		.uleb128 0x5
+ 2744 0107 03       		.byte	0x3
+ 2745 0108 00000000 		.4byte	cy_meta_flashprotect
+ 2746 010c 07       		.uleb128 0x7
+ 2747 010d EA000000 		.4byte	0xea
+ 2748 0111 05       		.uleb128 0x5
+ 2749 0112 91000000 		.4byte	0x91
+ 2750 0116 21010000 		.4byte	0x121
+ 2751 011a 09       		.uleb128 0x9
+ 2752 011b 8A000000 		.4byte	0x8a
+ 2753 011f 0B       		.byte	0xb
+ 2754 0120 00       		.byte	0
+ 2755 0121 0A       		.uleb128 0xa
+ 2756 0122 98000000 		.4byte	.LASF16
+ 2757 0126 03       		.byte	0x3
+ 2758 0127 B301     		.2byte	0x1b3
+ 2759 0129 33010000 		.4byte	0x133
+ 2760 012d 05       		.uleb128 0x5
+ 2761 012e 03       		.byte	0x3
+ 2762 012f 00000000 		.4byte	cy_metadata
+ 2763 0133 07       		.uleb128 0x7
+ 2764 0134 11010000 		.4byte	0x111
+ 2765 0138 00       		.byte	0
+ 2766              		.section	.debug_abbrev,"",%progbits
+ 2767              	.Ldebug_abbrev0:
+ 2768 0000 01       		.uleb128 0x1
+ 2769 0001 11       		.uleb128 0x11
+ 2770 0002 01       		.byte	0x1
+ 2771 0003 25       		.uleb128 0x25
+ 2772 0004 0E       		.uleb128 0xe
+ 2773 0005 13       		.uleb128 0x13
+ 2774 0006 0B       		.uleb128 0xb
+ 2775 0007 03       		.uleb128 0x3
+ 2776 0008 0E       		.uleb128 0xe
+ 2777 0009 1B       		.uleb128 0x1b
+ 2778 000a 0E       		.uleb128 0xe
+ 2779 000b 10       		.uleb128 0x10
+ 2780 000c 17       		.uleb128 0x17
+ 2781 000d 00       		.byte	0
+ 2782 000e 00       		.byte	0
+ 2783 000f 02       		.uleb128 0x2
+ 2784 0010 24       		.uleb128 0x24
+ 2785 0011 00       		.byte	0
+ 2786 0012 0B       		.uleb128 0xb
+ 2787 0013 0B       		.uleb128 0xb
+ 2788 0014 3E       		.uleb128 0x3e
+ 2789 0015 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 50
+
+
+ 2790 0016 03       		.uleb128 0x3
+ 2791 0017 0E       		.uleb128 0xe
+ 2792 0018 00       		.byte	0
+ 2793 0019 00       		.byte	0
+ 2794 001a 03       		.uleb128 0x3
+ 2795 001b 16       		.uleb128 0x16
+ 2796 001c 00       		.byte	0
+ 2797 001d 03       		.uleb128 0x3
+ 2798 001e 0E       		.uleb128 0xe
+ 2799 001f 3A       		.uleb128 0x3a
+ 2800 0020 0B       		.uleb128 0xb
+ 2801 0021 3B       		.uleb128 0x3b
+ 2802 0022 0B       		.uleb128 0xb
+ 2803 0023 49       		.uleb128 0x49
+ 2804 0024 13       		.uleb128 0x13
+ 2805 0025 00       		.byte	0
+ 2806 0026 00       		.byte	0
+ 2807 0027 04       		.uleb128 0x4
+ 2808 0028 24       		.uleb128 0x24
+ 2809 0029 00       		.byte	0
+ 2810 002a 0B       		.uleb128 0xb
+ 2811 002b 0B       		.uleb128 0xb
+ 2812 002c 3E       		.uleb128 0x3e
+ 2813 002d 0B       		.uleb128 0xb
+ 2814 002e 03       		.uleb128 0x3
+ 2815 002f 08       		.uleb128 0x8
+ 2816 0030 00       		.byte	0
+ 2817 0031 00       		.byte	0
+ 2818 0032 05       		.uleb128 0x5
+ 2819 0033 01       		.uleb128 0x1
+ 2820 0034 01       		.byte	0x1
+ 2821 0035 49       		.uleb128 0x49
+ 2822 0036 13       		.uleb128 0x13
+ 2823 0037 01       		.uleb128 0x1
+ 2824 0038 13       		.uleb128 0x13
+ 2825 0039 00       		.byte	0
+ 2826 003a 00       		.byte	0
+ 2827 003b 06       		.uleb128 0x6
+ 2828 003c 21       		.uleb128 0x21
+ 2829 003d 00       		.byte	0
+ 2830 003e 49       		.uleb128 0x49
+ 2831 003f 13       		.uleb128 0x13
+ 2832 0040 2F       		.uleb128 0x2f
+ 2833 0041 05       		.uleb128 0x5
+ 2834 0042 00       		.byte	0
+ 2835 0043 00       		.byte	0
+ 2836 0044 07       		.uleb128 0x7
+ 2837 0045 26       		.uleb128 0x26
+ 2838 0046 00       		.byte	0
+ 2839 0047 49       		.uleb128 0x49
+ 2840 0048 13       		.uleb128 0x13
+ 2841 0049 00       		.byte	0
+ 2842 004a 00       		.byte	0
+ 2843 004b 08       		.uleb128 0x8
+ 2844 004c 34       		.uleb128 0x34
+ 2845 004d 00       		.byte	0
+ 2846 004e 03       		.uleb128 0x3
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 51
+
+
+ 2847 004f 0E       		.uleb128 0xe
+ 2848 0050 3A       		.uleb128 0x3a
+ 2849 0051 0B       		.uleb128 0xb
+ 2850 0052 3B       		.uleb128 0x3b
+ 2851 0053 0B       		.uleb128 0xb
+ 2852 0054 49       		.uleb128 0x49
+ 2853 0055 13       		.uleb128 0x13
+ 2854 0056 3F       		.uleb128 0x3f
+ 2855 0057 19       		.uleb128 0x19
+ 2856 0058 02       		.uleb128 0x2
+ 2857 0059 18       		.uleb128 0x18
+ 2858 005a 00       		.byte	0
+ 2859 005b 00       		.byte	0
+ 2860 005c 09       		.uleb128 0x9
+ 2861 005d 21       		.uleb128 0x21
+ 2862 005e 00       		.byte	0
+ 2863 005f 49       		.uleb128 0x49
+ 2864 0060 13       		.uleb128 0x13
+ 2865 0061 2F       		.uleb128 0x2f
+ 2866 0062 0B       		.uleb128 0xb
+ 2867 0063 00       		.byte	0
+ 2868 0064 00       		.byte	0
+ 2869 0065 0A       		.uleb128 0xa
+ 2870 0066 34       		.uleb128 0x34
+ 2871 0067 00       		.byte	0
+ 2872 0068 03       		.uleb128 0x3
+ 2873 0069 0E       		.uleb128 0xe
+ 2874 006a 3A       		.uleb128 0x3a
+ 2875 006b 0B       		.uleb128 0xb
+ 2876 006c 3B       		.uleb128 0x3b
+ 2877 006d 05       		.uleb128 0x5
+ 2878 006e 49       		.uleb128 0x49
+ 2879 006f 13       		.uleb128 0x13
+ 2880 0070 3F       		.uleb128 0x3f
+ 2881 0071 19       		.uleb128 0x19
+ 2882 0072 02       		.uleb128 0x2
+ 2883 0073 18       		.uleb128 0x18
+ 2884 0074 00       		.byte	0
+ 2885 0075 00       		.byte	0
+ 2886 0076 00       		.byte	0
+ 2887              		.section	.debug_aranges,"",%progbits
+ 2888 0000 14000000 		.4byte	0x14
+ 2889 0004 0200     		.2byte	0x2
+ 2890 0006 00000000 		.4byte	.Ldebug_info0
+ 2891 000a 04       		.byte	0x4
+ 2892 000b 00       		.byte	0
+ 2893 000c 0000     		.2byte	0
+ 2894 000e 0000     		.2byte	0
+ 2895 0010 00000000 		.4byte	0
+ 2896 0014 00000000 		.4byte	0
+ 2897              		.section	.debug_line,"",%progbits
+ 2898              	.Ldebug_line0:
+ 2899 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2899      02003701 
+ 2899      00000201 
+ 2899      FB0E0D00 
+ 2899      01010101 
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 52
+
+
+ 2900              	.LASF9:
+ 2901 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2901      6E74385F 
+ 2901      7400
+ 2902              	.LASF17:
+ 2903 000a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2903      43313120 
+ 2903      352E342E 
+ 2903      31203230 
+ 2903      31363036 
+ 2904 003d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2904      20726576 
+ 2904      6973696F 
+ 2904      6E203233 
+ 2904      37373135 
+ 2905 0070 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2905      66756E63 
+ 2905      74696F6E 
+ 2905      2D736563 
+ 2905      74696F6E 
+ 2906              	.LASF16:
+ 2907 0098 63795F6D 		.ascii	"cy_metadata\000"
+ 2907      65746164 
+ 2907      61746100 
+ 2908              	.LASF1:
+ 2909 00a4 756E7369 		.ascii	"unsigned char\000"
+ 2909      676E6564 
+ 2909      20636861 
+ 2909      7200
+ 2910              	.LASF5:
+ 2911 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2911      20756E73 
+ 2911      69676E65 
+ 2911      6420696E 
+ 2911      7400
+ 2912              	.LASF3:
+ 2913 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 2913      7420756E 
+ 2913      7369676E 
+ 2913      65642069 
+ 2913      6E7400
+ 2914              	.LASF13:
+ 2915 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2915      6574615F 
+ 2915      63757374 
+ 2915      6E766C00 
+ 2916              	.LASF12:
+ 2917 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2917      6574615F 
+ 2917      636F6E66 
+ 2917      69676563 
+ 2917      6300
+ 2918              	.LASF8:
+ 2919 00f9 756E7369 		.ascii	"unsigned int\000"
+ 2919      676E6564 
+ 2919      20696E74 
+ 2919      00
+ARM GAS  C:\Users\JOSHU_~1\AppData\Local\Temp\cc3lCV1F.s 			page 53
+
+
+ 2920              	.LASF7:
+ 2921 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2921      206C6F6E 
+ 2921      6720756E 
+ 2921      7369676E 
+ 2921      65642069 
+ 2922              	.LASF10:
+ 2923 011d 75696E74 		.ascii	"uint8_t\000"
+ 2923      385F7400 
+ 2924              	.LASF15:
+ 2925 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2925      6574615F 
+ 2925      666C6173 
+ 2925      6870726F 
+ 2925      74656374 
+ 2926              	.LASF14:
+ 2927 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2927      6574615F 
+ 2927      776F6E76 
+ 2927      6C00
+ 2928              	.LASF11:
+ 2929 0148 73697A65 		.ascii	"sizetype\000"
+ 2929      74797065 
+ 2929      00
+ 2930              	.LASF6:
+ 2931 0151 6C6F6E67 		.ascii	"long long int\000"
+ 2931      206C6F6E 
+ 2931      6720696E 
+ 2931      7400
+ 2932              	.LASF19:
+ 2933 015f 433A5C73 		.ascii	"C:\\school\\me135\\PSOC\\VESC_Serial_PWM.cydsn\000"
+ 2933      63686F6F 
+ 2933      6C5C6D65 
+ 2933      3133355C 
+ 2933      50534F43 
+ 2934              	.LASF2:
+ 2935 018a 73686F72 		.ascii	"short int\000"
+ 2935      7420696E 
+ 2935      7400
+ 2936              	.LASF4:
+ 2937 0194 6C6F6E67 		.ascii	"long int\000"
+ 2937      20696E74 
+ 2937      00
+ 2938              	.LASF0:
+ 2939 019d 7369676E 		.ascii	"signed char\000"
+ 2939      65642063 
+ 2939      68617200 
+ 2940              	.LASF18:
+ 2941 01a9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2941      72617465 
+ 2941      645F536F 
+ 2941      75726365 
+ 2941      5C50536F 
+ 2942              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
