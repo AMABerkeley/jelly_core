@@ -16,3 +16,6 @@ This includes the ros packages to control the robot.
 
 ## Jelly_Mechanical
 This includes all files to build a jelly robot.
+
+## Jelly_Cypress_Workspace
+This includes the PSoC Creator project for interfacing between the ODroid and VESC.
