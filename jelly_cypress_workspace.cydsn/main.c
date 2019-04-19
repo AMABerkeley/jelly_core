@@ -60,19 +60,11 @@
 *  None.
 *
 *******************************************************************************/
-float period = 9600;
-
-void writeMS(float ms) {
-    float perc = ms / 20; // 20 ms period
-    int cmp = (int) ((1 - perc) * period);
-    PWM_WriteCompare(cmp);
-    CyDelay(1000);
-}
-
 
 int main()
 {
     CyDelay(1000);
+    
     /* Serial */
     CyGlobalIntEnable;
     UART_Start();
@@ -82,8 +74,9 @@ int main()
     
     /* PWM */
     PWM_Start();    
-    int cmp = 9000;
+    int cmp = 9000; // cmp is between 8640 and 9120, 90%-95% of 9600.
     int mltplr = 1;
+    
     while (1) {
         ch = UART_GetChar(); // returns an int apparently
         
@@ -101,9 +94,8 @@ int main()
                 cmp = atoi(buffer);
                 
                 // Spin motor:
-                for (int i = 0; i < 1; i++) {
-                    PWM_WriteCompare(cmp); 
-                    CyDelay(20);
+                if (cmp < 9250 && cmp > 8700) { // Manually tested range.
+                    PWM_WriteCompare(cmp); // This is real time!!    
                 }
 
                 // Reset buffer
@@ -114,44 +106,7 @@ int main()
                 buffer[buffer_count++] = ch;
             }
         }
-        
-        continue;
-        
-        for (int i = 0; i < 2; i++) {
-            PWM_WriteCompare(cmp); 
-            CyDelay(100);    
-            if (cmp == 9000 && 1==2) {
-                i = 0;
-            }
-        }
-        
-        cmp += 1 * mltplr;
-        if (cmp >= 9120 || cmp <= 8640) {
-            mltplr *= -1;
-        }
-        /*
-        if (cmp == 8800 ) {
-            PWM_WriteCompare(cmp); 
-            CyDelay(500);
-            while (1) {}   
-        }
-        
-       */
     }
-    /*
-    float ms = 2;
-    int mltplr = -1;
-    while (1) {
-        writeMS(ms);
-        // 480 = 9120 - 8640 = 9600 * .95 - 9600 * .9
-        // number of increments
-        ms += 1/480 * mltplr; 
-        if (ms <= 1 || ms >= 2) {
-            mltplr *= -1;   
-        }
-    }
-    */
 }
-
 
 /* [] END OF FILE */
