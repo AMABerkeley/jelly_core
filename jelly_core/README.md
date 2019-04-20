@@ -38,9 +38,12 @@ Controller
     * FL - Front Left
     * RR - Rear Right
     * RL - Rear Left
-    
-- Each Leg has a hip, upper_leg, lower_leg joints
-- The joints for the front right leg is
+
+
+Each Leg has a hip, upper_leg, lower_leg joints.
+
+
+The joints for the front right leg is
 
 * FR_hip
 * FR_upper_leg
