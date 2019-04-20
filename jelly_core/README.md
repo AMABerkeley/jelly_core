@@ -31,3 +31,17 @@ Controller
 # Motor level(but can be in the same node as the leg node)
  * reads motor position and velocity for Odrive
  * takes command motor torque and converts to motor current and write to Odrive
+
+# Joint naming conventions
+* Each leg has a ID
+    * FR - Front Right
+    * FL - Front Left
+    * RR - Rear Right
+    * RL - Rear Left
+Each Leg has a hip, upper_leg, lower_leg joints
+The joints for the front right leg is
+* FR_hip
+* FR_upper_leg
+* FR_lower_leg
+
+* FR_hip
