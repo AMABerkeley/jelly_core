@@ -49,4 +49,27 @@ The joints for the front right leg is
 * FR_upper_leg
 * FR_lower_leg
 
-* FR_hip
+
+# ODrive to Joint Mapping
+
+ODrive serial IDs will be parameters in the form `od_FL_leg_id = 207C37823548`.
+
+* od_FL_leg
+    * FL_upper_leg
+    * FL_lower_leg
+* od_FR_leg
+    * FR_upper_leg
+    * FR_lower_leg
+* od_BL_leg
+    * BL_upper_leg
+    * BL_lower_leg
+* od_BR_leg
+    * BR_upper_leg
+    * BR_lower_leg
+* od_F_hip
+    * FL_hip
+    * FR_hip
+* od_B_hip
+    * BL_hip
+    * BR_hip
+
