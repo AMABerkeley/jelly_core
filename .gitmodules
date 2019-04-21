@@ -9,4 +9,4 @@
 	url = https://github.com/inertialsense/inertial_sense_ros.git
 [submodule "jelly_core/jelly_sensors/odrive_ros"]
 	path = jelly_core/jelly_sensors/odrive_ros
-	url = https://github.com/neomanic/odrive_ros.git
+	url = https://github.com/williammlu/odrive_ros.git
