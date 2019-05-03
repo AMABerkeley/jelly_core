@@ -3,7 +3,48 @@ import time
 import numpy as np
 import rospy
 from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64
+from std_msgs.msg import String
 from sensor_msgs.msg import JointState
+
+class JellyGUI:
+    def __init__(self):
+        # TODO check with jelly_web that thses topcis are correct
+        rospy.Subscriber("/jelly_gui/command", String, self.update_status)
+        self.pub = rospy.Publisher("/jelly_gui/status", String, queue_size=1)
+        self.mode = 0
+        self.cmd = 0
+
+        # initalize
+    def update_status(self, msg):
+        # TODO figure out how gui commands are specified
+
+        if msg.data == "rolling":
+            self.mode = 0
+            self.cmd = 0
+        elif msg.data == "rolling":
+            self.mode = 0
+            self.cmd = 0
+        elif msg.data == "rolling":
+            self.mode = 0
+            self.cmd = 0
+        elif msg.data == "rolling":
+            self.mode = 0
+            self.cmd = 0
+        else:
+            self.mode = 0
+            self.cmd = 0
+
+    def read_command(self):
+        return self.mode, self.cmd
+
+    def write(self, msg):
+        # write to console
+        rospy.loginfo(msg)
+        s = String()
+        s.data = msg
+        self.pub.publish(s)
+
 
 class JellyRobot:
     def __init__(self):
@@ -12,37 +53,40 @@ class JellyRobot:
 
         # collect parameters of robot
         self.joint_names = rospy.get_param("/jelly_hardware/joint_names")
+        self.joint_to_idx = {}
+        for idx, joint in enumerate(self.joint_names):
+            self.joint_to_idx[joint] = idx
+
         self.base_link   = rospy.get_param("/jelly_hardware/base_link")
-        self.fl_link     = rospy.get_param("/jelly_hardware/FL_lower_leg")
-        self.fr_link     = rospy.get_param("/jelly_hardware/FR_lower_leg")
-        self.rl_link     = rospy.get_param("/jelly_hardware/RL_lower_leg")
-        self.rr_link     = rospy.get_param("/jelly_hardware/RR_lower_leg")
+        self.fl_link     = rospy.get_param("/jelly_hardware/fl_link")
+        self.fr_link     = rospy.get_param("/jelly_hardware/fr_link")
+        self.rl_link     = rospy.get_param("/jelly_hardware/rl_link")
+        self.rr_link     = rospy.get_param("/jelly_hardware/rr_link")
 
         self.gear_ratio  = rospy.get_param("/jelly_hardware/gear_ratio")
         self.joint_directions = rospy.get_param("/jelly_hardware/joint_directions")
 
-
         # set up publishers for odrive
-        self.leg_odrive_map   = rospy.get_param("/jelly_hardware/leg_odrive_id")
-        self.leg_odrive_axis  = rospy.get_param("/jelly_hardware/leg_odrive_axis")
+        self.odrives = rospy.get_param("/jelly_hardware/odrive_ids")
         self.motor_publishers = []
 
-        for odrive in self.leg_odrive_map:
-            pi = rospy.Publisher("/jelly_hardware/odrives" + str(odrive)  +"/command", Float64MultiArray, queue_size=1)
+        for odrive in self.odrives:
+            id = odrive["id"]
+            a1 = odrive["axis1"]
+            a2 = odrive["axis2"]
+            # TODO change to correct message type and topic
+            pi = rospy.Publisher("/jelly_hardware/odrives" + str(id)  +"/command", Float64MultiArray, queue_size=1)
             self.motor_publishers.append(pi) # set up odrive
-            # some command
             pass
 
-        self.vesc_pub = rospy.Publisher("/jelly_hardware/odrives" + str(odrive)  +"/command", Float64MultiArray, queue_size=1)
+        # TODO change to correct message type and topic
+        self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc_cmd/command", Float64, queue_size=1)
 
-        # set subscribers and publishers
-        #  rospy.Subscriber("/joint_states", JointState, self.update_joints)
-        #  rospy.Subscriber("/motor_states", MotorState, self.update_motors)
 
         # initalize state
-        self.joint_positions  = [0.0] * len(self.joint_names)
-        self.joint_velocities = [0.0] * len(self.joint_names)
-        self.joint_torques    = [0.0] * len(self.joint_names)
+        # self.joint_positions  = [0.0] * len(self.joint_names)
+        # self.joint_velocities = [0.0] * len(self.joint_names)
+        # self.joint_torques    = [0.0] * len(self.joint_names)
 
         # collect parameters of controller
         self._home_position = rospy.get_param("/jelly_control/home_position")
@@ -50,23 +94,23 @@ class JellyRobot:
 
 
     def set_joints(self, cmds):
-        # TODO figure out how odrive topics will be layed out
-        j_cmd = Float64MultiArray()
-        j_cmd.data = cmds
+        for i, odrive in enumerate(self.odrives):
+            a1 = odrive["axis1"]
+            a2 = odrive["axis2"]
+            idx1 = self.joint_to_idx[a1]
+            idx2 = self.joint_to_idx[a2]
+            # TODO change to correct message type and topic
+            pub_i = self.motor_publishers[i] # set up odrive
 
-        cmd_idx = 0
-        for pub in self.motor_publishers:
-            self.cmd.publish(j_cmd)
+            # TODO use correct custon message type
+            msg = Message()
+            msg.data1 = cmds[idx1]
+            msg.data2 = cmds[idx2]
+            pub_i.publish(msg)
 
     def update_joints(self, joint_msg):
-        self.joint_positions  = [0.0] * len(self.joint_names)
-        for i, n in enumerate(joint_msg.name):
-            for j, jn in enumerate(self.joint_names):
-                if jn == n:
-                    self.joint_positions[j] = joint_msg.position[i]
-                    continue
-                #  else:
-                    #  rospy.logerr('No Valid Joint Found')
+        # TODO
+        pass
 
     def calibrate(self):
         # TODO
@@ -99,26 +143,26 @@ class JellyRobot:
             self.home()
 
 if __name__ == '__main__':
-    # initialize the robot
+    # initialize the robot and GUi
     rospy.init_node('jelly_controller', anonymous=True)
     jelly = JellyRobot()
-    rospy.loginfo('Jelly setup complete')
+    gui = JellyGUI()
+    gui.write("Jelly setup complete")
 
     # calibrate jelly
+    gui.write("calibrating")
     jelly.calibrate()
+    gui.write("done calibrating")
 
     # initilize to home position
-    jelly.home()
+    # jelly.home()
 
-    # gui = GUI()
-    # set up gui object that reads from commands from gui
-
+    gui.write("done calibrating")
     while not rospy.is_shutdown():
-        
         # control loop
 
         # read from gui
-        # mode, cmd = gui.read_command()
+        mode, cmd = gui.read_command()
 
         # jelly.command(mode, cmd)
         jelly.rate.sleep()

@@ -14,33 +14,30 @@ jelly_hardware:
         - RR_upper_leg_joint
         - RR_lower_leg_joint
 
-    odrives_id:
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
-        - 207C37823548
+    odrive_ids:
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
 
-    odrives_axis:
-        - 0
-        - 1
-        - 0
-        - 1
-        - 0
-        - 1
-        - 0
-        - 1
-        - 0
-        - 1
-        - 0
-        - 1
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
+
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
+
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
+
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
+
+        - id: 207C37823548
+          axis1: FL_hip_joint
+          axis2: FL_upper_leg_joint
 
 
     base_link: chassis
@@ -56,18 +53,6 @@ jelly_hardware:
 
     softstop_min_angles: [-3.3, -2.25, -2.6, -2.25, -2.6, -2.25, -2.6, -1.45]
     softstop_max_angles: [2.2, 0.5, 2.6, 0.5, 2.6, 0.2, 2.6, 1.45]
-    softstop_tolerance: 0.19
-    softstop_torque_limit: 95.0
-
-    ### Motor configuration
-    motor_names:
-        - base_roll_motor
-        - right_motor1
-        - left_motor1
-        - right_motor2
-        - left_motor2
-        - right_motor3
-        - left_motor3
-        - gripper_motor
-    motor_current_limits: [2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0]
-    current_to_torque_ratios: [0.626, 0.626, 0.626, 0.626, 0.626, 1.67, 1.67, 1.67]
+jelly_control:
+    home_position: [-0.785398, -2.19, -1.570796, 0.0, 1.570796, -0.23, 0.0, 0.0]
+    rolling_position: [-0.785398, -2.19, -1.570796, 0.0, 1.570796, -0.23, 0.0, 0.0]
