@@ -1,14 +1,37 @@
 <launch>
 
+  <!-- Load hardware configuration and parameters-->
+  <param
+    name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find blue_descriptions)/robots/blue_full_v$(arg version).urdf.xacro'" />
+  <rosparam
+    file="$(find blue_bringup)/config/robot_parameters_$(arg side).yaml"
+    command="load" />
+
+  <!-- Joint calibration -->
+  <node
+    name="jelly_main_controller"
+    pkg="blue_control"
+    type="jelly_controller_main.py"
+    output="screen" />
+
+
+  <!-- Include other sensor packages-->
+
   <!-- #urdf
- 
+
   <include
    file="$(find jelly_urdf)/launch/display.launch"/> -->
 
 
   <!-- #vesc hub motor driver
- 
-  <include
-   file="$(find vesc_driver)/launch/vesc_driver_node.launch"/> -->
 
+  <include
+   file="$(find vesc_driver)/launch/vesc_driver_node.launch"/>
+  -->
+
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+  <node name="tf2_web_republisher"
+    pkg="tf2_web_republisher"
+    type="tf2_web_republisher" />
 </launch>

@@ -3,7 +3,7 @@ Software for controlling jelly robot with ros
 
 
 ### bringup_jelly
- * used to bringup robot 
+ * used to bringup robot
 
 ### control_jelly
  * used for implementing control
@@ -33,12 +33,11 @@ Controller
  * takes command motor torque and converts to motor current and write to Odrive
 
 # Joint naming conventions
-* Each leg has a ID
-    * FR - Front Right
-    * FL - Front Left
-    * RR - Rear Right
-    * RL - Rear Left
-
+* Each leg has a ID as well as a corresponding number ==> ID(#)
+    * FR(0) - Front Right
+    * FL(1) - Front Left
+    * RR(2) - Rear Right
+    * RL(3) - Rear Left
 
 Each Leg has a hip, upper_leg, lower_leg joints.
 

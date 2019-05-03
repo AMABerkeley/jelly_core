@@ -1,0 +1,73 @@
+jelly_hardware:
+    ### Joint configuration
+    joint_names:
+        - FL_hip_joint
+        - FL_upper_leg_joint
+        - FL_lower_leg_joint
+        - FR_hip_joint
+        - FR_upper_leg_joint
+        - FR_lower_leg_joint
+        - RL_hip_joint
+        - RL_upper_leg_joint
+        - RL_lower_leg_joint
+        - RR_hip_joint
+        - RR_upper_leg_joint
+        - RR_lower_leg_joint
+
+    odrives_id:
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+        - 207C37823548
+
+    odrives_axis:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 0
+        - 1
+        - 0
+        - 1
+        - 0
+        - 1
+        - 0
+        - 1
+
+
+    base_link: chassis
+    fl_link:   FL_lower_leg
+    fr_link:   FR_lower_leg
+    rl_link:   RL_lower_leg
+    rr_link:   RR_lower_leg
+
+    gear_ratio: 8.1
+    joint_directions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+    id_torque_gains: [1.12, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+    softstop_min_angles: [-3.3, -2.25, -2.6, -2.25, -2.6, -2.25, -2.6, -1.45]
+    softstop_max_angles: [2.2, 0.5, 2.6, 0.5, 2.6, 0.2, 2.6, 1.45]
+    softstop_tolerance: 0.19
+    softstop_torque_limit: 95.0
+
+    ### Motor configuration
+    motor_names:
+        - base_roll_motor
+        - right_motor1
+        - left_motor1
+        - right_motor2
+        - left_motor2
+        - right_motor3
+        - left_motor3
+        - gripper_motor
+    motor_current_limits: [2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0]
+    current_to_torque_ratios: [0.626, 0.626, 0.626, 0.626, 0.626, 1.67, 1.67, 1.67]
