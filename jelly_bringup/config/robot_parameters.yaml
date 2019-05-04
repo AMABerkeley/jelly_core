@@ -15,29 +15,29 @@ jelly_hardware:
         - RR_lower_leg_joint
 
     odrive_ids:
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 2069339B304B # Front Right
+          axis0: FR_upper_leg_joint
+          axis1: FR_lower_leg_joint
 
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 2069339E304B # Rear Right
+          axis0: RR_upper_leg_joint
+          axis1: RR_lower_leg_joint
 
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 206A3378304B # Rear Left
+          axis0: RL_upper_leg_joint
+          axis1: RL_lower_leg_joint
 
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 206A3398304B # Front Left
+          axis0: FL_upper_leg_joint
+          axis1: FL_lower_leg_joint
 
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 207C37823548 # Rear
+          axis0: RL_hip_joint
+          axis1: RR_hip_joint
 
-        - id: 207C37823548
-          axis1: FL_hip_joint
-          axis2: FL_upper_leg_joint
+        - id: 207C37863548 # Front
+          axis0: FL_hip_joint
+          axis1: FR_hip_joint
 
 
     base_link: chassis
@@ -47,16 +47,13 @@ jelly_hardware:
     rr_link:   RR_lower_leg
 
     gear_ratio: 8.1
-    joint_directions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-    id_torque_gains: [1.12, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    joint_directions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 
-    softstop_min_angles: [-3.3, -2.25, -2.6, -2.25, -2.6, -2.25, -2.6, -1.45]
-    softstop_max_angles: [2.2, 0.5, 2.6, 0.5, 2.6, 0.2, 2.6, 1.45]
 jelly_control:
     speed: 0.5
 
-    home_position: [-0.785398, -2.19, -1.570796, 0.0, 1.570796, -0.23, 0.0, 0.0]
-    rolling_position: [-0.785398, -2.19, -1.570796, 0.0, 1.570796, -0.23, 0.0, 0.0]
+    home_position:    [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    rolling_position: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 
     total_gait_count: 500
 

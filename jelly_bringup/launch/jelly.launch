@@ -4,8 +4,14 @@
   <rosparam
     file="$(find jelly_bringup)/config/robot_parameters.yaml"
     command="load" />
+
   <param name="robot_description"
       command="$(find xacro)/xacro '$(find jelly_descriptions)/robots/jelly.urdf.xacro'" />
+  <!-- Compute forward kinematics and broadcast via tf -->
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="state_publisher" />
 
   <!-- Joint calibration -->
   <node
@@ -22,14 +28,16 @@
   <include
    file="$(find jelly_urdf)/launch/display.launch"/> -->
 
-
   <!-- #vesc hub motor driver
 
   <include
    file="$(find vesc_driver)/launch/vesc_driver_node.launch"/>
   -->
 
+  <include file="$(find jelly_bringup)/launch/odrive_all.launch" />
+
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+
   <node name="tf2_web_republisher"
     pkg="tf2_web_republisher"
     type="tf2_web_republisher" />

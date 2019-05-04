@@ -2,10 +2,26 @@
 
   <!-- Load hardware configuration and parameters-->
   <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="207C37823548"/>
+  </include>
+
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="207C37863548"/>
+  </include>
+
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
     <arg name="odrive_id" value="2069339B304B"/>
   </include>
 
   <include file="$(find odrive_ros)/launch/odrive_node.launch" >
-    <arg name="odrive_id" value="207C37823548"/>
+    <arg name="odrive_id" value="2069339E304B"/>
+  </include>
+
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="206A3378304B"/>
+  </include>
+
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="206A3398304B"/>
   </include>
 </launch>
