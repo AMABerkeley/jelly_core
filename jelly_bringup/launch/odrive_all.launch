@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Load hardware configuration and parameters-->
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="2069339B304B"/>
+  </include>
+
+  <include file="$(find odrive_ros)/launch/odrive_node.launch" >
+    <arg name="odrive_id" value="207C37823548"/>
+  </include>
+</launch>

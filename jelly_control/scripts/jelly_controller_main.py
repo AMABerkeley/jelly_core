@@ -34,7 +34,7 @@ class JellyGUI:
 class JellyRobot:
     def __init__(self):
         # set control rate
-        self.rate = rospy.Rate(200)
+        self.rate = rospy.Rate(500)
 
         # collect parameters of robot
         self.joint_names = rospy.get_param("/jelly_hardware/joint_names")
@@ -60,7 +60,7 @@ class JellyRobot:
             a1 = odrive["axis1"]
             a2 = odrive["axis2"]
             # TODO change to correct message type and topic
-            pi = rospy.Publisher("/jelly_hardware/odrives" + str(id)  +"/command", Float64MultiArray, queue_size=1)
+            pi = rospy.Publisher("/jelly_hardware/odrives/" + str(id)  +"/command", Float64MultiArray, queue_size=1)
             self.motor_publishers.append(pi) # set up odrive
             rospy.logerr(a1)
             rospy.logerr(a2)
@@ -73,12 +73,16 @@ class JellyRobot:
 
         # initalize state
         self.joint_positions  = [0.0] * len(self.joint_names)
+        self.joint_zeros      = [0.0] * len(self.joint_names)
         # self.joint_velocities = [0.0] * len(self.joint_names)
         # self.joint_torques    = [0.0] * len(self.joint_names)
 
         # collect parameters of controller
         self._home_position = rospy.get_param("/jelly_control/home_position")
         self._rolling_position = rospy.get_param("/jelly_control/rolling_position")
+
+        # vesc rpm
+        self.speed = rospy.get_param("/jelly_control/speed")
 
 
         # Initalize Gaits
@@ -139,13 +143,12 @@ class JellyRobot:
             a2 = odrive["axis2"]
             idx1 = self.joint_to_idx[a1]
             idx2 = self.joint_to_idx[a2]
-            # TODO change to correct message type and topic
-            pub_i = self.motor_publishers[i] # set up odrive
+            pub_i = self.motor_publishers[i] # get motor publisher
 
             # TODO use correct custon message type
             msg = Message()
-            msg.data1 = cmds[idx1]
-            msg.data2 = cmds[idx2]
+            msg.data1 = self.gear_ratio * self.joint_directions[idx1] * (cmds[idx1] - self.joint_zeros[idx1])
+            msg.data2 = self.gear_ratio * self.joint_directions[idx2] * (cmds[idx2] - self.joint_zeros[idx2])
             pub_i.publish(msg)
 
         # TODO, assume cmded positions is the joint position
@@ -168,6 +171,7 @@ class JellyRobot:
     def calibrate(self):
         # TODO
         # insert calibration code
+        self.joint_zeros = self.joint_zeros
         pass
 
 
@@ -183,9 +187,8 @@ class JellyRobot:
         # command motors appropriately
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
-                speed = 0.5 * command
                 msg = Float64()
-                msg.data = speed
+                msg.data = self.speed * command
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.set_joints(self._rolling_position)
