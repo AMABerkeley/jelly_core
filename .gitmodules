@@ -1,12 +1,9 @@
 [submodule "jelly_sensors/vesc"]
 	path = jelly_sensors/vesc
 	url = https://github.com/brentyi/vesc.git
-[submodule "jelly_sensors/usb_cam"]
-	path = jelly_sensors/usb_cam
-	url = https://github.com/ros-drivers/usb_cam.git
-[submodule "jelly_sensors/inertial_sense_ros"]
-	path = jelly_sensors/inertial_sense_ros
-	url = https://github.com/inertialsense/inertial_sense_ros.git
 [submodule "jelly_sensors/odrive_ros"]
 	path = jelly_sensors/odrive_ros
 	url = https://github.com/williammlu/odrive_ros.git
+[submodule "jelly_sensors/inertial_sense_ros"]
+	path = jelly_sensors/inertial_sense_ros
+	url = https://github.com/inertialsense/inertial_sense_ros.git
