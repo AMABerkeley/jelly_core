@@ -13,15 +13,14 @@ class JellyGUI:
         # TODO check with jelly_web that thses topcis are correct
         rospy.Subscriber("/jelly_gui/command", String, self.update_status)
         self.pub = rospy.Publisher("/jelly_gui/status", String, queue_size=1)
-        self.mode = 0
-        self.cmd = 0
+        self.msg = "none"
 
         # initalize
     def update_status(self, msg):
-        return msg.data
+        self.msg = msg.data
 
     def read_command(self):
-        return self.mode, self.cmd
+        return self.msg
 
     def write(self, msg):
         # write to console
@@ -32,9 +31,19 @@ class JellyGUI:
 
 
 class JellyRobot:
+    def update_joints(self, idx0, idx1):
+
+        def callback(msg):
+            j0 = (msg.data[0] - self.motor_zeros[idx0]) /  (self.gear_ratio * self.joint_directions[idx0])
+            j1 = (msg.data[1] - self.motor_zeros[idx1]) /  (self.gear_ratio * self.joint_directions[idx1])
+            self.joint_positions[idx0] = j0
+            self.joint_positions[idx1] = j1
+
+        return callback
+
     def __init__(self):
         # set control rate
-        self.rate = rospy.Rate(500)
+        self.rate = rospy.Rate(100)
 
         # collect parameters of robot
         self.joint_names = rospy.get_param("/jelly_hardware/joint_names")
@@ -55,27 +64,35 @@ class JellyRobot:
         self.odrives = rospy.get_param("/jelly_hardware/odrive_ids")
         self.motor_publishers = []
 
+
         for odrive in self.odrives:
             id = odrive["id"]
+            a0 = odrive["axis0"]
             a1 = odrive["axis1"]
-            a2 = odrive["axis2"]
-            # TODO change to correct message type and topic
             pi = rospy.Publisher("/jelly_hardware/odrives/" + str(id)  +"/command", Float64MultiArray, queue_size=1)
             self.motor_publishers.append(pi) # set up odrive
+            rospy.logerr(a0)
             rospy.logerr(a1)
-            rospy.logerr(a2)
 
-            pass
+            joint0 = self.joint_to_idx[a0]
+            joint1 = self.joint_to_idx[a1]
+
+            # create subscriber
+            rospy.Subscriber("/jelly_hardware/odrives/" + str(id)  +"/state", Float64MultiArray, self.update_joints(joint0, joint1))
 
         # TODO change to correct message type and topic
         self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc_cmd/command", Float64, queue_size=1)
+        self.js_pub = rospy.Publisher("/joint_states", JointState, queue_size=1)
 
 
         # initalize state
         self.joint_positions  = [0.0] * len(self.joint_names)
-        self.joint_zeros      = [0.0] * len(self.joint_names)
-        # self.joint_velocities = [0.0] * len(self.joint_names)
-        # self.joint_torques    = [0.0] * len(self.joint_names)
+        self.motor_zeros      = [0.0] * len(self.joint_names)
+        self.joint_velocities = [0.0] * len(self.joint_names)
+        self.joint_torques    = [0.0] * len(self.joint_names)
+
+        # position set point
+        self.joint_positions_cmd  = [0.0] * len(self.joint_names)
 
         # collect parameters of controller
         self._home_position = rospy.get_param("/jelly_control/home_position")
@@ -88,6 +105,7 @@ class JellyRobot:
         # Initalize Gaits
         self.total_gait_count = rospy.get_param("/jelly_control/total_gait_count")
         self.gait_index = 0
+        self.mode = 0
         ###################### Walking ###################################
         p1     = np.array(rospy.get_param("/jelly_control/walking_gait/p1"))
         p2     = np.array(rospy.get_param("/jelly_control/walking_gait/p2"))
@@ -138,47 +156,34 @@ class JellyRobot:
         #############################################################################
 
     def set_joints(self, cmds):
+        # rospy.logerr(cmds)
         for i, odrive in enumerate(self.odrives):
+            a0 = odrive["axis0"]
             a1 = odrive["axis1"]
-            a2 = odrive["axis2"]
+            idx0 = self.joint_to_idx[a0]
             idx1 = self.joint_to_idx[a1]
-            idx2 = self.joint_to_idx[a2]
             pub_i = self.motor_publishers[i] # get motor publisher
 
-            # TODO use correct custon message type
-            msg = Message()
-            msg.data1 = self.gear_ratio * self.joint_directions[idx1] * (cmds[idx1] - self.joint_zeros[idx1])
-            msg.data2 = self.gear_ratio * self.joint_directions[idx2] * (cmds[idx2] - self.joint_zeros[idx2])
+            msg = Float64MultiArray()
+            pos0 = self.gear_ratio * self.joint_directions[idx0] * (cmds[idx0] - self.motor_zeros[idx0])
+            pos1 = self.gear_ratio * self.joint_directions[idx1] * (cmds[idx1] - self.motor_zeros[idx1])
+
+            msg.data = [pos0, pos1]
             pub_i.publish(msg)
 
-        # TODO, assume cmded positions is the joint position
-        self.joint_positions = cmds
 
-    def move_joints(self, cmd, duration=1):
-        points = 100
-        curr_joints = np.array(self.joint_positions)
-        cmd = np.array(cmd)
-        for i in range(points):
-            self.set_joints(curr_joints * (1.0 - float(i)/float(duration)) + cmd * float(i)/float(duration) )
-            time.sleep(float(i/duration))
-        self.set_joints(cmd)
-
-
-    def update_joints(self, joint_msg):
-        # TODO
-        pass
 
     def calibrate(self):
         # TODO
         # insert calibration code
-        self.joint_zeros = self.joint_zeros
+        self.motor_zeros = self.motor_zeros
         pass
 
 
-    def home(self, duration=1):
-        self.move_joints(self._home_position, duration=duration)
+    def home(self):
+        self.joint_positions_cmd = self._home_position
 
-    def command(self, mode, command):
+    def set_command(self, mode, command):
 
         # increment gait
         self.gait_index = (self.gait_index + command*1)%self.total_gait_count
@@ -187,47 +192,63 @@ class JellyRobot:
         # command motors appropriately
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
-                msg = Float64()
+                msg = F1oat64()
                 msg.data = self.speed * command
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
-                self.set_joints(self._rolling_position)
+                self.joint_positions_cmd = self._rolling_position
 
             elif self.mode == 0: # standing mode
-                self.home(duration=0.1)
+                self.home()
 
             elif self.mode == 1: # walking mode
                 positions = self.walking_gait(gait_cmd)
-                self.set_joints(positions, duration=switch_time)
+                self.joint_positions_cmd = positions
 
             elif self.mode == 2: # Turning mode
                 positions = self.turning_gait(gait_cmd)
-                self.set_joints(positions, duration=switch_time)
+                self.joint_positions_cmd = positions
 
         else:
             self.switch_to(mode)
 
+    def publish_robot_state(self):
+        rospy.logerr("publishing state")
+        js = JointState()
+        js.name = self.joint_names
+        js.position = self.joint_positions
+        js.velocity = self.joint_velocities
+        js.effort = self.joint_torques
+        now = rospy.get_rostime()
+        js.header.stamp.secs  = now.secs
+        js.header.stamp.nsecs = now.nsecs
+        self.js_pub.publish(js)
+
     def switch_to(mode):
-        switch_time = 2.5
+        rospy.logerr("switching to mode: " + str(mode))
+        switch_time = 1.5
         self.gait_index = 0
         gait_cmd = self.gait_index/self.total_gait_count
 
         if mode == -1:
-            self.move_joints(self._rolling_position, duration=switch_time)
-
+            self.joint_positions_cmd = self._rolling_position
         elif self.mode == 0: # standing mode
-            self.home(duration=switch_time)
-
+            self.home()
         elif self.mode == 1: # walking mode
             positions = self.walking_gait(gait_cmd)
-            self.move_joints(positions, duration=switch_time)
-
+            self.joint_positions_cmd = positions
         elif self.mode == 2: # Turning mode
             positions = self.turning_gait(gait_cmd)
-            self.move_joints(positions, duration=switch_time)
-
+            self.joint_positions_cmd = positions
         else:
-            self.home(duration=switch_time)
+            self.home()
+        self.mode = mode
+
+    def actuate(self):
+        clip_thresh = 0.05
+        signed_diff = np.array(self.joint_positions_cmd) - np.array(self.joint_positions)
+        clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
+        self.set_joints(self.joint_positions + clipped_diff)
 
 def parse_msg(msg):
     # -1 rolling
@@ -296,9 +317,13 @@ if __name__ == '__main__':
 
     # control loop
     while not rospy.is_shutdown():
-
         # read from gui
         msg = gui.read_command()
+        # gui.write("from gui:" + msg)
         mode, cmd = parse_msg(msg)
-        jelly.command(mode, cmd)
+        # gui.write("mode: " + str(mode))
+        # gui.write("cmd: " + str(cmd))
+        jelly.set_command(mode, cmd)
+        jelly.actuate()
+        jelly.publish_robot_state()
         jelly.rate.sleep()
