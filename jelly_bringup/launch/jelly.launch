@@ -20,6 +20,13 @@
     type="jelly_controller_main.py"
     output="screen" />
 
+  <!-- Joint calibration -->
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    output="screen" />
+
 
   <!-- Include other sensor packages-->
 

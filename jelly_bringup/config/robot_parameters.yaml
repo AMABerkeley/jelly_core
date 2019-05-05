@@ -16,28 +16,28 @@ jelly_hardware:
 
     odrive_ids:
         - id: 2069339B304B # Front Right
-          axis0: FR_upper_leg_joint
-          axis1: FR_lower_leg_joint
+          axis1: FL_upper_leg_joint
+          axis0: FL_lower_leg_joint
 
         - id: 2069339E304B # Rear Right
-          axis0: RR_upper_leg_joint
-          axis1: RR_lower_leg_joint
-
-        - id: 206A3378304B # Rear Left
           axis0: RL_upper_leg_joint
           axis1: RL_lower_leg_joint
 
+        - id: 206A3378304B # Rear Left
+          axis1: RR_upper_leg_joint
+          axis0: RR_lower_leg_joint
+
         - id: 206A3398304B # Front Left
-          axis0: FL_upper_leg_joint
-          axis1: FL_lower_leg_joint
+          axis1: FR_upper_leg_joint
+          axis0: FR_lower_leg_joint
 
         - id: 207C37823548 # Rear
           axis0: RL_hip_joint
           axis1: RR_hip_joint
 
         - id: 207C37863548 # Front
-          axis0: FL_hip_joint
-          axis1: FR_hip_joint
+          axis0: FR_hip_joint
+          axis1: FL_hip_joint
 
 
     base_link: chassis
@@ -47,13 +47,14 @@ jelly_hardware:
     rr_link:   RR_lower_leg
 
     gear_ratio: 8.1
-    joint_directions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    joint_directions: [-1.0, 1.0, -1.0, 1.0, -1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
+    starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
 jelly_control:
     speed: 0.5
 
-    home_position:    [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-    rolling_position: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    home_position:    [0.0, 0.7, -1.4, 0.0, 0.7, -1.4, 0.0, -0.7, 1.4, 0.0, -0.7, 1.4]
+    rolling_position: [0.0, 1.1, -2.2, 0.0, 1.1, -2.2, 0.0, -1.1, 2.2, 0.0, -1.1, 2.2]
 
     total_gait_count: 500
 
