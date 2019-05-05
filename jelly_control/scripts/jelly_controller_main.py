@@ -91,7 +91,7 @@ class JellyRobot:
             rospy.Subscriber("/jelly_hardware/odrives/" + str(id)  +"/state", Float64MultiArray, self.update_joints(joint0, joint1))
 
         # TODO change to correct message type and topic
-        self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc_cmd/command", Float64, queue_size=1)
+        self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc/command", String, queue_size=1)
         self.js_pub = rospy.Publisher("/joint_states", JointState, queue_size=1)
 
 
@@ -110,6 +110,10 @@ class JellyRobot:
 
         # vesc rpm
         self.speed = rospy.get_param("/jelly_control/speed")
+        if self.speed < 0:
+            self.speed  = 0
+        elif self.speed > 1:
+            self.speed = 1
 
 
         # Initalize Gaits
@@ -189,10 +193,10 @@ class JellyRobot:
         # command motors appropriately
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
-                msg = Float64()
-                msg.data = self.speed * command
+                msg = String()
+                msg.data = str(int(8970 + self.speed * (9200 - 8970) * command))
                 # write to vesc and joints
-                self.vesc_pub.publish(msg)
+                self.vesc_pub.publish(msg))
                 self.joint_positions_cmd = self._rolling_position
 
             elif self.mode == 0: # standing mode

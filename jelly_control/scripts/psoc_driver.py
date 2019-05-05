@@ -11,9 +11,9 @@ from std_msgs.msg import String
 # https://github.com/BerkeleyExpertSystemTechnologiesLab/2d-spine-control-hardware/blob/master/ros-spine-control/src/spine_controller/src/serial_tx_fromtopic.py
 class SerialTxHubFromTopic:
     def __init__(self, device_name, topic_name):
-        self.serial, self.sub = self.serial_tx_startup(device_name, topic_name)
+        self.serial, self.sub = self.serial_tx_startup(device_name)
 
-    def serial_tx_startup(self, device_name, topic_name):
+    def serial_tx_startup(self, device_name):
         # anonymous=False because we want unique nodes
         rospy.init_node("serial_tx_hub_from_topic", anonymous=False)
 
@@ -22,7 +22,7 @@ class SerialTxHubFromTopic:
         ser.reset_input_buffer()
         ser.reset_output_buffer()
 
-        sub = rospy.Subscriber(topic_name, String, self.serial_tx_callback)
+        sub = rospy.Subscriber("/jelly_hardware/vesc/command", String, self.serial_tx_callback)
 
         print("Opened serial port and created subscriber.")
         print("Now receiving from topic.")
@@ -36,7 +36,8 @@ class SerialTxHubFromTopic:
             print("Error writing to serial.")
 
 if __name__ == "__main__":
-    s_tx = SerialTxHubFromTopic(sys.argv[1], sys.argv[2])
+    device_name = "TODO fill in"
+    s_tx = SerialTxHubFromTopic(device_name)
 
     try:
         rospy.spin()

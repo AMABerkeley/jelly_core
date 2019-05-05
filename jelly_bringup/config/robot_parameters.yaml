@@ -51,6 +51,7 @@ jelly_hardware:
     starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
 jelly_control:
+    # number between 0 and 1
     speed: 0.5
 
     home_position:    [0.0, 0.7, -1.4, 0.0, 0.7, -1.4, 0.0, -0.7, 1.4, 0.0, -0.7, 1.4]
