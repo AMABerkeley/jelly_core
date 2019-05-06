@@ -127,7 +127,8 @@ class JellyRobot:
         beta   = np.array(rospy.get_param("/jelly_control/walking_gait/beta"))
         p1 = p1 + offset;
 
-        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
+        # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
+        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab")
         ######################################################################
 
         ####################### Turning ###################################
@@ -140,7 +141,8 @@ class JellyRobot:
         p1r = p1 * flip
         p2r = p2 * flip
 
-        self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="reverse_crab")
+        # self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="reverse_crab")
+        self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="crab")
         ########################################################################
 
         ####################### Troting ###################################
@@ -187,7 +189,6 @@ class JellyRobot:
 
         # increment gait
         self.gait_index = (self.gait_index + command*1)%self.total_gait_count
-        rospy.logerr(self.gait_index)
         gait_cmd = float(self.gait_index)/float(self.total_gait_count)
 
         # command motors appropriately
@@ -196,7 +197,7 @@ class JellyRobot:
                 msg = String()
                 msg.data = str(int(8970 + self.speed * (9200 - 8970) * command))
                 # write to vesc and joints
-                self.vesc_pub.publish(msg))
+                self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
 
             elif self.mode == 0: # standing mode
@@ -255,8 +256,8 @@ class JellyRobot:
         # rospy.logerr(clipped_diff)
 
         joint_set =  curr_joints + clipped_diff
-        rospy.logerr("joint cmd")
-        rospy.logerr(joint_set)
+        # rospy.logerr("joint cmd")
+        # rospy.logerr(joint_set)
         self._set_joints(joint_set)
 
 
