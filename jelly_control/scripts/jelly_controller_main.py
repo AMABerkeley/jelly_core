@@ -4,6 +4,7 @@ import numpy as np
 import rospy
 from std_msgs.msg import Float64MultiArray
 from std_msgs.msg import Float64
+from std_msgs.msg import Int32
 from std_msgs.msg import String
 from std_msgs.msg import Bool
 from sensor_msgs.msg import JointState
@@ -91,8 +92,8 @@ class JellyRobot:
             rospy.Subscriber("/jelly_hardware/odrives/" + str(id)  +"/state", Float64MultiArray, self.update_joints(joint0, joint1))
 
         # TODO change to correct message type and topic
-        self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc/command", String, queue_size=1)
-        self.js_pub = rospy.Publisher("/joint_states", JointState, queue_size=1)
+        self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc/command", Int32, queue_size=1)
+        self.js_pub   = rospy.Publisher("/joint_states", JointState, queue_size=1)
 
 
         # initalize state
@@ -194,8 +195,8 @@ class JellyRobot:
         # command motors appropriately
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
-                msg = String()
-                msg.data = str(int(8970 + self.speed * (9200 - 8970) * command))
+                msg = Int32()
+                msg.data = int(8980 + self.speed * (9250 - 8980) * command)
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
@@ -247,7 +248,7 @@ class JellyRobot:
         self.mode = mode
 
     def actuate(self):
-        clip_thresh = 0.02
+        clip_thresh = 0.2
 
         curr_joints = np.array(self.joint_positions).copy()
         signed_diff = np.array(self.joint_positions_cmd) - curr_joints

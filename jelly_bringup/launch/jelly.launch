@@ -43,7 +43,9 @@
 
   <include file="$(find jelly_bringup)/launch/odrive_all.launch" />
 
-  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
+    <arg name="max_message_size" value="Inf" />
+  </include>
 
   <node name="tf2_web_republisher"
     pkg="tf2_web_republisher"
