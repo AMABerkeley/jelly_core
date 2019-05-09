@@ -46,6 +46,14 @@ class JellyRobot:
     def calibrate_callback(self, msg):
         self.calibrated = msg.data
 
+    def mode_callback(self, msg):
+        if msg.data == "crab":
+            self.leg_mutiplier = -1 * np.ones(12)
+        if msg.data == "reverse_crab":
+            self.leg_mutiplier = np.ones(12)
+        if msg.data == "normal":
+            self.leg_mutiplier = np.concat( -np.ones(6), np.ones(6))
+
     def __init__(self):
         # set control rate
         self.rate = rospy.Rate(100)
@@ -53,6 +61,8 @@ class JellyRobot:
         # calibration subscriber
         self.calibrated = False
         rospy.Subscriber("/jelly_hardware/calibrate", Bool, self.calibrate_callback)
+        self.leg_mutiplier = np.ones(12)
+        rospy.Subscriber("/jelly_control/mode", String, self.mode_callback)
 
 
         # collect parameters of robot
@@ -250,7 +260,9 @@ class JellyRobot:
         self.mode = mode
 
     def actuate(self):
-        clip_thresh = 0.2
+        clip_thresh = 0.05
+
+        mode_cmd = self.joint_positions * self.leg_mutiplier
 
         curr_joints = np.array(self.joint_positions).copy()
         signed_diff = np.array(self.joint_positions_cmd) - curr_joints
