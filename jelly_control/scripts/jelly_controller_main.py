@@ -68,6 +68,7 @@ class JellyRobot:
         self.rl_link     = rospy.get_param("/jelly_hardware/rl_link")
         self.rr_link     = rospy.get_param("/jelly_hardware/rr_link")
 
+
         self.gear_ratio  = rospy.get_param("/jelly_hardware/gear_ratio")
         self.joint_directions = rospy.get_param("/jelly_hardware/joint_directions")
 
@@ -119,6 +120,7 @@ class JellyRobot:
 
         # Initalize Gaits
         self.total_gait_count = rospy.get_param("/jelly_control/total_gait_count")
+        self.height = rospy.get_param("/jelly_control/height")
         self.gait_index = 0
         self.mode = 0
         ###################### Walking ###################################
@@ -129,7 +131,7 @@ class JellyRobot:
         p1 = p1 + offset;
 
         # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
-        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab")
+        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab", height=self.height)
         ######################################################################
 
         ####################### Turning ###################################
@@ -143,7 +145,7 @@ class JellyRobot:
         p2r = p2 * flip
 
         # self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="reverse_crab")
-        self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="crab")
+        self.turning_gait = gaits.TurningGait(p1l, p2l, p1r, p2r, mode="crab", height=self.height)
         ########################################################################
 
         ####################### Troting ###################################
@@ -276,10 +278,12 @@ class JellyRobot:
             pub_i = self.motor_publishers[odrive["id"]] # get motor publisher
 
             msg = Float64MultiArray()
-            pos0 = self.gear_ratio * self.joint_directions[idx0] * (cmds[idx0] + self.motor_zeros[idx0])
-            pos1 = self.gear_ratio * self.joint_directions[idx1] * (cmds[idx1] + self.motor_zeros[idx1])
+            pos0 = float(self.gear_ratio) * float(self.joint_directions[idx0]) * (float(cmds[idx0]) + float(self.motor_zeros[idx0]))
+            pos1 = float(self.gear_ratio) * float(self.joint_directions[idx1]) * (float(cmds[idx1]) + float(self.motor_zeros[idx1]))
 
             msg.data = [pos0, pos1]
+
+            rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
             pub_i.publish(msg)
 
 def parse_msg(msg):

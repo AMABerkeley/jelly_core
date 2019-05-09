@@ -53,6 +53,7 @@ jelly_hardware:
 jelly_control:
     # number between 0 and 1
     speed: 0.5
+    height: 0.2
 
     home_position:    [-0.2, -0.7, 1.4, -0.2, -0.7, 1.4, -0.2, 0.7, -1.4, -0.2, 0.7, -1.4]
     rolling_position: [0.0, 1.3, -2.8, 0.0, 1.3, -2.8, 0.0, -1.3, 2.8, 0.0, -1.3, 2.8]
