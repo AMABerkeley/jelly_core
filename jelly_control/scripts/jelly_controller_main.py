@@ -9,7 +9,12 @@ from std_msgs.msg import String
 from std_msgs.msg import Bool
 from sensor_msgs.msg import JointState
 import jelly_locomotion.jelly_gaits as gaits
+import jelly_locomotion.robotics_math as rm
 from odrive.enums import *
+
+import PyKDL as kdl
+import kdl_parser_py.urdf as kdl_parser
+from scipy.linalg import block_diag
 
 class JellyGUI:
     def __init__(self):
@@ -17,7 +22,6 @@ class JellyGUI:
         rospy.Subscriber("/jelly_gui/command", String, self.update_status)
         self.pub = rospy.Publisher("/jelly_gui/status", String, queue_size=1)
         self.msg = "none"
-
         # initalize
     def update_status(self, msg):
         self.msg = msg.data
@@ -34,6 +38,45 @@ class JellyGUI:
 
 
 class JellyRobot:
+    def prepare_kin_dyn(self):
+        robot_description = rospy.get_param("/robot_description")
+        flag, self.tree = kdl_parser.treeFromParam(robot_description)
+
+        chain = self.tree.getChain(self.base_link, self.rl_link)
+        self.fk_bl = kdl.ChainFkSolverPos_recursive(chain)
+        self.jac_bl = kdl.ChainJntToJacSolver(chain)
+
+        chain = self.tree.getChain(self.base_link, self.rr_link)
+        self.fk_br = kdl.ChainFkSolverPos_recursive(chain)
+        self.jac_br = kdl.ChainJntToJacSolver(chain)
+
+        chain = self.tree.getChain(self.base_link, self.fl_link)
+        self.fk_fl = kdl.ChainFkSolverPos_recursive(chain)
+        self.jac_fl = kdl.ChainJntToJacSolver(chain)
+
+        chain = self.tree.getChain(self.base_link, self.fr_link)
+        self.fk_fr = kdl.ChainFkSolverPos_recursive(chain)
+        self.jac_fr = kdl.ChainJntToJacSolver(chain)
+
+        # convention front_left, front_front, back_right, back_left
+        self.jac_list = [self.jac_fl, self.jac_fr, self.jac_bl, self.jac_br]
+        self.fk_list  = [self.fk_fl , self.fk_fr , self.fk_bl , self.fk_br ]
+
+        joints = kdl.JntArray(3)
+        joints[0] = 0
+        joints[1] = 0
+        joints[2] = 0
+        frame = kdl.Frame()
+        jk_list = self.fk_list
+        print(jk_list[0].JntToCart(joints, frame))
+        print(frame)
+        print(jk_list[1].JntToCart(joints, frame))
+        print(frame)
+        print(jk_list[2].JntToCart(joints, frame))
+        print(frame)
+        print(jk_list[3].JntToCart(joints, frame))
+        print(frame)
+
     def update_joints(self, idx0, idx1):
 
         def callback(msg):
@@ -47,14 +90,154 @@ class JellyRobot:
     def calibrate_callback(self, msg):
         self.calibrated = msg.data
 
+    def get_stance_legs(self):
+        return self.stance_legs
+
     def compute_ff(self):
-        return np.zeros(12)
+        stance = self.get_stance_legs()
+
+        joint_pos = np.array(self.joint_positions).copy()
+
+        p_ = []
+        for i in range(4):
+            frame = kdl.Frame()
+            joints = kdl.JntArray(3)
+            joints[0] = joint_pos[i+ 0]
+            joints[1] = joint_pos[i+ 1]
+            joints[2] = joint_pos[i+ 2]
+            self.fk_list[i].JntToCart(joints, frame)
+            frame_p = np.array([frame.p[0], frame.p[1], frame.p[2]])
+            foot_pos = frame_p
+            p_.append(foot_pos)
+
+
+        acc         = np.zeros(3)
+        # orientation_error = np.log(ori_des.dot(curr_ori))
+        # print("angular accel: {}".format(angular_acc))
+
+        constraints      = []
+        constraints_b    = []
+        equality_const   = []
+        equality_const_b = []
+        theta = np.pi/4
+        F_normal = []
+        num_stance = 0
+        for i, s in enumerate(stance):
+            if s:
+                const = np.zeros(12)
+                const[i*3 + 0] = 0
+                const[i*3 + 1] = 0
+                const[i*3 + 2] = -1
+                constraints.append(const)
+                constraints_b.append(0)
+
+                F_normal.append([0, 0, self.mass * 9.81])
+                num_stance = num_stance + 1
+            else:
+                const = np.zeros(12)
+                const[i*3 + 0] = 1
+                const[i*3 + 1] = 0
+                const[i*3 + 2] = 0
+                equality_const.append(const)
+                equality_const_b.append(0)
+
+                const = np.zeros(12)
+                const[i*3 + 0] = 0
+                const[i*3 + 1] = 1
+                const[i*3 + 2] = 0
+                equality_const.append(const)
+                equality_const_b.append(0)
+
+                const = np.zeros(12)
+                const[i*3 + 0] = 0
+                const[i*3 + 1] = 0
+                const[i*3 + 2] = 1
+                equality_const.append(const)
+                equality_const_b.append(0)
+
+                F_normal.append([0, 0, 0])
+
+
+        F_normal = np.array(F_normal) / num_stance
+
+        eye3 = np.eye(3)
+        Atop = np.hstack((eye3, eye3, eye3, eye3))
+        Abot = np.hstack((rm.skew_3d(p_[0]), rm.skew_3d(p_[1]), rm.skew_3d(p_[2]), rm.skew_3d(p_[3])))
+        A = np.vstack([Atop, Abot])
+
+        g = np.array([0, 0, 9.8])
+        bd_top = self.mass * g
+        bd_top = np.reshape(bd_top, (3, 1))
+        bd_bot = np.zeros(3)
+        bd_bot = np.reshape(bd_bot, (3, 1))
+        bd = np.vstack((bd_top, bd_bot))
+
+        P = np.eye(12)
+        q = np.zeros(12)
+
+        G = np.array(constraints)
+        h = np.array(constraints_b)
+
+        if not equality_const == []:
+            A = np.vstack((A , np.array(equality_const)))
+            b = np.vstack((bd, np.array(equality_const_b)))[:,0]
+        else:
+            A = A
+            b = bd[:,0]
+
+        print("qwer")
+        print(P)
+        print(q)
+        print(G)
+        print(h)
+        print(A)
+        print(b)
+
+        F_opt = rm.quadprog_solve_qp(P, q, G=G, h=h, A=A, b=b)
+        print("f_opt")
+        print(F_opt)
+        if np.abs(np.sum(F_opt)) < 1e-5 :
+            foot_forces = np.array(F_normal)
+            # foot_forces = F_opt.reshape(4, 3)
+            # print(foot_forces.shape)
+        else:
+            foot_forces = F_opt
+            # print(foot_forces.shape)
+            print("ihi")
+        print(foot_forces)
+        torques = self.force_to_torques(foot_forces, joint_pos)
+        print(torques)
+        return torques
+
+    def force_to_torques(self, forces, joint_positions):
+        # TODO test (correct reference frame?????)
+        torques = []
+        for i in range(4):
+            # print(f)
+            jacobian = kdl.Jacobian(3)
+            joints = kdl.JntArray(3)
+            joints[0] = joint_positions[3*i+ 0]
+            joints[1] = joint_positions[3*i+ 1]
+            joints[2] = joint_positions[3*i+ 2]
+            print(joints)
+            self.jac_list[i].JntToJac(joints, jacobian)
+            jacobian = rm.jac_to_np(jacobian)
+
+            f = np.array([forces[3*i+0], forces[3*i+1], forces[3*i+2]])
+            f = np.vstack([f.reshape(3,1), np.zeros((3,1))])
+            print(f)
+            t = (jacobian.T).dot(f)
+            torques.append(t)
+            i += 1
+        return torques
 
     def pd_force_control(self, positions):
         torques = []
         # TODO make non zero
         # feed_forward = np.zeros(12)
         feed_forward = self.compute_ff()
+        rospy.logerr(feed_forward)
+        feed_forward = np.zeros(12)
         i = 0
         for p_des, p_curr, v_curr in zip(positions, self.joint_positions, self.joint_velocities):
             t = feed_forward[i] + self.kp * (p_des - p_curr) + self.kd * (-1 * v_curr)
@@ -103,6 +286,10 @@ class JellyRobot:
         self.gear_ratio  = rospy.get_param("/jelly_hardware/gear_ratio")
         self.joint_directions = rospy.get_param("/jelly_hardware/joint_directions")
 
+        ## prepare kinematics and jacobian
+        self.prepare_kin_dyn()
+
+
         # set up publishers for odrive
         self.odrives = rospy.get_param("/jelly_hardware/odrive_ids")
         self.motor_publishers = {}
@@ -130,9 +317,11 @@ class JellyRobot:
 
         # initalize state
         self.joint_positions  = [0.0] * len(self.joint_names)
+        self.joint_positions  = [0.0, -0.5, 1] * 4
         self.motor_zeros      = [0.0] * len(self.joint_names)
         self.joint_velocities = [0.0] * len(self.joint_names)
         self.joint_torques    = [0.0] * len(self.joint_names)
+        self.stance_legs      = [1, 1, 1, 1]
 
         # position set point
         self.joint_positions_cmd  = [0.0] * len(self.joint_names)
@@ -227,7 +416,6 @@ class JellyRobot:
         self.joint_positions_cmd = self._home_position
 
     def set_command(self, mode, command):
-
         # increment gait
         self.gait_index = (self.gait_index + command*1)%self.total_gait_count
         gait_cmd = float(self.gait_index)/float(self.total_gait_count)
@@ -243,17 +431,21 @@ class JellyRobot:
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
+                self.stance_legs = [1, 1, 1, 1]
 
             elif self.mode == 0: # standing mode
                 self.home()
+                self.stance_legs = [1, 1, 1, 1]
 
             elif self.mode == 1: # walking mode
                 positions = self.walking_gait.step(gait_cmd)
                 self.joint_positions_cmd = positions
+                self.stance_legs = self.walking_gait.check_stance_swing(gait_cmd)
 
             elif self.mode == 2: # Turning mode
                 positions = self.turning_gait.step(gait_cmd)
                 self.joint_positions_cmd = positions
+                self.stance_legs = self.turning_gait.check_stance_swing(gait_cmd)
 
         else:
             self.clip_threshold = self.clip_threshold_orig / 5.0
