@@ -425,8 +425,8 @@ class JellyRobot:
         self.motor_zeros = np.array(current_state) - np.array(self.starting_joints)
         self.publish_robot_state()
         self.clip_threshold = self.clip_threshold_orig / 10.0
-        self.kp = self.kp_orig / 5.0
-        self.kd = self.kd_orig / 5.0
+        self.kp = self.kp_orig / 22.0
+        self.kd = self.kd_orig / 22.0
 
     def home(self):
         self.joint_positions_cmd = self._home_position
@@ -555,6 +555,7 @@ class JellyRobot:
 
             elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
 		# torque control mode
+                cmds = np.clip(cmds.copy(), -1.5, 1.5)
                 torq0 = cmds[idx0] / float(self.gear_ratio) * float(self.joint_directions[idx0])
                 torq1 = cmds[idx1] / float(self.gear_ratio) * float(self.joint_directions[idx1])
                 msg.data = [torq0, motor_mode, torq1, motor_mode]

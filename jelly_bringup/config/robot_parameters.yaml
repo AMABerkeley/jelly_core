@@ -57,7 +57,7 @@ jelly_control:
 
     # force control settings
     pd_force_control: true
-    kp: 6.1
+    kp: 12.1
     kd: 0.001
 
     height: 0.2
