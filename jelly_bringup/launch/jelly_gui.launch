@@ -5,7 +5,6 @@
       command="$(find xacro)/xacro '$(find jelly_descriptions)/robots/jelly.urdf.xacro'" />
 
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
-    <arg name="max_message_size" value="Inf" />
   </include>
 
   <node name="tf2_web_republisher"
