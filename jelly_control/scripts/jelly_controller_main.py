@@ -47,6 +47,21 @@ class JellyRobot:
     def calibrate_callback(self, msg):
         self.calibrated = msg.data
 
+    def compute_ff(self):
+        return np.zeros(12)
+
+    def pd_force_control(self, positions):
+        torques = []
+        # TODO make non zero
+        # feed_forward = np.zeros(12)
+        feed_forward = self.compute_ff()
+        i = 0
+        for p_des, p_curr, v_curr in zip(positions, self.joint_positions, self.joint_velocities):
+            t = feed_forward[i] + self.kp * (p_des - p_curr) + self.kd * (-1 * v_curr)
+            torques.append(t)
+            i += 1
+        return torques
+
     def mode_callback(self, msg):
         self.set_mode(msg.data)
 
@@ -83,6 +98,7 @@ class JellyRobot:
         self.rl_link     = rospy.get_param("/jelly_hardware/rl_link")
         self.rr_link     = rospy.get_param("/jelly_hardware/rr_link")
 
+        self.mass = rospy.get_param("/jelly_hardware/mass")
 
         self.gear_ratio  = rospy.get_param("/jelly_hardware/gear_ratio")
         self.joint_directions = rospy.get_param("/jelly_hardware/joint_directions")
@@ -132,6 +148,10 @@ class JellyRobot:
         elif self.speed > 1:
             self.speed = 1
 
+        # force control setings
+        self.is_force_control = rospy.get_param("/jelly_control/pd_force_control")
+        self.kp = rospy.get_param("/jelly_control/kp")
+        self.kd = rospy.get_param("/jelly_control/kd")
 
         # Initalize Gaits
         self.total_gait_count = rospy.get_param("/jelly_control/total_gait_count")
@@ -236,9 +256,8 @@ class JellyRobot:
                 self.joint_positions_cmd = positions
 
         else:
-            self.clip_threshold = self.clip_threshold_orig / 10.0
+            self.clip_threshold = self.clip_threshold_orig / 5.0
             self.switch_to(mode)
-
 
     def publish_robot_state(self):
         # rospy.logerr("publishing state")
@@ -276,39 +295,57 @@ class JellyRobot:
             self.home()
         self.mode = mode
 
-    def actuate(self, mode=CTRL_MODE_POSITION_CONTROL):
-        clip_thresh = self.clip_threshold
+    def actuate(self):
+        if self.is_force_control:
+            motor_mode = CTRL_MODE_CURRENT_CONTROL
+        else:
+            motor_mode = CTRL_MODE_POSITION_CONTROL
 
         mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
-
-        curr_joints  = np.array(self.joint_positions).copy()
-        signed_diff  = np.array(mode_cmd) - curr_joints
-        clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
-
-        joint_set =  curr_joints + clipped_diff
-        self._set_joints(joint_set, mode)
+        if motor_mode == CTRL_MODE_POSITION_CONTROL:
+            clip_thresh = self.clip_threshold
 
 
-    def _set_joints(self, cmds, mode):
+            curr_joints  = np.array(self.joint_positions).copy()
+            signed_diff  = np.array(mode_cmd) - curr_joints
+            clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
+
+            joint_set =  curr_joints + clipped_diff
+            self._set_joints(joint_set, motor_mode)
+
+        elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
+            torques = self.pd_force_control(mode_cmd)
+            self._set_joints(torques, motor_mode)
+
+
+    def _set_joints(self, cmds, motor_mode):
         cmds = np.array(cmds)
         # cmds = np.clip(cmds.copy(), -np.pi, np.pi)
-        cmds = np.clip(cmds.copy(), -3.0, 3.0)
 
         for i, odrive in enumerate(self.odrives):
             a0 = odrive["axis0"]
             a1 = odrive["axis1"]
             idx0 = self.joint_to_idx[a0]
             idx1 = self.joint_to_idx[a1]
-            pub_i = self.motor_publishers[odrive["id"]] # get motor publisher
 
             msg = Float64MultiArray()
-            pos0 = float(self.gear_ratio) * float(self.joint_directions[idx0]) * (float(cmds[idx0]) + float(self.motor_zeros[idx0]))
-            pos1 = float(self.gear_ratio) * float(self.joint_directions[idx1]) * (float(cmds[idx1]) + float(self.motor_zeros[idx1]))
-
             # mode is default to position control, update if you want trajectory control or position control
-            msg.data = [pos0, mode, pos1, mode] 
+            if motor_mode == CTRL_MODE_POSITION_CONTROL:
+
+                cmds = np.clip(cmds.copy(), -3.0, 3.0)
+
+                pos0 = float(self.gear_ratio) * float(self.joint_directions[idx0]) * (float(cmds[idx0]) + float(self.motor_zeros[idx0]))
+                pos1 = float(self.gear_ratio) * float(self.joint_directions[idx1]) * (float(cmds[idx1]) + float(self.motor_zeros[idx1]))
+                msg.data = [pos0, motor_mode, pos1, motor_mode]
+
+            elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
+                torq0 = cmds[idx0] / float(self.gear_ratio) * float(self.joint_directions[idx0])
+                torq1 = cmds[idx1] / float(self.gear_ratio) * float(self.joint_directions[idx1])
+                msg.data = [torq0, motor_mode, torq1, motor_mode]
+
 
             # rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
+            pub_i = self.motor_publishers[odrive["id"]] # get motor publisher
             pub_i.publish(msg)
 
 def parse_msg(msg):
