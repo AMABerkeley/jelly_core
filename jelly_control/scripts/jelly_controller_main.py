@@ -47,11 +47,20 @@ class JellyRobot:
     def calibrate_callback(self, msg):
         self.calibrated = msg.data
 
+    def compute_ff(self):
+        return np.zeros(12)
+
     def pd_force_control(self, positions):
-        for p_des, p_curr, v_curr in zip(positions, p_curr):
-
-
-
+        torques = []
+        # TODO make non zero
+        # feed_forward = np.zeros(12)
+        feed_forward = self.compute_ff()
+        i = 0
+        for p_des, p_curr, v_curr in zip(positions, self.joint_positions, self.joint_velocities):
+            t = feed_forward[i] + self.kp * (p_des - p_curr) + self.kd * (-1 * v_curr)
+            torques.append(t)
+            i += 1
+        self.force_control(torques)
 
     def mode_callback(self, msg):
         self.set_mode(msg.data)
