@@ -46,6 +46,12 @@ class JellyRobot:
     def calibrate_callback(self, msg):
         self.calibrated = msg.data
 
+    def pd_force_control(self, positions):
+        for p_des, p_curr, v_curr in zip(positions, p_curr):
+
+
+
+
     def mode_callback(self, msg):
         self.set_mode(msg.data)
 
@@ -82,6 +88,7 @@ class JellyRobot:
         self.rl_link     = rospy.get_param("/jelly_hardware/rl_link")
         self.rr_link     = rospy.get_param("/jelly_hardware/rr_link")
 
+        self.mass = rospy.get_param("/jelly_hardware/mass")
 
         self.gear_ratio  = rospy.get_param("/jelly_hardware/gear_ratio")
         self.joint_directions = rospy.get_param("/jelly_hardware/joint_directions")
@@ -131,6 +138,10 @@ class JellyRobot:
         elif self.speed > 1:
             self.speed = 1
 
+        # force control setings
+        self.is_force_control = rospy.get_param("/jelly_control/pd_force_control")
+        self.kp = rospy.get_param("/jelly_control/kp")
+        self.kd = rospy.get_param("/jelly_control/kd")
 
         # Initalize Gaits
         self.total_gait_count = rospy.get_param("/jelly_control/total_gait_count")
