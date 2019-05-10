@@ -50,9 +50,15 @@ jelly_hardware:
     joint_directions: [-1.0, 1.0, -1.0, 1.0, -1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
     starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
-jelly_control:
+    mass: 25 # kg
 
+jelly_control:
     speed: 0.5 # number between 0 and 1
+
+    # force control settings
+    pd_force_control: false
+    kp: 10
+    kd: 1
 
     height: 0.18
     clip_threshold: 0.1
