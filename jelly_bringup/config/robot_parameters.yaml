@@ -40,24 +40,24 @@ jelly_hardware:
           axis1: FL_hip_joint
 
 
-    base_link: chassis
-    fl_link:   FL_lower_leg
-    fr_link:   FR_lower_leg
-    rl_link:   RL_lower_leg
-    rr_link:   RR_lower_leg
+    base_link: base_link
+    fl_link:   FL_foot_link
+    fr_link:   FR_foot_link
+    rl_link:   RL_foot_link
+    rr_link:   RR_foot_link
 
     gear_ratio: 8.21
     joint_directions: [-1.0, 1.0, -1.0, 1.0, -1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
     starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
-    mass: 25 # kg
+    mass: 0.1 # kg
 
 jelly_control:
     speed: 0.5 # number between 0 and 1
 
     # force control settings
     pd_force_control: true
-    kp: 4
+    kp: 8
     kd: 0.2
 
     height: 0.18
