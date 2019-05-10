@@ -45,7 +45,8 @@ class SerialTxHubFromTopic:
             print(str(message.data) + " is not between 8700 and 9250")
 
 if __name__ == "__main__":
-    device_name = "/dev/serial/by-id/usb-Cypress_Semiconductor_Cypress_KitProg_16170ADE002E4400-if02"
+    # device_name = "/dev/serial/by-id/usb-Cypress_Semiconductor_Cypress_KitProg_16170ADE002E4400-if02"
+    device_name = "/dev/serial/by-id/usb-Cypress_Semiconductor_Cypress_KitProg_1521172A03254400-if02"
     s_tx = SerialTxHubFromTopic(device_name)
 
     try:
