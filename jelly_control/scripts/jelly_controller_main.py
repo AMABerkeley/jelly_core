@@ -245,7 +245,7 @@ class JellyRobot:
         # TODO make non zero
         # feed_forward = np.zeros(12)
         #feed_forward = self.compute_ff()
-        rospy.logerr("-    -")
+        #rospy.logerr("-    -")
         # rospy.logerr("-start-")
         #rospy.logerr(feed_forward)
         feed_forward = np.zeros(12)
@@ -446,7 +446,7 @@ class JellyRobot:
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
                 msg = Int32()
-                msg.data = int(8980 + self.speed * (9250 - 8980) * command)
+                msg.data = int(8980 + self.speed * (9250 - 8980) * command / 2.0)
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
@@ -456,6 +456,7 @@ class JellyRobot:
 
             elif self.mode == 1: # walking mode
                 positions = self.walking_gait.step(gait_cmd)
+		positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
                 self.joint_positions_cmd = positions
 
             elif self.mode == 2: # Turning mode
@@ -496,14 +497,16 @@ class JellyRobot:
             self.stance_legs = [1, 1, 1, 1]
         elif self.mode == 1: # walking mode
             positions = self.walking_gait.step(gait_cmd)
+	    positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
             self.joint_positions_cmd = positions
             self.set_mode("crab")
-            self.stance_legs = self.walking_gait.check_stance_swing(gait_cmd)
+            # self.stance_legs = self.walking_gait.check_stance_swing(gait_cmd)
         elif self.mode == 2: # Turning mode
             positions = self.turning_gait.step(gait_cmd)
+            positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
             self.joint_positions_cmd = positions
             self.set_mode("crab")
-            self.stance_legs = self.turning_gait.check_stance_swing(gait_cmd)
+            # self.stance_legs = self.turning_gait.check_stance_swing(gait_cmd)
         else:
             self.home()
         self.mode = mode
@@ -580,6 +583,12 @@ def parse_msg(msg):
     elif msg == "roll_back":
         mode = -1
         cmd = -1
+    elif msg == "roll_back_fast":
+        mode = -1
+        cmd = -2
+    elif msg == "roll_forward_fast":
+        mode = -1
+        cmd = 2
 
     # Standing
     elif msg == "stand_left":
