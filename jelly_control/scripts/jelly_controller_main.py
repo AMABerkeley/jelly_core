@@ -264,12 +264,14 @@ class JellyRobot:
 
     def set_mode(self, mode_string):
         clip_thresh = self.clip_threshold / 4.0
+        self.kp = self.kp_orig / 15
+        self.kd = self.kd_orig / 15
         if mode_string == "crab":
             self.leg_mutiplier = np.ones(12)
         if mode_string == "reverse_crab":
             self.leg_mutiplier = np.array([1, -1, -1]*4)
         if mode_string == "normal":
-            self.leg_mutiplier = np.hstack(( np.array([1, -1, -1]*4), np.ones(6)))
+            self.leg_mutiplier = np.hstack(( np.array([1, -1, -1]*2), np.ones(6)))
 
     def __init__(self):
         # set control rate
@@ -425,8 +427,8 @@ class JellyRobot:
         self.motor_zeros = np.array(current_state) - np.array(self.starting_joints)
         self.publish_robot_state()
         self.clip_threshold = self.clip_threshold_orig / 10.0
-        self.kp = self.kp_orig / 22.0
-        self.kd = self.kd_orig / 22.0
+        self.kp = self.kp_orig / 24.0
+        self.kd = self.kd_orig / 24.0
 
     def home(self):
         self.joint_positions_cmd = self._home_position
@@ -434,7 +436,7 @@ class JellyRobot:
     def set_command(self, mode, command):
 
         # increment gait
-        self.gait_index = (self.gait_index + command*1)%self.total_gait_count
+        self.gait_index = (self.gait_index - command*1)%self.total_gait_count
         gait_cmd = float(self.gait_index)/float(self.total_gait_count)
 
         # command motors appropriately
@@ -465,8 +467,8 @@ class JellyRobot:
 
         else:
             self.clip_threshold = self.clip_threshold_orig / 5.0
-            self.kp = self.kp_orig / 5
-            self.kd = self.kd_orig / 5
+            self.kp = self.kp_orig / 15
+            self.kd = self.kd_orig / 15
             self.switch_to(mode)
 
     def publish_robot_state(self):
@@ -493,19 +495,19 @@ class JellyRobot:
             self.stance_legs = [1, 1, 1, 1]
         elif self.mode == 0: # standing mode
             self.home()
-            self.set_mode("crab")
+            # self.set_mode("crab")
             self.stance_legs = [1, 1, 1, 1]
         elif self.mode == 1: # walking mode
             positions = self.walking_gait.step(gait_cmd)
 	    positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
             self.joint_positions_cmd = positions
-            self.set_mode("crab")
+            # self.set_mode("crab")
             # self.stance_legs = self.walking_gait.check_stance_swing(gait_cmd)
         elif self.mode == 2: # Turning mode
             positions = self.turning_gait.step(gait_cmd)
             positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
             self.joint_positions_cmd = positions
-            self.set_mode("crab")
+            # self.set_mode("crab")
             # self.stance_legs = self.turning_gait.check_stance_swing(gait_cmd)
         else:
             self.home()
@@ -555,7 +557,7 @@ class JellyRobot:
 
             elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
 		# torque control mode
-                cmds = np.clip(cmds.copy(), -1.5, 1.5)
+                cmds = np.clip(cmds.copy(), -3.0, 3.0)
                 torq0 = cmds[idx0] / float(self.gear_ratio) * float(self.joint_directions[idx0])
                 torq1 = cmds[idx1] / float(self.gear_ratio) * float(self.joint_directions[idx1])
                 msg.data = [torq0, motor_mode, torq1, motor_mode]
