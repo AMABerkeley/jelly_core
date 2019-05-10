@@ -53,7 +53,7 @@ jelly_hardware:
     mass: 0.1 # kg
 
 jelly_control:
-    speed: 0.5 # number between 0 and 1
+    speed: 0.8 # number between 0 and 1
 
     # force control settings
     pd_force_control: true

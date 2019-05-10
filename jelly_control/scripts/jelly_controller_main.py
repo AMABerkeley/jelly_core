@@ -446,7 +446,7 @@ class JellyRobot:
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
                 msg = Int32()
-                msg.data = int(8980 + self.speed * (9250 - 8980) * command / 2.0)
+                msg.data = int(8990 + self.speed * (9250 - 8990) * command / 2.0)
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
