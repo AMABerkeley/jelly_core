@@ -56,7 +56,7 @@ jelly_control:
     speed: 0.5 # number between 0 and 1
 
     # force control settings
-    pd_force_control: true
+    pd_force_control: false
     kp: 8
     kd: 0.2
 

@@ -244,10 +244,10 @@ class JellyRobot:
         torques = []
         # TODO make non zero
         # feed_forward = np.zeros(12)
-        feed_forward = self.compute_ff()
+        #feed_forward = self.compute_ff()
         rospy.logerr("-    -")
         # rospy.logerr("-start-")
-        rospy.logerr(feed_forward)
+        #rospy.logerr(feed_forward)
         feed_forward = np.zeros(12)
         i = 0
         for p_des, p_curr, v_curr in zip(positions, self.joint_positions, self.joint_velocities):
