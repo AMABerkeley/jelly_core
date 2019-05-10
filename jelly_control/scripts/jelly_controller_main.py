@@ -9,6 +9,7 @@ from std_msgs.msg import String
 from std_msgs.msg import Bool
 from sensor_msgs.msg import JointState
 import jelly_locomotion.jelly_gaits as gaits
+from odrive.enums import *
 
 class JellyGUI:
     def __init__(self):
@@ -275,7 +276,7 @@ class JellyRobot:
             self.home()
         self.mode = mode
 
-    def actuate(self):
+    def actuate(self, mode=CTRL_MODE_POSITION_CONTROL):
         clip_thresh = self.clip_threshold
 
         mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
@@ -285,10 +286,10 @@ class JellyRobot:
         clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
 
         joint_set =  curr_joints + clipped_diff
-        self._set_joints(joint_set)
+        self._set_joints(joint_set, mode)
 
 
-    def _set_joints(self, cmds):
+    def _set_joints(self, cmds, mode):
         cmds = np.array(cmds)
         # cmds = np.clip(cmds.copy(), -np.pi, np.pi)
         cmds = np.clip(cmds.copy(), -3.0, 3.0)
@@ -304,7 +305,8 @@ class JellyRobot:
             pos0 = float(self.gear_ratio) * float(self.joint_directions[idx0]) * (float(cmds[idx0]) + float(self.motor_zeros[idx0]))
             pos1 = float(self.gear_ratio) * float(self.joint_directions[idx1]) * (float(cmds[idx1]) + float(self.motor_zeros[idx1]))
 
-            msg.data = [pos0, pos1]
+            # mode is default to position control, update if you want trajectory control or position control
+            msg.data = [pos0, mode, pos1, mode] 
 
             # rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
             pub_i.publish(msg)
