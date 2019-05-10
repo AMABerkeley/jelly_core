@@ -47,16 +47,20 @@ class JellyRobot:
         self.calibrated = msg.data
 
     def mode_callback(self, msg):
-        if msg.data == "crab":
-            self.leg_mutiplier = -1 * np.ones(12)
-        if msg.data == "reverse_crab":
+        self.set_mode(msg.data)
+
+    def set_mode(self, mode_string):
+        clip_thresh = self.clip_threshold / 4.0
+        if mode_string == "crab":
             self.leg_mutiplier = np.ones(12)
-        if msg.data == "normal":
-            self.leg_mutiplier = np.concat( -np.ones(6), np.ones(6))
+        if mode_string == "reverse_crab":
+            self.leg_mutiplier = np.array([1, -1, -1]*4)
+        if mode_string == "normal":
+            self.leg_mutiplier = np.hstack(( np.array([1, -1, -1]*4), np.ones(6)))
 
     def __init__(self):
         # set control rate
-        self.rate = rospy.Rate(100)
+        self.rate = rospy.Rate(170)
 
         # calibration subscriber
         self.calibrated = False
@@ -93,8 +97,8 @@ class JellyRobot:
             a1 = odrive["axis1"]
             pi = rospy.Publisher("/jelly_hardware/odrives/" + str(id)  +"/command", Float64MultiArray, queue_size=1)
             self.motor_publishers[id] = pi # set up odrive
-            rospy.logerr(a0)
-            rospy.logerr(a1)
+            # rospy.logerr(a0)
+            # rospy.logerr(a1)
 
             joint0 = self.joint_to_idx[a0]
             joint1 = self.joint_to_idx[a1]
@@ -131,6 +135,8 @@ class JellyRobot:
         # Initalize Gaits
         self.total_gait_count = rospy.get_param("/jelly_control/total_gait_count")
         self.height = rospy.get_param("/jelly_control/height")
+        self.clip_threshold_orig = rospy.get_param("/jelly_control/clip_threshold")
+        self.clip_threshold = rospy.get_param("/jelly_control/clip_threshold")
         self.gait_index = 0
         self.mode = 0
         ###################### Walking ###################################
@@ -141,7 +147,7 @@ class JellyRobot:
         p1 = p1 + offset;
 
         # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
-        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab", height=self.height)
+        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab", height=self.height)
         ######################################################################
 
         ####################### Turning ###################################
@@ -194,6 +200,7 @@ class JellyRobot:
 
         self.motor_zeros = np.array(current_state) - np.array(self.starting_joints)
         self.publish_robot_state()
+        self.clip_threshold = self.clip_threshold_orig / 20.0
 
     def home(self):
         self.joint_positions_cmd = self._home_position
@@ -205,6 +212,9 @@ class JellyRobot:
         gait_cmd = float(self.gait_index)/float(self.total_gait_count)
 
         # command motors appropriately
+        if mode == self.mode and not command == 0:
+            self.clip_threshold = self.clip_threshold_orig
+
         if mode == self.mode:
             if self.mode == -1: #rolling  mode
                 msg = Int32()
@@ -225,7 +235,9 @@ class JellyRobot:
                 self.joint_positions_cmd = positions
 
         else:
+            self.clip_threshold = self.clip_threshold_orig / 10.0
             self.switch_to(mode)
+
 
     def publish_robot_state(self):
         # rospy.logerr("publishing state")
@@ -247,37 +259,36 @@ class JellyRobot:
 
         if mode == -1:
             self.joint_positions_cmd = self._rolling_position
+            self.set_mode("reverse_crab")
         elif self.mode == 0: # standing mode
             self.home()
+            self.set_mode("crab")
         elif self.mode == 1: # walking mode
             positions = self.walking_gait.step(gait_cmd)
             self.joint_positions_cmd = positions
+            self.set_mode("crab")
         elif self.mode == 2: # Turning mode
             positions = self.turning_gait.step(gait_cmd)
             self.joint_positions_cmd = positions
+            self.set_mode("crab")
         else:
             self.home()
         self.mode = mode
 
     def actuate(self):
-        clip_thresh = 0.05
+        clip_thresh = self.clip_threshold
 
-        mode_cmd = self.joint_positions * self.leg_mutiplier
+        mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
 
-        curr_joints = np.array(self.joint_positions).copy()
-        signed_diff = np.array(self.joint_positions_cmd) - curr_joints
+        curr_joints  = np.array(self.joint_positions).copy()
+        signed_diff  = np.array(mode_cmd) - curr_joints
         clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
-        # rospy.logerr("clipped error")
-        # rospy.logerr(clipped_diff)
 
         joint_set =  curr_joints + clipped_diff
-        # rospy.logerr("joint cmd")
-        # rospy.logerr(joint_set)
         self._set_joints(joint_set)
 
 
     def _set_joints(self, cmds):
-        # rospy.logerr(cmds)
         cmds = np.array(cmds)
         # cmds = np.clip(cmds.copy(), -np.pi, np.pi)
         cmds = np.clip(cmds.copy(), -3.0, 3.0)
@@ -295,7 +306,7 @@ class JellyRobot:
 
             msg.data = [pos0, pos1]
 
-            rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
+            # rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
             pub_i.publish(msg)
 
 def parse_msg(msg):
