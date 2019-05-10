@@ -57,8 +57,8 @@ jelly_control:
 
     # force control settings
     pd_force_control: true
-    kp: 2
-    kd: 0.1
+    kp: 4
+    kd: 0.2
 
     height: 0.18
     clip_threshold: 0.1

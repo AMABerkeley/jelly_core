@@ -42,6 +42,14 @@ class JellyRobot:
             self.joint_positions[idx0] = j0
             self.joint_positions[idx1] = j1
 
+            v0 = msg.data[4] /  (self.gear_ratio * self.joint_directions[idx0])
+            v1 = msg.data[5] /  (self.gear_ratio * self.joint_directions[idx1])
+            self.joint_velocities[idx0] = v0
+            self.joint_velocities[idx1] = v1
+
+            self.motor_currents[idx0] = msg.data[2]
+            self.motor_currents[idx1] = msg.data[3]
+
         return callback
 
     def calibrate_callback(self, msg):
@@ -133,6 +141,7 @@ class JellyRobot:
         self.motor_zeros      = [0.0] * len(self.joint_names)
         self.joint_velocities = [0.0] * len(self.joint_names)
         self.joint_torques    = [0.0] * len(self.joint_names)
+        self.motor_currents   = [0.0] * len(self.joint_names)
 
         # position set point
         self.joint_positions_cmd  = [0.0] * len(self.joint_names)
@@ -221,7 +230,7 @@ class JellyRobot:
 
         self.motor_zeros = np.array(current_state) - np.array(self.starting_joints)
         self.publish_robot_state()
-        self.clip_threshold = self.clip_threshold_orig / 20.0
+        self.clip_threshold = self.clip_threshold_orig / 100.0
 
     def home(self):
         self.joint_positions_cmd = self._home_position
@@ -302,15 +311,14 @@ class JellyRobot:
             motor_mode = CTRL_MODE_POSITION_CONTROL
 
         mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
+
+        clip_thresh = self.clip_threshold
+        curr_joints  = np.array(self.joint_positions).copy()
+        signed_diff  = np.array(mode_cmd) - curr_joints
+        clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
+
+        joint_set =  curr_joints + clipped_diff
         if motor_mode == CTRL_MODE_POSITION_CONTROL:
-            clip_thresh = self.clip_threshold
-
-
-            curr_joints  = np.array(self.joint_positions).copy()
-            signed_diff  = np.array(mode_cmd) - curr_joints
-            clipped_diff = np.clip(signed_diff, -clip_thresh, clip_thresh)
-
-            joint_set =  curr_joints + clipped_diff
             self._set_joints(joint_set, motor_mode)
 
         elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
@@ -339,6 +347,7 @@ class JellyRobot:
                 msg.data = [pos0, motor_mode, pos1, motor_mode]
 
             elif motor_mode == CTRL_MODE_CURRENT_CONTROL:
+		# torque control mode
                 torq0 = cmds[idx0] / float(self.gear_ratio) * float(self.joint_directions[idx0])
                 torq1 = cmds[idx1] / float(self.gear_ratio) * float(self.joint_directions[idx1])
                 msg.data = [torq0, motor_mode, torq1, motor_mode]
