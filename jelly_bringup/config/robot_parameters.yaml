@@ -46,13 +46,19 @@ jelly_hardware:
     rl_link:   RL_lower_leg
     rr_link:   RR_lower_leg
 
-    gear_ratio: 8.1
+    gear_ratio: 8.21
     joint_directions: [-1.0, 1.0, -1.0, 1.0, -1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
     starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
-jelly_control:
+    mass: 25 # kg
 
+jelly_control:
     speed: 0.5 # number between 0 and 1
+
+    # force control settings
+    pd_force_control: true
+    kp: 2
+    kd: 0.1
 
     height: 0.18
     clip_threshold: 0.1
@@ -61,7 +67,7 @@ jelly_control:
     rolling_position: [0.0, -1.3, 2.8, 0.0, -1.3, 2.8, 0.0, 1.3, -2.8, 0.0, 1.3, -2.8]
     # rolling_position: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
-    total_gait_count: 800
+    total_gait_count: 1800
 
     walking_gait:
         p1     : [1.85e-01, -7.0e-02, -4.0e-01]
