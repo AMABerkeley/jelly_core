@@ -66,8 +66,8 @@ jelly_control:
 
     # force control settings
     pd_force_control: true
-    kp: 16.5
-    kd: 0.05
+    kp: 12.5
+    kd: 0.1
 
     total_gait_count: 2000
     walking_gait:
