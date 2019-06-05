@@ -21,11 +21,13 @@
     output="screen" />
 
   <!-- Joint calibration -->
+<!--
   <node
     name="rviz"
     pkg="rviz"
     type="rviz"
     output="screen" />
+-->
 
 
   <!-- Include other sensor packages-->
