@@ -362,7 +362,8 @@ class JellyRobot:
         p1 = p1 + offset;
 
         # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
-        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab", height=self.height)
+        # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab", height=self.height)
+        self.walking_gait = gaits.SimpleMirrorWalkingGait(beta, p1, p2, mode="crab", height=self.height)
         ######################################################################
 
         ####################### Turning ###################################
