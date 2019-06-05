@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="blue_description">
+  <!-- <xacro:arg name="is_gazebo" default="false" /> -->
+  <!-- <xacro:property name="is_gazebo" value="$(arg is_gazebo)" /> -->
+
+  <xacro:include filename="$(find jelly_descriptions)/urdf/base_v1/base.urdf.xacro" />
+  <xacro:include filename="$(find jelly_descriptions)/urdf/leg_link_v1/leg_link.urdf.xacro" />
+
+  <xacro:jelly_base_v1 name="base_link"/>
+  <xacro:jelly_leg_v1  side="FR" parent="base_link" f_sign=" 1" s_sign=" 1" hip_r="0"            hip_y="0"            leg_y="0"           />
+  <xacro:jelly_leg_v1  side="FL" parent="base_link" f_sign=" 1" s_sign="-1" hip_r="3.1415926535" hip_y="0"            leg_y="3.1415926535"/>
+  <xacro:jelly_leg_v1  side="RR" parent="base_link" f_sign="-1" s_sign=" 1" hip_r="3.1415926535" hip_y="3.1415926535" leg_y="0"/>
+  <xacro:jelly_leg_v1  side="RL" parent="base_link" f_sign="-1" s_sign="-1" hip_r="0"            hip_y="3.1415926535" leg_y="3.1415926535"/>
+
+  <!-- <xacro:if value="${is_gazebo}"> -->
+    <!-- <gazebo> -->
+      <!-- <plugin -->
+        <!-- name="gazebo_ros_control" -->
+        <!-- filename="libgazebo_ros_control.so"> -->
+        <!-- <robotNamespace>/right_arm</robotNamespace> -->
+      <!-- </plugin> -->
+    <!-- </gazebo> -->
+  <!-- </xacro:if> -->
+</robot>

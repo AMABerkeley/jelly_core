@@ -47,33 +47,54 @@ jelly_hardware:
     rr_link:   RR_foot_link
 
     gear_ratio: 8.21
-    joint_directions: [-1.0, 1.0, -1.0, 1.0, -1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
-    starting_joints: [0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
+    joint_directions: [1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, -1.0, 1.0]
+    starting_joints: [-0.26, 0.0, 0.0, 0.26, 0.0, 0.0, -0.26, 0.0, 0.0, 0.26, 0.0, 0.0]
 
     mass: 0.1 # kg
 
 jelly_control:
-    speed: 0.5 # number between 0 and 1
+    speed: 0.8 # number between 0 and 1
 
-    # force control settings
-    pd_force_control: true
-    kp: 8
-    kd: 0.2
 
-    height: 0.18
-    clip_threshold: 0.1
+    height: 0.15
+    clip_threshold: 0.25
 
-    home_position:    [-0.2, -0.7, 1.4, -0.2, -0.7, 1.4, -0.2, 0.7, -1.4, -0.2, 0.7, -1.4]
-    rolling_position: [0.0, -1.3, 2.8, 0.0, -1.3, 2.8, 0.0, 1.3, -2.8, 0.0, 1.3, -2.8]
+    home_position:    [0.2, -0.7, 1.4, -0.2, -0.7, 1.4, 0.2, 0.7, -1.4, -0.2, 0.7, -1.4]
+    rolling_position: [0.0, -1.3, 2.7, 0.0, -1.3, 2.7, 0.0, 1.3, -2.7, 0.0, 1.3, -2.7]
     # rolling_position: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
-    total_gait_count: 1800
 
+    # force control settings
+    pd_force_control: false
+    kp: 12.5
+    kd: 0.1
+
+    total_gait_count: 1500
     walking_gait:
-        p1     : [1.85e-01, -7.0e-02, -4.0e-01]
-        p2     : [-1.85e-01, -7.0e-02, -4.0e-01]
-        offset : [0.07, 0, 0]
+        p1     : [ 0.85e-01, -5.0e-02, -4.2e-01]
+        p2     : [-1.05e-01, -5.0e-02, -4.2e-01]
+        offset : [0.00, 0, 0]
         beta   : 0.90
+
+    ################################# kinda walking ###############
+    # total_gait_count: 2200
+    # walking_gait:
+        # p1     : [1.60e-01, -8.5e-02, -3.04e-01]
+        # p2     : [-1.60e-01, -8.5e-02, -3.04e-01]
+        # offset : [0.04, 0, 0]
+        # beta   : 0.85
+    ################################# kinda walking ###############
+
+    # pd_force_control: true
+    # kp: 12.1
+    # kd: 0.001
+#
+    # total_gait_count: 1000
+    # walking_gait:
+        # p1     : [1.85e-01, -8.5e-02, -3.94e-01]
+        # p2     : [-1.85e-01, -8.5e-02, -3.94e-01]
+        # offset : [0.07, 0, 0]
+        # beta   : 0.92
 
     turning_gait:
         p1     : [1.85e-01, 4.5e-02, -3.94e-01]

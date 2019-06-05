@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!-- XML namespaces -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ============================  link  ============================ -->
+  <!-- Includes elbow flex, FA roll joints in macros below -->
+  <xacro:macro name="jelly_base_v1" params="name">
+    <link
+      name="${name}">
+      <inertial>
+        <origin
+          xyz="1.3878E-16 7.5298E-19 -0.00024739"
+          rpy="0 0 0" />
+        <mass
+          value="1.4036" />
+        <inertia
+          ixx="0.010824"
+          ixy="-3.2526E-18"
+          ixz="8.8557E-19"
+          iyy="0.019805"
+          iyz="9.2004E-19"
+          izz="0.025106" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://jelly_descriptions/meshes/base_link.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.29804 0.29765 0.29941 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://jelly_descriptions/meshes/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>
