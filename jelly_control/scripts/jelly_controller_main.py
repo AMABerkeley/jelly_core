@@ -32,7 +32,7 @@ class JellyGUI:
 
     def write(self, msg):
         # write to console
-        rospy.logerr(msg)
+        # rospy.logerr(msg)
         s = String()
         s.data = msg
         self.pub.publish(s)
@@ -79,7 +79,6 @@ class JellyRobot:
         # print(frame)
 
     def update_joints(self, idx0, idx1):
-
         def callback(msg):
             j0 = msg.data[0] /  (self.gear_ratio * self.joint_directions[idx0]) - self.motor_zeros[idx0]
             j1 = msg.data[1] /  (self.gear_ratio * self.joint_directions[idx1]) - self.motor_zeros[idx1]
@@ -120,9 +119,7 @@ class JellyRobot:
             p_.append(foot_pos)
 
 
-        acc         = np.zeros(3)
-        # orientation_error = np.log(ori_des.dot(curr_ori))
-        # print("angular accel: {}".format(angular_acc))
+        acc              = np.zeros(3)
 
         constraints      = []
         constraints_b    = []
@@ -245,18 +242,12 @@ class JellyRobot:
         # TODO make non zero
         # feed_forward = np.zeros(12)
         #feed_forward = self.compute_ff()
-        #rospy.logerr("-    -")
-        # rospy.logerr("-start-")
-        #rospy.logerr(feed_forward)
         feed_forward = np.zeros(12)
         i = 0
         for p_des, p_curr, v_curr in zip(positions, self.joint_positions, self.joint_velocities):
             t = feed_forward[i] + self.kp * (p_des - p_curr) + self.kd * (-1 * v_curr)
             torques.append(t)
             i += 1
-        # rospy.logerr(torques)
-        # rospy.logerr("-end-")
-        # rospy.logerr("-  -")
         return torques
 
     def mode_callback(self, msg):
@@ -315,8 +306,6 @@ class JellyRobot:
             a1 = odrive["axis1"]
             pi = rospy.Publisher("/jelly_hardware/odrives/" + str(id)  +"/command", Float64MultiArray, queue_size=1)
             self.motor_publishers[id] = pi # set up odrive
-            # rospy.logerr(a0)
-            # rospy.logerr(a1)
 
             joint0 = self.joint_to_idx[a0]
             joint1 = self.joint_to_idx[a1]
@@ -472,7 +461,6 @@ class JellyRobot:
             self.switch_to(mode)
 
     def publish_robot_state(self):
-        # rospy.logerr("publishing state")
         js = JointState()
         js.name = self.joint_names
         js.position = self.joint_positions
@@ -484,7 +472,7 @@ class JellyRobot:
         self.js_pub.publish(js)
 
     def switch_to(self, mode):
-        rospy.logerr("switching to mode: " + str(mode))
+        # rospy.logerr("switching to mode: " + str(mode))
         switch_time = 1.5
         self.gait_index = 0
         gait_cmd = self.gait_index/self.total_gait_count
@@ -563,7 +551,6 @@ class JellyRobot:
                 msg.data = [torq0, motor_mode, torq1, motor_mode]
 
 
-            # rospy.logerr("m%s - cmd %s | rads %s" %(odrive["id"], str(cmds), str(msg.data)))
             pub_i = self.motor_publishers[odrive["id"]] # get motor publisher
             pub_i.publish(msg)
 
