@@ -254,15 +254,16 @@ class JellyRobot:
         self.set_mode(msg.data)
 
     def set_mode(self, mode_string):
-        clip_thresh = self.clip_threshold / 4.0
+        clip_thresh = self.clip_threshold / 14.0
         self.kp = self.kp_orig / 15
         self.kd = self.kd_orig / 15
-        if mode_string == "crab":
-            self.leg_mutiplier = np.ones(12)
-        if mode_string == "reverse_crab":
-            self.leg_mutiplier = np.array([1, -1, -1]*4)
-        if mode_string == "normal":
-            self.leg_mutiplier = np.hstack(( np.array([1, -1, -1]*2), np.ones(6)))
+        # if mode_string == "crab":
+            # self.leg_mutiplier = np.ones(12)
+        # if mode_string == "reverse_crab":
+            # self.leg_mutiplier = np.array([1, -1, -1]*4)
+        # if mode_string == "normal":
+            # self.leg_mutiplier = np.hstack(( np.array([1, -1, -1]*2), np.ones(6)))
+        self.mode_string = mode_string
 
     def __init__(self):
         # set control rate
@@ -271,7 +272,7 @@ class JellyRobot:
         # calibration subscriber
         self.calibrated = False
         rospy.Subscriber("/jelly_hardware/calibrate", Bool, self.calibrate_callback)
-        self.leg_mutiplier = np.ones(12)
+        # self.leg_mutiplier = np.ones(12)
         rospy.Subscriber("/jelly_control/mode", String, self.mode_callback)
 
 
@@ -298,6 +299,7 @@ class JellyRobot:
         # set up publishers for odrive
         self.odrives = rospy.get_param("/jelly_hardware/odrive_ids")
         self.motor_publishers = {}
+        self.mode_string = "crab"
 
 
         for odrive in self.odrives:
@@ -315,6 +317,7 @@ class JellyRobot:
 
         # TODO change to correct message type and topic
         self.vesc_pub = rospy.Publisher("/jelly_hardware/vesc/command", Int32, queue_size=1)
+        # self.vesc_pub = rospy.Publisher("/vesc/current_command", Float32, queue_size=1)
         self.js_pub   = rospy.Publisher("/joint_states", JointState, queue_size=1)
 
 
@@ -363,7 +366,10 @@ class JellyRobot:
 
         # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab")
         # self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab", height=self.height)
-        self.walking_gait = gaits.SimpleMirrorWalkingGait(beta, p1, p2, mode="crab", height=self.height)
+        # self.walking_gait = gaits.SimpleMirrorWalkingGait(beta, p1, p2, mode="crab", height=self.height)
+        self.walking_gait = gaits.SimpleWalkingGait(beta, p1, p2, mode="crab", height=self.height)
+        self.walking_gait_reverse = gaits.SimpleWalkingGait(beta, p1, p2, mode="reverse_crab", height=self.height)
+        self.walking_gait_normal = gaits.SimpleWalkingGait(beta, p1, p2, mode="normal", height=self.height)
         ######################################################################
 
         ####################### Turning ###################################
@@ -416,7 +422,7 @@ class JellyRobot:
 
         self.motor_zeros = np.array(current_state) - np.array(self.starting_joints)
         self.publish_robot_state()
-        self.clip_threshold = self.clip_threshold_orig / 10.0
+        self.clip_threshold = self.clip_threshold_orig / 50.0
         self.kp = self.kp_orig / 24.0
         self.kd = self.kd_orig / 24.0
 
@@ -426,7 +432,7 @@ class JellyRobot:
     def set_command(self, mode, command):
 
         # increment gait
-        self.gait_index = (self.gait_index - command*1)%self.total_gait_count
+        self.gait_index = (self.gait_index + command*1)%self.total_gait_count
         gait_cmd = float(self.gait_index)/float(self.total_gait_count)
 
         # command motors appropriately
@@ -439,6 +445,8 @@ class JellyRobot:
             if self.mode == -1: #rolling  mode
                 msg = Int32()
                 msg.data = int(8990 + self.speed * (9250 - 8990) * command / 2.0)
+                # msg = Float32()
+                # msg.data = self.speed * command
                 # write to vesc and joints
                 self.vesc_pub.publish(msg)
                 self.joint_positions_cmd = self._rolling_position
@@ -447,7 +455,14 @@ class JellyRobot:
                 self.home()
 
             elif self.mode == 1: # walking mode
-                positions = self.walking_gait.step(gait_cmd)
+                if self.mode_string == "crab":
+                    positions = self.walking_gait.step(gait_cmd)
+                elif self.mode_string == "reverse_crab":
+                    positions = self.walking_gait_reverse.step(gait_cmd)
+                elif self.mode_string == "normal":
+                    positions = self.walking_gait_normal.step(gait_cmd)
+                else:
+                    positions = self.walking_gait.step(gait_cmd)
 		positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
                 self.joint_positions_cmd = positions
 
@@ -456,7 +471,7 @@ class JellyRobot:
                 self.joint_positions_cmd = positions
 
         else:
-            self.clip_threshold = self.clip_threshold_orig / 5.0
+            self.clip_threshold = self.clip_threshold_orig / 15.0
             self.kp = self.kp_orig / 15
             self.kd = self.kd_orig / 15
             self.switch_to(mode)
@@ -487,8 +502,15 @@ class JellyRobot:
             # self.set_mode("crab")
             self.stance_legs = [1, 1, 1, 1]
         elif self.mode == 1: # walking mode
-            positions = self.walking_gait.step(gait_cmd)
-	    positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
+            if self.mode_string == "crab":
+                positions = self.walking_gait.step(gait_cmd)
+            elif self.mode_string == "reverse_crab":
+                positions = self.walking_gait_reverse.step(gait_cmd)
+            elif self.mode_string == "normal":
+                positions = self.walking_gait_normal.step(gait_cmd)
+            else:
+                positions = self.walking_gait.step(gait_cmd)
+            positions = np.array(positions) * np.array([-1, 1, 1, 1, 1, 1] * 2)
             self.joint_positions_cmd = positions
             # self.set_mode("crab")
             # self.stance_legs = self.walking_gait.check_stance_swing(gait_cmd)
@@ -508,7 +530,8 @@ class JellyRobot:
         else:
             motor_mode = CTRL_MODE_POSITION_CONTROL
 
-        mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
+        # mode_cmd = self.joint_positions_cmd * self.leg_mutiplier
+        mode_cmd = self.joint_positions_cmd
 
         clip_thresh = self.clip_threshold
         curr_joints  = np.array(self.joint_positions).copy()

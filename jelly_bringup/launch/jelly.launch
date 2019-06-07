@@ -37,11 +37,10 @@
   <include
    file="$(find jelly_urdf)/launch/display.launch"/> -->
 
-  <!-- #vesc hub motor driver
+  #vesc hub motor driver
 
   <include
    file="$(find vesc_driver)/launch/vesc_driver_node.launch"/>
-  -->
 
   <include file="$(find jelly_bringup)/launch/odrive_all.launch" />
 
